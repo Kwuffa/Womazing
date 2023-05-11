@@ -16,8 +16,11 @@ function scrollFunc() {
         if(localStorage.getItem('theme') === "white"){
             myhead.style.background = "white";
         }
-        if(localStorage.getItem('theme') === "dark"){
+        else if(localStorage.getItem('theme') === "dark"){
             myhead.style.background = "grey";
+        }
+        else{
+            myhead.style.background = "white";
         }
         myhead.style.top = "0";
     } else {

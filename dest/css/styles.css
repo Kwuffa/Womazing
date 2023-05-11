@@ -2478,13 +2478,15 @@ html.dark .telephone_wrapper::before {
   .home_no_bg_button {
     margin: auto;
     margin-top: 4rem;
-    max-width: 15.5rem;
+    max-width: 16rem;
     border: 1px solid #6E9C9F;
   }
 }
 @media screen and (min-width: 768px) {
   .home_no_bg_button a {
     display: block;
+    width: 100%;
+    text-align: center;
     padding: 1.375rem 3.125rem;
     color: #6E9C9F;
     background-color: #fff;
