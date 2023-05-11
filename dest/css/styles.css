@@ -190,6 +190,7 @@ html {
 }
 
 .wrapGrow {
+  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1442,6 +1443,46 @@ html.dark .call_wrapper button:hover {
     opacity: 1;
   }
 }
+@-webkit-keyframes menuAppearAnimation {
+  0% {
+    -webkit-transform: translateX(-20rem);
+            transform: translateX(-20rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes menuAppearAnimation {
+  0% {
+    -webkit-transform: translateX(-20rem);
+            transform: translateX(-20rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes menuHideAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-20rem);
+            transform: translateX(-20rem);
+  }
+}
+@keyframes menuHideAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-20rem);
+            transform: translateX(-20rem);
+  }
+}
 @media screen and (min-width: 768px) {
   /* важно спрятать не нужное не на телефонах */
   .menu-hide-button {
@@ -1768,13 +1809,6 @@ html.dark .call_wrapper button:hover {
     background-color: #509498;
     cursor: pointer;
   }
-  .menu-hide-button .menu-hide::before {
-    content: "🠻";
-    position: absolute;
-    left: 0;
-    top: -3rem;
-    font-size: 3rem;
-  }
   .menu-hide-button .menu-hide {
     position: absolute;
     background-color: #F1EADC;
@@ -1782,7 +1816,7 @@ html.dark .call_wrapper button:hover {
     -webkit-box-shadow: 0 0 2px 1px #ded4c1;
             box-shadow: 0 0 2px 1px #ded4c1;
     padding: 1rem;
-    width: 13rem;
+    width: 15rem;
     top: 3.5rem;
     left: 0;
     display: none;
@@ -1792,6 +1826,8 @@ html.dark .call_wrapper button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-animation: menuAppearAnimation 0.5s linear;
+            animation: menuAppearAnimation 0.5s linear;
   }
   .menu-hide-button .menu-hide li a, .menu-hide div a {
     font-size: 1.5rem;
@@ -5604,6 +5640,9 @@ html.dark .color_buttons input[type=radio]:checked + span {
     max-width: 63rem;
     margin-bottom: 4.5rem;
     height: 18rem;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
   }
   .item-legend hr {
     background-color: #CCCCCC;
@@ -5874,6 +5913,9 @@ html.dark .color_buttons input[type=radio]:checked + span {
     -ms-flex-item-align: self-start;
         align-self: self-start;
     row-gap: 1rem;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
   }
   .product {
     -webkit-column-gap: 1rem;
@@ -7972,6 +8014,8 @@ footer {
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
 }
 
 html.dark footer {

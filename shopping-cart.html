@@ -368,11 +368,8 @@
     <script src="scripts/shoppingCart.js"></script>
     <script src="scripts/addToCart.js"></script>
     <script src="scripts/countItemsInCart.js"></script>
+    <script src="scripts/menuHide.js"></script>
     <script>
-        
-
-
-
         document.addEventListener('click', ({ target: t }) => {
             const count = t.parentNode.querySelector(".count");
             if (t.classList.contains('plus')) {
@@ -388,30 +385,6 @@
                     localStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
                     }
                 }
-        });
-
-        // Получить меню спрятанное
-        const menu = document.getElementById("menu");
-        const menu_button = document.getElementById("menu-button");
-
-        function openMenu() {
-            menu.style.display = "flex";
-        }
-        function closeMenu() {
-            menu.style.display = "none";
-        }
-        menu_button.addEventListener('click', function(event) {
-            event.stopPropagation();
-            openMenu();
-        });
-        document.addEventListener('click', function(event) {
-            const target = event.target;
-            const isMenu = target === menu || menu.contains(target);
-            const isMenu_button = target === menu_button;
-
-            if (!isMenu && !isMenu_button) {
-                closeMenu();
-            }
         });
     </script>
 </body>

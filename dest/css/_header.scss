@@ -39,6 +39,22 @@
         opacity: 1;
     }
 }
+@keyframes menuAppearAnimation{
+    0%{
+        transform: translateX(-20rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes menuHideAnimation{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-20rem);
+    }
+}
 
 @media screen and (min-width: 768px){
 /* важно спрятать не нужное не на телефонах */
@@ -79,12 +95,6 @@
     transform-style: preserve-3d;
     perspective: 100px;
 }
-// .head .logo:hover{
-//     box-shadow: 10px 10px 20px rgb(127, 127, 127);
-//     // box-shadow: 10px 10px 20px #98b3b5;
-//     // background-color: #fffcf7;
-//     background-color: rgb(239, 239, 239);
-// }
 .logo span {
     font-family: 'Raleway', sans-serif;
     color: black;
@@ -270,25 +280,19 @@
         background-color: #509498;
         cursor: pointer;
     }
-    .menu-hide-button .menu-hide::before {
-        content: "\1F83B";
-        position: absolute;
-        left: 0;
-        top: -3rem;
-        font-size: 3rem;
-    }
     .menu-hide-button .menu-hide {
         position: absolute;
         background-color: #F1EADC;
         border: 1px solid #ded4c1;
         box-shadow: 0 0 2px 1px #ded4c1;
         padding: 1rem;
-        width: 13rem;
+        width: 15rem;
         top: 3.5rem;
         left: 0;
         display: none;
         align-items: center;
         justify-content: center;
+        animation: menuAppearAnimation .5s linear;
     }
     .menu-hide-button .menu-hide li a, .menu-hide div a {
         font-size: 1.5rem;

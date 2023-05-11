@@ -301,31 +301,6 @@
     <script src="scripts/theme.js"></script>
     <script src="scripts/scroll_header.js"></script>
     <script src="scripts/countItemsInCart.js"></script>
-    <script>
-
-        // Получить меню спрятанное
-        const menu = document.getElementById("menu");
-        const menu_button = document.getElementById("menu-button");
-
-        function openMenu() {
-            menu.style.display = "flex";
-        }
-        function closeMenu() {
-            menu.style.display = "none";
-        }
-        menu_button.addEventListener('click', function(event) {
-            event.stopPropagation();
-            openMenu();
-        });
-        document.addEventListener('click', function(event) {
-            const target = event.target;
-            const isMenu = target === menu || menu.contains(target);
-            const isMenu_button = target === menu_button;
-
-            if (!isMenu && !isMenu_button) {
-                closeMenu();
-            }
-        });
-    </script>
+    <script src="scripts/menuHide.js"></script>
 </body>
 </html>
