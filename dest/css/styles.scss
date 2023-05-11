@@ -1,0 +1,233 @@
+@import 'reset';
+
+// основные
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+:root {
+    --text-font: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    transition: .5s ease;
+}
+.border_link{
+    position: relative;
+}
+.border_link::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.4em;
+    width: 100%;
+    height: 1px;
+    background-color: #509498;
+    opacity: 0;
+    transition: all .5s linear;
+}
+.border_link:hover{
+    color: #6E9C9F;
+    &::before{
+        opacity: 0.5;
+    }
+}
+/* тело */
+@media screen and (min-width: 768px){
+    html {
+        font-size: 16px;
+    }
+@media screen and (max-width: 1320px){
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1164px){
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 992px){
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 830px){
+    html {
+        font-size: 9px;
+    }
+}
+}
+@media screen and (max-width: 767px) {
+html {
+    font-size: 15px;
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 376px) {
+    html {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 315px) {
+    html {
+        font-size: 9px;
+    }
+}
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(248, 248, 248);
+    transition: .5s ease;
+}
+.wrapper {
+    max-width: 73.125rem;
+    margin: auto;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+}
+.themeBtn {
+    position: fixed;
+    bottom: 2rem;
+    left: 1rem;
+    a{
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+    }
+    img{
+        width: 4rem;
+        height: 4rem;
+        opacity: .8;
+    }
+}
+html.dark{
+    .themeBtn img{
+        stroke: white;
+    }
+    body{
+        background-color: rgb(66, 66, 66);
+        color: white;
+    }
+    .border_link {
+        color: rgb(201, 201, 201);
+    }
+    .border_link::before{
+        background-color: white;
+    }
+    .border_link:hover{
+        // color: grey;
+        color: white;
+    }
+    img {
+        filter: grayscale(20%) brightness(80%);
+    }
+    svg path {
+        stroke: white;
+        fill: none;
+    }
+}
+input, textarea{
+    transition:background .5s ease;
+}
+
+// Назания страниц со ссылками
+@media screen and (min-width: 768px){
+    .page_title__links a {
+        color: black;
+        transition: 0.5s ease;
+    }
+    .page_title {
+        margin-top: 16.8rem;
+        margin-bottom: 13.375rem;
+        height: 6.9375rem;
+    }
+    .page_title__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.625rem;
+    }
+    .page_title h1 {
+        font-family: var(--text-font);
+        font-size: 3.4375rem;
+        font-weight: 500;
+        line-height: 3.8125rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+        
+    }
+    .page_title__links {
+        font-family: var(--text-font);
+        font-size: 1.06rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+        display: flex;
+        column-gap: 0.8125rem;
+    }
+    .page_title__links span {
+        color: #909090;
+    }
+}
+@media screen and (max-width: 767px) {
+    .page_title__links a {
+        color: black;
+        transition: 0.5s ease;
+    }
+    .page_title {
+        margin-top: 8.125rem;
+        margin-bottom: 4rem;
+        height: 6.9375rem;
+    }
+    .page_title__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.625rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .page_title h1 {
+        font-family: var(--text-font);
+        font-size: 3.4375rem;
+        font-weight: 500;
+        line-height: 3.8125rem;
+        letter-spacing: 0.02em;
+        text-align: center;
+        
+    }
+    .page_title__links {
+        font-family: var(--text-font);
+        font-size: 1.06rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0.02em;
+        text-align: center;
+        display: flex;
+        column-gap: 0.8125rem;
+    }
+    .page_title__links span {
+        color: #909090;
+        
+    }
+}
+
+
+@import 'call';
+@import 'header';
+@import 'main_home-page';
+@import 'main_contacts-page';
+@import 'main_shop-page';
+@import 'main_about-brand-page';
+@import 'main_item';
+@import 'main_shopping-cart-page';
+@import 'main_ordering-page';
+@import 'main_success-page';
+@import 'footer';

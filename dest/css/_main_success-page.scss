@@ -1,0 +1,154 @@
+/* SUCCESS PAGE */
+@media screen and (min-width: 768px){
+    // page_title
+    /* вторая секция */
+    .order-success_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 2.75rem;
+    }
+    .order-success {
+        display: flex;
+        align-items: center;
+        column-gap: 2.75rem;
+    }
+    .order-success__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.06rem;
+    }
+    .order-success__text h3 {
+        font-family: var(--text-font);
+        font-size: 1.5625rem;
+        font-weight: 500;
+        line-height: 2.1875rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+    .order-success__text p {
+        font-family: var(--text-font);
+        font-size: 1.06rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+    .order-success_wrapper .no_background_open_store_button a {
+        border: 1px solid #6E9C9F;
+        display: block;
+        padding: 1.375rem 3.125rem;
+        color: #6E9C9F;
+        background-color: #fff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.06rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.02em;
+        transition: 0.5s ease;
+    }
+    .order-success_wrapper .no_background_open_store_button a:hover {
+        background: #6E9C9F;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    // page_title
+    @media screen and (max-width: 300px) {
+        .success_page-links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .success_page+section {
+            margin-top: 10rem;
+        }
+    }
+    /* вторая секция */
+    .order-success_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2.75rem;
+    }
+    .order-success {
+        display: flex;
+        align-items: center;
+        column-gap: 2.75rem;
+    }
+    .order-success__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.06rem;
+    }
+    .order-success__text h3 {
+        font-family: var(--text-font);
+        font-size: 1.5625rem;
+        font-weight: 500;
+        line-height: 2.1875rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+    .order-success__text p {
+        font-family: var(--text-font);
+        font-size: 1.06rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+    @media screen and (max-width: 500px) {
+        .order-success {
+            flex-direction: column;
+            row-gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .order-success__text {
+            align-items: center;
+            justify-content: center;
+        }
+        .order-success__text h3 {
+            font-family: var(--text-font);
+            font-size: 1.5625rem;
+            font-weight: 500;
+            line-height: 2.1875rem;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+        .order-success__text p {
+            font-family: var(--text-font);
+            font-size: 1.06rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+    }
+    .order-success_wrapper .no_background_open_store_button a {
+        border: 1px solid #6E9C9F;
+        display: block;
+        padding: 1.375rem 3.125rem;
+        color: #6E9C9F;
+        background-color: #fff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.06rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.02em;
+        transition: 0.5s ease;
+    }
+    .order-success_wrapper .no_background_open_store_button a:hover {
+        background: #6E9C9F;
+        color: #fff;
+    }
+}
+
+html.dark{
+    .no_background_open_store_button a{
+        border: none;
+    }
+}
