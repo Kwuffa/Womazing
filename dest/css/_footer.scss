@@ -253,12 +253,13 @@
             margin-top: 8.125rem;
             background: #F1EADC;
             position: relative;
-            padding: 2rem 0;
+            padding: 2rem 2rem;
         }
         .footer_wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-items: center;
+            align-items: center;
             row-gap: 1rem;
         }
         .privacy-footer{
@@ -289,25 +290,29 @@
         .connection {
             display: none;
         }
+        .nav-footer{
+            justify-self: end;
+        }
         .nav-footer .menu {
             max-width: 10rem;
             display: flex;
             flex-direction: column;
             position: static;
-            row-gap: 1rem;
+            row-gap: 1.2rem;
             padding: 0;
         }
         .connection-hiden {
             margin-top: 1rem;
             display: flex;
             flex-direction: column;
-            row-gap: 1.9375rem;
+            row-gap: 1.2rem;
             align-items: end;
             align-items: center;
             justify-content: center;
         }
         .socials {
             display: flex;
+            align-items: center;
             column-gap: 0.75rem;
         }
         .footer_link a {

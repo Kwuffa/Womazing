@@ -324,7 +324,10 @@
     .home_no_bg_button {
         margin: auto;
         margin-top: 4rem;
-        max-width: 16rem; 
+        max-width: 16rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #6E9C9F;
     }
     .home_no_bg_button a {
@@ -715,7 +718,10 @@
     .home_no_bg_button {
         margin: auto;
         margin-top: 4rem;
-        max-width: 16rem; 
+        max-width: fit-content; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #6E9C9F;
     }
     .home_no_bg_button a {
@@ -731,6 +737,7 @@
         line-height: 1.5rem;
         letter-spacing: 0.02em;
         transition: 0.5s ease;
+        text-align: center;
     }
     .home_no_bg_button a:hover {
         background: #6E9C9F;
@@ -866,6 +873,16 @@ html.dark {
     }
     .onclick_for_collections{
         background-color: gray;
+    }
+}
+@media screen and (max-width: 767px) {
+    html.dark{
+        .images_block::after {
+            background: none;
+        }
+        .bg_for_images-block{
+            background-color: rgb(13, 13, 12);
+        }
     }
 }
 

@@ -59,9 +59,24 @@ a{
 html {
     font-size: 15px;
 }
+@media screen and (max-height: 480px) {
+    html{
+        font-size: 13px;
+    }
+}
+@media screen and (max-height: 420px) {
+    html{
+        font-size: 11px;
+    }
+}
 @media screen and (max-width: 500px) {
     html {
         font-size: 14px;
+    }
+    @media screen and (max-height: 420px) {
+        html{
+            font-size: 11px;
+        }
     }
 }
 @media screen and (max-width: 430px) {
@@ -118,6 +133,12 @@ html{
         width: 4rem;
         height: 4rem;
         opacity: .8;
+    }
+}
+@media screen and (max-width: 767px) {
+    .themeBtn{
+        bottom: 6rem;
+        left: .5rem;
     }
 }
 html.dark{
