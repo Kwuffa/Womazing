@@ -271,7 +271,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     // page_title
     /* вторая секция */
     .order-content {
@@ -282,9 +282,18 @@
         justify-content: center;
         row-gap: 4.5625rem;
         margin-top: 8rem;
-
     }
-    
+    @media screen and (max-height: 480px) {
+        .order-content {
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+            column-gap: 10rem;
+            row-gap: 4.5625rem;
+            margin-top: 8rem;
+            flex-wrap: wrap;
+        }
+    }
     /* форма */
     .order-content__form form{
         display: flex;
@@ -303,7 +312,6 @@
         letter-spacing: 0.02em;
         text-align: left;
     }
-    
     .order-content__form textarea{
         max-width: 21.875rem;
         border-bottom: 1px solid black;
@@ -353,7 +361,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        row-gap: 9.9375rem;
+        row-gap: 5rem;
     }
     .order_information__your-order h3 {
         font-family: var(--text-font);

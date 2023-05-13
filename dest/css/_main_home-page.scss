@@ -444,8 +444,7 @@
     }
     
 }
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .conaiter_top {
         display: flex;
         flex-direction: column;
@@ -627,6 +626,17 @@
         max-width: 69.375rem;
         row-gap: 1.25rem;
     }
+    @media screen and (max-height: 480px) {
+        .new_collection {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1.875rem;
+            row-gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+    }
     .new_collection > div {
         position: relative;
         display: flex;
@@ -756,6 +766,18 @@
         margin-bottom: 5.75rem;
         row-gap: 1rem;
     }
+    @media screen and (max-height: 480px) {
+        .important_for_us {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 1.875rem;
+            margin-bottom: 5.75rem;
+            row-gap: 2rem;
+            flex-wrap: wrap;
+        }
+    }
     .product {
         max-width: 21.875rem;
         display: flex;
@@ -786,6 +808,7 @@
         line-height: 1.5rem;
         letter-spacing: 0.02em;
         text-align: center;
+        display: inline-block !important;
     }
     
     
@@ -875,7 +898,7 @@ html.dark {
         background-color: gray;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     html.dark{
         .images_block::after {
             background: none;

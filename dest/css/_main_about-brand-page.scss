@@ -70,7 +70,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     // page_title
     /* вторая секция */
     .brend-description__container {
@@ -89,6 +89,21 @@
     .brend-description__container > section:nth-child(2){
         .brend-description__img{
             order: -1;
+        }
+    }
+    @media screen and (max-height: 480px) {
+        .brend-description__container > section {
+            flex-direction: row;
+            column-gap: 5.875rem;
+            row-gap: 0.9375rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .brend-description__container > section:nth-child(2){
+            .brend-description__img{
+                order: 1;
+            }
         }
     }
     .brend-description__text {

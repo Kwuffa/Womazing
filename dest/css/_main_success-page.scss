@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     // page_title
     @media screen and (max-width: 300px) {
         .success_page-links {
@@ -64,6 +64,11 @@
         }
         .success_page+section {
             margin-top: 10rem;
+        }
+    }
+    @media screen and (max-width: 441px) {
+        .success_page__container a, span{
+            font-size: .9rem;
         }
     }
     /* вторая секция */
