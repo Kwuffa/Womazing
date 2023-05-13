@@ -5009,8 +5009,8 @@ html.dark #background_open_store_button:hover {
     row-gap: 1rem;
   }
   .item_wrapper img {
-    height: 39.5rem;
-    width: 27.9rem;
+    max-height: 39.5rem;
+    max-width: 27.9rem;
   }
   .item_wrapper__item-description {
     display: -webkit-box;
