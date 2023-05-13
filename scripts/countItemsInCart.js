@@ -1,5 +1,8 @@
 // let countItemsCart = document.querySelector('.countItemsCart');
 let countItemsCart = Array.from(document.querySelectorAll('.countItemsCart'));
+if(localStorage.getItem("countItems") < 0){
+    localStorage.setItem('countItems', 0);
+}
 // console.log(countItemsCart);
 // очистка локал
 // localStorage.setItem('countItems', 0);
@@ -8,23 +11,21 @@ function addNumberCart(num=0){
     let counter = 0;
     counter += num;
     countItemsCart.forEach(element => {
-        element.innerText = Number(element.innerText) + counter;
+        if(Number(element.innerText) + counter > -1){
+            element.innerText = Number(element.innerText) + counter;
+        }
     });
-    // countItemsCart.innerText = Number(countItemsCart.innerText) + counter;
     localStorage.setItem('countItems', Number(countItemsCart[0].innerText));
     if(countItemsCart[0].innerText > 0){
         countItemsCart.forEach(element => {
             element.classList.add("active");
         });
-        // countItemsCart.classList.add("active");
     }
     else{
         countItemsCart.forEach(element => {
             element.style.opacity = "0";
             setTimeout(()=>{element.classList.remove("active")}, 500);
         });
-        // countItemsCart.style.opacity = "0";
-        // setTimeout(()=>{countItemsCart.classList.remove("active")}, 500);
     }
 }
 countItemsCart.forEach(element => {
