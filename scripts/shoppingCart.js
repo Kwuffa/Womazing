@@ -2,6 +2,9 @@ let button = document.querySelector(".add-to-cart__background_in-cart_button");
 if(!localStorage.getItem('sec_item')){
     localStorage.setItem('sec_item', '<div class="items"></div>');
 }
+if(localStorage.getItem('sec_item') == '<div class="items"></div>'){
+    localStorage.setItem('countItems', 0);
+}
 // console.log(localStorage.getItem('sec_item'));
 function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
     let divAdd = `<div class="item">
