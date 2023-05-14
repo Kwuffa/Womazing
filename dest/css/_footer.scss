@@ -35,7 +35,6 @@
         display: flex;
         column-gap: 2.75rem;
         row-gap: 1.25rem;
-        flex-wrap: wrap;
     }
     .nav-footer .menu li:nth-child(1) {
         align-self: flex-start;
@@ -437,7 +436,7 @@
     }
 }
 footer{
-    transition: .5s ease;
+    transition:background .5s ease;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
 }

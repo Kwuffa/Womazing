@@ -222,27 +222,70 @@
                     <div class="conaiter_top">
                         <div class="offer">
                             <div class="offer_container">
-                                <div class="new_staff">
-                                    <h1>Новые поступления в этом сезоне</h1>
-                                </div>
-                                <div class="offer_inf">
-                                    <p>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
-                                </div>
-                                <div class="background_open_store_button">
-                                    <div class="offer_arrow">
-                                        <a href="#offer-arrow-btn-destination"><svg width="1rem" height="1.81125rem" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 0V28M8 28L1 20.8108M8 28L15 20.8108" stroke="#6E9C9F"/>
-                                            </svg>
-                                        </a>
+                                <div class="carousel_wrapper active" data-carousel="1">
+                                    <div class="new_staff">
+                                        <h1>Новые поступления в этом сезоне</h1>
                                     </div>
-                                    <a href="Shop_page.html">Открыть магазин</a>
+                                    <div class="offer_inf">
+                                        <p>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
+                                    </div>
+                                    <div class="background_open_store_button">
+                                        <div class="offer_arrow">
+                                            <a href="#offer-arrow-btn-destination"><svg width="1rem" height="1.81125rem" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 0V28M8 28L1 20.8108M8 28L15 20.8108" stroke="#6E9C9F"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <a href="Shop_page.html">Открыть магазин</a>
+                                    </div>
                                 </div>
+                                <div class="carousel_wrapper" data-carousel="2">
+                                    <div class="new_staff">
+                                        <h1>Что-то новенькое. Мы заждались тебя.</h1>
+                                    </div>
+                                    <div class="offer_inf">
+                                        <p>Надоело искать себя в сером городе? Настало время новых идей, свежих красок и вдохновения с Womazing!</p>
+                                    </div>
+                                    <div class="background_open_store_button">
+                                        <div class="offer_arrow">
+                                            <a href="#offer-arrow-btn-destination"><svg width="1rem" height="1.81125rem" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 0V28M8 28L1 20.8108M8 28L15 20.8108" stroke="#6E9C9F"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <a href="Shop_page.html">Открыть магазин</a>
+                                    </div>
+                                </div>
+                                <div class="carousel_wrapper" data-carousel="3">
+                                    <div class="new_staff">
+                                        <h1>Включай новый сезон с WOMAZING</h1>
+                                    </div>
+                                    <div class="offer_inf">
+                                        <p>Мы обновили ассортимент - легендарные коллекции и новинки от отечественных дизайнеров</p>
+                                    </div>
+                                    <div class="background_open_store_button">
+                                        <div class="offer_arrow">
+                                            <a href="#offer-arrow-btn-destination"><svg width="1rem" height="1.81125rem" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 0V28M8 28L1 20.8108M8 28L15 20.8108" stroke="#6E9C9F"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <a href="Shop_page.html">Открыть магазин</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carouselButtonBlock">
+                                <button class="carouselButton active" data-carousel="1"></button>
+                                <button class="carouselButton" data-carousel="2"></button>
+                                <button class="carouselButton" data-carousel="3"></button>
                             </div>
                         </div>
                         <div class="images_block">
-                            <img src="images/img_home-page/header-section/dmitriy_biggest.jpg" alt="Девушка в бежевом пальто с синими волосами">
-                            <img src="images/img_home-page/header-section/ionut-comanici_smallest.jpg" alt="Девушка в черной шляпе и зеленым свитером на темном фоне">
-                            <img src="images/img_home-page/header-section/allef-vinicius_mid.jpg" alt="Девушка в белой соломовой шляпе на деревянном фоне">
+                            <img class="mainHomeImage active" data-carousel="1" src="images/img_home-page/header-section/dmitriy_biggest.jpg" alt="Девушка в бежевом пальто с синими волосами">
+                            <img class="mainHomeImage" data-carousel="2" src="images/img_home-page/header-section/main-photo2.jpg" alt="Девушка в желтом пальто, белой футболке и очках">
+                            <img class="mainHomeImage" data-carousel="3" src="images/img_home-page/header-section/main-photo3.jpg" alt="Девушка в розовых штанах и белом топе">
+                            <img class="smallBottomImage" src="images/img_home-page/header-section/ionut-comanici_smallest.jpg" alt="Девушка в черной шляпе и зеленым свитером на темном фоне">
+                            <img class="smallTopImage" src="images/img_home-page/header-section/allef-vinicius_mid.jpg" alt="Девушка в белой соломовой шляпе на деревянном фоне">
                         </div>
                 </section>
                 <section id="offer-arrow-btn-destination">
@@ -529,5 +572,6 @@
     <script src="scripts/scroll_header.js"></script>
     <script src="scripts/countItemsInCart.js"></script>
     <script src="scripts/menuHide.js"></script>
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>
