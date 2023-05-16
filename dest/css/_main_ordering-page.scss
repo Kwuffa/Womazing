@@ -529,65 +529,8 @@
     }
 }
 
-.errorSpan {
-    color: red;
-    max-width: 22rem;
-    margin-top: -2rem;
-    margin-bottom: -1rem;
 
-    animation-name: errorSpanAnimation;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-}
-.pushInfSuccess {
-    display: none;
-    background-color: #F1EADC;
-    height: 2rem;
-    margin-top: -2rem;
-    width: 15.375rem;
-    font-family: var(--text-font);
-    font-size: 1.06rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    letter-spacing: 0.02em;
-    text-align: center;
-    box-shadow: 0px 0px 10px green;
-}
-.pushInfError {
-    display: none;
-    background-color: #F1EADC;
-    height: 2rem;
-    margin-top: -2rem;
-    width: 15.375rem;
-    font-family: var(--text-font);
-    font-size: 1.06rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    letter-spacing: 0.02em;
-    text-align: center;
-    box-shadow: 0px 0px 10px red;
-}
-.pushInfSuccess.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    animation-name: boxShadowAnimation_green;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
-.pushInfError.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    animation-name: boxShadowAnimation_red;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
 
 html.dark{
     .item-ordering h4:last-child::before {

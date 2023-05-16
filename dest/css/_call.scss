@@ -575,7 +575,15 @@
     }
 }
 
-
+.back-call{
+    .pushInfSuccess {
+        width: 100%;
+    }
+    .pushInfError {
+        width: 100%;
+        // margin-top: 0.1rem;
+    }
+}
 html.dark {
     .background-for-call{
         background: grey;

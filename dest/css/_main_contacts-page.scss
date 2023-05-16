@@ -127,19 +127,39 @@
     .contact-content__form button:hover {
         background-color: #509498;
     }
-    .message-submit-success {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 27.6875rem;
-        height: 5.25rem;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-        background-color: #F1EADC;
+    .contact-content__form{
+        .pushInfSuccess, .pushInfError {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 5.25rem;
+            font-family: var(--text-font);
+            font-size: 1.06rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            letter-spacing: 0.02em;
+            text-align: left;
+            background-color: #F1EADC;
+        }
+        .pushInfSuccess.active{
+            display: flex;
+        
+            animation-name: boxShadowAnimation_green;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+        .pushInfError.active{
+            display: flex;
+        
+            animation-name: boxShadowAnimation_red;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        
     }
     .contact-content__form button:active .message-submit-success{
         background-color: #6E9C9F;
@@ -210,6 +230,11 @@
             flex-direction: column;
             align-items: center;
             row-gap: 2.1875rem;
+            max-width: 80%;
+            margin: auto;
+            .errorSpan{
+                align-self: flex-start;
+            }
         }
         h3{
             align-self: center;
@@ -291,20 +316,40 @@
     .contact-content__form button:hover {
         background-color: #509498;
     }
-    .message-submit-success {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        min-width: 22rem;
-        height: 5.25rem;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: center;
-        background-color: #F1EADC;
+    .contact-content__form{
+        .pushInfSuccess, .pushInfError {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 22rem;
+            align-self: center;
+            height: 5.25rem;
+            font-family: var(--text-font);
+            font-size: 1.06rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            letter-spacing: 0.02em;
+            text-align: left;
+            background-color: #F1EADC;
+        }
+        .pushInfSuccess.active{
+            display: flex;
+        
+            animation-name: boxShadowAnimation_green;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+        .pushInfError.active{
+            display: flex;
+        
+            animation-name: boxShadowAnimation_red;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        
     }
     .contact-content__form button:active .message-submit-success{
         background-color: #6E9C9F;

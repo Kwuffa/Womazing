@@ -1,13 +1,18 @@
 let forms = Array.from(document.getElementsByTagName("form"));
 let buttons = Array.from(document.getElementsByTagName("button"));
-let success_div = document.querySelector(".pushInfSuccess");
-let error_div = document.querySelector(".pushInfError");
 let errorText = [];
 let valid = false;
+
+let callbackground = document.querySelector(".background-for-call");
+let body = document.getElementById("body");
+let call_block = document.querySelector(".call_wrapper");
+import { cancel_Func } from "./call_appearance.js";
 
 buttons.forEach(button => {
     if(button.classList.contains("submitButton")) {
         button.addEventListener("click", function(event) {
+            let success_div = document.querySelector(`.pushInfSuccess.${event.target.classList[1]}`);
+            let error_div = document.querySelector(`.pushInfError.${event.target.classList[1]}`);
             let thisForms = forms.filter(form => form.classList.contains(event.target.classList[1]));
             let inputs = [];
             thisForms.forEach(elem => {
@@ -74,7 +79,24 @@ buttons.forEach(button => {
                 } else {
                     success_div.classList.add("active");
                     error_div.classList.remove("active");
-                }
+                    Array.from(inputs).forEach((input, index) => {
+                        if(event.target.classList[1] == "orderCall"){
+                            setTimeout(() => {
+                                input.value = "";
+                            }, 300 * index);
+                        }else{
+                            setTimeout(() => {
+                                input.value = "";
+                            }, 100 * index);
+                        }
+                    });
+                    setTimeout(() => {
+                        if(event.target.classList[1] == "orderCall"){
+                            success_div.classList.remove("active");
+                            cancel_Func(callbackground, call_block, body);
+                        };
+                    }, 1500);
+                };
             }, 10);
         });
     };

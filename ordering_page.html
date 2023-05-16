@@ -173,8 +173,8 @@
                             <form action="#" class="orderForm" method="post">
                                 <label for="is_cash"><input class="cashOrCard" type="checkbox" name="is_cash" id="is_cash"><span>&#x25A0;</span>Оплата наличными</label>
                                 <button class="submitButton orderForm" type="submit">Разместить заказ</button>
-                                <div class="pushInfSuccess">Заказ успешно размещен</div>
-                                <div class="pushInfError">Вы где-то ошиблись</div>
+                                <div class="pushInfSuccess orderForm">Заказ успешно размещен</div>
+                                <div class="pushInfError orderForm">Вы где-то ошиблись</div>
                                 <div class="comment">
                                     <p>Пока кнопка не работает, нажмите <a class="border_link" href="success_page.html">Сюда</a> чтобы сделать имитацию успешного оформления заказа</p>
                                 </div>
@@ -315,7 +315,7 @@
         </div>
         <div class="call_wrapper" id="call_form">
             <div class="cancell-btn">
-                <a onclick="cancel_Func()"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="closeCallMenu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L15.5 15.5M15.5 1L1 15.5" stroke="black"/>
                     </svg>
                 </a>
@@ -328,11 +328,13 @@
                     <input type="tel" name="user_phone" placeholder="Телефон" minlength="10" required>
                     <button type="submit" class="submitButton orderCall">Заказать звонок</button>
                 </form>
+                <div class="pushInfSuccess orderCall">Мы скоро перезвоним!</div>
+                <div class="pushInfError orderCall">Вы где-то ошиблись</div>
             </div>
         </div>
     </div>
-    <script src="scripts/call_appearance.js"></script>
-    <script src="scripts/form_validation.js"></script>
+    <script type="module" src="scripts/call_appearance.js"></script>
+    <script type="module" src="scripts/form_validation.js"></script>
     <script src="scripts/theme.js"></script>
     <script src="scripts/scroll_header.js"></script>
     <script src="scripts/countItemsInCart.js"></script>

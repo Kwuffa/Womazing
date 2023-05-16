@@ -3,6 +3,7 @@ let callbackground = document.querySelector(".background-for-call");
 let body = document.getElementById("body");
 let btn = document.querySelector(".CallTelephoneMenu");
 let call_block = document.querySelector(".call_wrapper");
+let closeBtn = document.querySelector(".closeCallMenu");
 // При нажатии
 function topFunc() {
     // цвет фона
@@ -16,8 +17,15 @@ function topFunc() {
     // спрятать прокрутку
     body.style.overflow = "hidden";
 }
-function cancel_Func() {
+export function cancel_Func(callbackground, call_block, body) {
     // цвет фона
+    let errorSpans = Array.from(document.querySelectorAll(".errorSpan"));
+    document.querySelector(".pushInfError.orderCall").classList.remove("active");
+    if(errorSpans){
+        errorSpans.forEach(element => {
+            element.remove();
+        });
+    };
     callbackground.classList.remove("active");
     callbackground.classList.add("close");
     // анимация самого меню
@@ -30,4 +38,7 @@ function cancel_Func() {
     // показать прокрутку
     body.style.overflowY = "scroll";
 }
+closeBtn.addEventListener('click', function() {
+    cancel_Func(callbackground, call_block, body);
+});
 btn.onclick = topFunc;

@@ -281,23 +281,26 @@
         </div>
         <div class="call_wrapper" id="call_form">
             <div class="cancell-btn">
-                <a onclick="cancel_Func()"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="closeCallMenu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L15.5 15.5M15.5 1L1 15.5" stroke="black"/>
                     </svg>
                 </a>
             </div>
             <div class="back-call">
                 <h3>Заказать обратный звонок</h3>
-                <form action="#" method="post">
+                <form action="#" class="orderCall" method="post">
                     <input type="text" name="user_name" placeholder="Имя" minlength="2" required>
                     <input type="email" name="user_e-mail" placeholder="E-mail" minlength="7" required>
                     <input type="tel" name="user_phone" placeholder="Телефон" minlength="10" required>
-                    <button type="submit">Заказать звонок</button>
+                    <button type="submit" class="submitButton orderCall">Заказать звонок</button>
                 </form>
+                <div class="pushInfSuccess orderCall">Мы скоро перезвоним!</div>
+                <div class="pushInfError orderCall">Вы где-то ошиблись</div>
             </div>
         </div>
     </div>
-    <script src="scripts/call_appearance.js"></script>
+    <script type="module" src="scripts/call_appearance.js"></script>
+    <script type="module" src="scripts/form_validation.js"></script>
     <script src="scripts/theme.js"></script>
     <script src="scripts/scroll_header.js"></script>
     <script src="scripts/countItemsInCart.js"></script>
