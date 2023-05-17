@@ -150,8 +150,8 @@
                     <div class="contact-content__form">
                         <h3>Напишите нам</h3>
                         <form class="contactForm" action="#" method="post">
-                            <input type="text" name="user_name" placeholder="Имя" minlength="2" required>
-                            <input type="text" name="user_e-mail" placeholder="E-mail" minlength="7" required>
+                            <input type="text" name="user_name" placeholder="Имя" minlength="2" maxlength="30" required>
+                            <input type="text" name="user_e-mail" placeholder="E-mail" minlength="6" maxlength="320" required>
                             <input type="text" name="user_phone" placeholder="Телефон" minlength="10" required>
                             <textarea name="user_message" placeholder="Сообщение" rows="5"></textarea>
                             <button class="submitButton contactForm" type="submit">Отправить</button>
@@ -297,7 +297,7 @@
         </div>
         <div class="call_wrapper" id="call_form">
             <div class="cancell-btn">
-                <a class="closeCallMenu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="closeCallMenu"><svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L15.5 15.5M15.5 1L1 15.5" stroke="black"/>
                     </svg>
                 </a>

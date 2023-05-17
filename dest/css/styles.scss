@@ -64,38 +64,59 @@ a{
 html {
     font-size: 15px;
 }
-@media screen and (max-height: 480px) {
-    html{
-        font-size: 12px;
-    }
-}
-@media screen and (max-height: 420px) {
-    html{
-        font-size: 10px;
-    }
-}
+
 @media screen and (max-width: 500px) {
     html {
         font-size: 14px;
     }
-    @media screen and (max-height: 420px) {
-        html{
-            font-size: 10px;
-        }
-    }
+    // @media screen and (max-height: 440px) {
+    //     html{
+    //         font-size: 10px;
+    //     }
+    // }
+    // @media screen and (max-height: 380px) {
+    //     html{
+    //         font-size: 9px;
+    //     }
+    // }
 }
 @media screen and (max-width: 430px) {
     html {
         font-size: 13px;
     }
+    // @media screen and (max-height: 440px) {
+    //     html{
+    //         font-size: 10px;
+    //     }
+    // }
 }
 @media screen and (max-width: 376px) {
     html {
         font-size: 11px;
     }
+    // @media screen and (max-height: 440px) {
+    //     html{
+    //         font-size: 9px;
+    //     }
+    // }
 }
 @media screen and (max-width: 315px) {
     html {
+        font-size: 9px;
+    }
+}
+@media screen and (max-height: 520px) {
+    html{
+        font-size: 11px;
+    }
+}
+@media screen and (max-height: 480px) {
+    html{
+        font-size: 10px;
+    }
+}
+@media screen and (max-height: 380px) {
+    html{
         font-size: 9px;
     }
 }

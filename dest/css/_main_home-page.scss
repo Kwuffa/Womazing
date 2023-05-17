@@ -498,6 +498,7 @@
         height: 51rem;
         background-color: #F1EADC;
         z-index: -1;
+        transition: background .5s ease;
     }
     @media screen and (max-width: 576px) {
         .bg_for_images-block {

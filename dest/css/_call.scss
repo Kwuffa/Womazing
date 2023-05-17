@@ -195,11 +195,10 @@
     }
     .call_wrapper {
         position: relative;
-        height: 31.4rem;
-        width: 30.68rem; 
-        padding: 4.375rem;
+        min-height: fit-content;
         background-color: white;
         z-index: 99999;
+        padding: 5rem;
 
         animation-duration: 0.5s;
         animation-timing-function: linear;
@@ -355,6 +354,10 @@
         position: absolute;
         right: 1.96875rem;
         top: 2rem;
+        svg{
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -398,28 +401,23 @@
     }
     .call_wrapper {
         position: relative;
-        height: 31.4rem;
-        width: 30.68rem; 
         padding: 4.375rem;
         background-color: white;
         z-index: 99999;
+        min-height: fit-content;
 
         animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) and (min-height: 480px){
             .call_wrapper {
-                height: 31.4rem;
                 width: 28rem; 
-                padding: 4.375rem;
             }
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 500px) and (min-height: 480px) {
             .call_wrapper {
-                height: 31.4rem;
                 width: 25rem; 
-                padding: 4.375rem;
             }
         }
     .call_wrapper.active {
@@ -572,6 +570,10 @@
         position: absolute;
         right: 1.96875rem;
         top: 2rem;
+        svg{
+            width: 1.3rem;
+            height: 1.3rem;
+        }
     }
 }
 
