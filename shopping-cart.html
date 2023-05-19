@@ -137,6 +137,12 @@
                         </div>
                     </div>
                 </section>
+                <div class="emptyWrapper">
+                    <div class="emptyCartMessage">
+                        <h2>Корзина пока что пуста :(</h2>
+                        <p>Скорее переходите во вкладку "Магазин" и выбирайте самые качественные изделия от компании Womazing!</p>
+                    </div>
+                </div>
                 <section class="sec_item-cart">
                     <!-- <div class="item">
                         <div class="product_wrapper">
@@ -189,26 +195,25 @@
                         </div>
                     </div> -->
                 </section>
-                <section>
+                <section class="couponAndTotalSection">
                     <form class="coupon" action="#" method="post">
-                        <input type="text" name="coupon" placeholder="Введите купон">
+                        <div class="couponInputDiv"><input type="text" name="coupon" placeholder="Введите купон"></div>
                         <button type="submit">Применить купон</button>
                         <button type="reset">Обновить корзину</button>
                     </form>
                     <div class="subtotal">
                         <div class="subtotal__text">
                             <p>Подытог:</p>
-                            <p class="subTotalProceBlock">$129</p>
+                            <p class="subTotalProceBlock">$0</p>
                         </div>
                         <div class="subtotal__total total">
                             <div class="total__price">
                                 <h3>Итого:</h3>
-                                <h3 class="totalProceBlock">$129</h3>
+                                <h3 class="totalProceBlock">$0</h3>
                             </div>
                             <div class="checkout">
-                                <button>Оформить заказ <div class="comment">
-                                    <p>Пока кнопка не работает, нажмите <a class="border_link" href="ordering_page.html">Сюда</a> чтобы сделать имитацию оформления заказа</p>
-                                </div></button>
+                                <!-- <button>Оформить заказ</button> -->
+                                <a href="ordering_page.html">Оформить заказ</a>
                             </div>
                         </div>
                     </div>
@@ -374,21 +379,22 @@
     <script src="scripts/menuHide.js"></script>
     <script>
         document.addEventListener('click', ({ target: t }) => {
-            const count = t.parentNode.querySelector(".count");
-            if (t.classList.contains('plus')) {
-                count.innerText =  (count.innerText | 0) + 1;
-                localStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
-            }
-        });
-        document.addEventListener('click', ({ target: t }) => {
-            const count = t.parentNode.querySelector(".count");
-            if (t.classList.contains('minus')) {
-                if (count.innerText > 1) {
-                    count.innerText = (count.innerText | 0) - 1;
-                    localStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
-                    }
-                }
-        });
+    const count = t.parentNode.querySelector(".count");
+    if (t.classList.contains('plus')) {
+        count.innerText =  (count.innerText | 0) + 1;
+        sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+    }
+});
+
+document.addEventListener('click', ({ target: t }) => {
+    const count = t.parentNode.querySelector(".count");
+    if (t.classList.contains('minus')) {
+        if (count.innerText > 1) {
+            count.innerText = (count.innerText | 0) - 1;
+            sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+        }
+    }
+});
     </script>
 </body>
 </html>

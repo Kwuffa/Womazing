@@ -153,262 +153,212 @@
         }
     }
 }
+// звонок меню
+.cancell-btn a:hover {
+    cursor: pointer;
+}
+.wrapper_for_call {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.background-for-call {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #6E9C9FF2;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
 
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.background-for-call.active {
+    animation-name: Opacity;
+}
+.background-for-call.close {
+    animation-name: close_Opacity;
+    animation-delay: 1s;
+}
+.call_wrapper {
+    position: relative;
+    min-height: fit-content;
+    background-color: white;
+    z-index: 99999;
+    padding: 5rem;
 
-@media screen and (min-width: 768px){
-    .cancell-btn a:hover {
-        cursor: pointer;
-    }
-    .wrapper_for_call {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-    }
-    .background-for-call {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        background: #6E9C9FF2;
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.8;
-
-        animation-duration: 0.5s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
-    .background-for-call.active {
-        animation-name: Opacity;
-    }
-    .background-for-call.close {
-        animation-name: close_Opacity;
-        animation-delay: 1s;
-    }
-    .call_wrapper {
-        position: relative;
-        min-height: fit-content;
-        background-color: white;
-        z-index: 99999;
-        padding: 5rem;
-
-        animation-duration: 0.5s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
-    .call_wrapper.active {
-        animation-name: adverAnim;
-        .back-call{
-            h3{
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.call_wrapper.active {
+    animation-name: adverAnim;
+    .back-call{
+        h3{
+            animation: SmoothAppearance;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+        form{
+            input{
                 animation: SmoothAppearance;
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
-                animation-delay: 0.5s;
             }
-            form{
-                input{
-                    animation: SmoothAppearance;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                }
-                input:first-child{
-                    opacity: 0;
-                    animation-delay: 0.7s;
-                }
-                input:nth-child(2){
-                    opacity: 0;
-                    animation-delay: 0.9s;
-                }
-                input:nth-child(3){
-                    opacity: 0;
-                    animation-delay: 1.1s;
-                }
-                button{
-                    animation: SmoothAppearance;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    animation-delay: 1.3s;
-                }
+            input:first-child{
+                opacity: 0;
+                animation-delay: 0.7s;
             }
-        }
-        .cancell-btn{
-            animation-name: CancelAppearance;
-            animation-duration: 1.5s;
-            animation-timing-function: linear;
-            animation-delay: 0s;
+            input:nth-child(2){
+                opacity: 0;
+                animation-delay: 0.9s;
+            }
+            input:nth-child(3){
+                opacity: 0;
+                animation-delay: 1.1s;
+            }
+            button{
+                animation: SmoothAppearance;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-delay: 1.3s;
+            }
         }
     }
-    .call_wrapper.close {
-        animation-name: close_adverAnim;
-        animation-delay: 1s;
-        .back-call{
-            h3{
+    .cancell-btn{
+        animation-name: CancelAppearance;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+    }
+}
+.call_wrapper.close {
+    animation-name: close_adverAnim;
+    animation-delay: 1s;
+    .back-call{
+        h3{
+            opacity: 1;
+            animation: close_SmoothAppearance;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            animation-delay: .8s;
+        }
+        form{
+            input{
                 opacity: 1;
                 animation: close_SmoothAppearance;
                 animation-duration: .5s;
                 animation-fill-mode: forwards;
-                animation-delay: .8s;
             }
-            form{
-                input{
-                    opacity: 1;
-                    animation: close_SmoothAppearance;
-                    animation-duration: .5s;
-                    animation-fill-mode: forwards;
-                }
-                input:first-child{
-                    animation-delay: .6s;
-                }
-                input:nth-child(2){
-                    animation-delay: .4s;
-                }
-                input:nth-child(3){
-                    animation-delay: .2s;
-                }
-                button{
-                    opacity: 1;
-                    animation: close_SmoothAppearance;
-                    animation-duration: .5s;
-                    animation-fill-mode: forwards;
-                }
+            input:first-child{
+                animation-delay: .6s;
             }
-        }
-        .cancell-btn{
-            animation-name: close_CancelAppearance;
-            animation-duration: 2.5s;
-            animation-timing-function: linear;
-            animation-delay: 0s;
+            input:nth-child(2){
+                animation-delay: .4s;
+            }
+            input:nth-child(3){
+                animation-delay: .2s;
+            }
+            button{
+                opacity: 1;
+                animation: close_SmoothAppearance;
+                animation-duration: .5s;
+                animation-fill-mode: forwards;
+            }
         }
     }
-
-    .back-call {
+    .cancell-btn{
+        animation-name: close_CancelAppearance;
+        animation-duration: 2.5s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+    }
+}
+.back-call {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.1875rem;
+    h3 {
+        font-family: var(--text-font);
+        font-size: 1.5625rem;
+        font-weight: 500;
+        line-height: 2.1875rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+        opacity: 0;
+    }
+    /* форма */
+    form{
         display: flex;
         flex-direction: column;
         row-gap: 2.1875rem;
-        h3 {
+        input{
+            max-width: 21.875rem;
+            padding-bottom: 0.9375rem;
+            border-bottom: 1px solid black;
             font-family: var(--text-font);
-            font-size: 1.5625rem;
+            font-size: 1.0625rem;
             font-weight: 500;
-            line-height: 2.1875rem;
+            line-height: 1.5rem;
             letter-spacing: 0.02em;
             text-align: left;
+        }
+        input::placeholder {
+            transform: translateY(1px);
+            transition: 0.5s ease;
+            font-family: var(--text-font);
+            font-size: 1.0625rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            letter-spacing: 0.02em;
+            text-align: left;
+        }
+        input:focus::placeholder {
             opacity: 0;
         }
-        /* форма */
-        form{
-            display: flex;
-            flex-direction: column;
-            row-gap: 2.1875rem;
-            input{
-                max-width: 21.875rem;
-                padding-bottom: 0.9375rem;
-                border-bottom: 1px solid black;
-                font-family: var(--text-font);
-                font-size: 1.0625rem;
-                font-weight: 500;
-                line-height: 1.5rem;
-                letter-spacing: 0.02em;
-                text-align: left;
-            }
-            input::placeholder {
-                transform: translateY(1px);
-                transition: 0.5s ease;
-                font-family: var(--text-font);
-                font-size: 1.0625rem;
-                font-weight: 500;
-                line-height: 1.5rem;
-                letter-spacing: 0.02em;
-                text-align: left;
-            }
-            input:focus::placeholder {
-                opacity: 0;
-            }
-            button {
-                height: 4.25rem;
-                width: 100%;
-                background-color: #6E9C9F;
-                transition: 0.5s ease;
-                font-family: var(--text-font);
-                font-size: 1.06rem;
-                font-weight: 400;
-                line-height: 1.5rem;
-                letter-spacing: 0.02em;
-                text-align: center;
-                color: white;
-                opacity: 0;
-            }
-            button:hover {
-                background-color: #509498;
-            }
+        button {
+            height: 4.25rem;
+            width: 100%;
+            background-color: #6E9C9F;
+            transition: 0.5s ease;
+            font-family: var(--text-font);
+            font-size: 1.06rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: white;
+            opacity: 0;
         }
-    }
-    .cancell-btn {
-        position: absolute;
-        right: 1.96875rem;
-        top: 2rem;
-        svg{
-            width: 1.5rem;
-            height: 1.5rem;
+        button:hover {
+            background-color: #509498;
         }
     }
 }
-
+.cancell-btn {
+    position: absolute;
+    right: 1.96875rem;
+    top: 2rem;
+    svg{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
 @media screen and (max-width: 768px) {
-    .cancell-btn a:hover {
-        cursor: pointer;
-    }
-    .wrapper_for_call {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-    }
-    .background-for-call {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        background: #6E9C9FF2;
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.8;
-
-        animation-duration: 0.5s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
-    .background-for-call.active {
-        animation-name: Opacity;
-    }
-    .background-for-call.close {
-        animation-name: close_Opacity;
-        animation-delay: 1s;
-    }
     .call_wrapper {
-        position: relative;
         padding: 4.375rem;
-        background-color: white;
-        z-index: 99999;
-        min-height: fit-content;
-
-        animation-duration: 0.5s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
     }
     @media screen and (max-width: 600px) and (min-height: 480px){
             .call_wrapper {
@@ -420,161 +370,6 @@
                 width: 25rem; 
             }
         }
-    .call_wrapper.active {
-        animation-name: adverAnim;
-        .back-call{
-            h3{
-                animation: SmoothAppearance;
-                animation-duration: 1s;
-                animation-fill-mode: forwards;
-                animation-delay: 0.5s;
-            }
-            form{
-                input{
-                    animation: SmoothAppearance;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                }
-                input:first-child{
-                    opacity: 0;
-                    animation-delay: 0.7s;
-                }
-                input:nth-child(2){
-                    opacity: 0;
-                    animation-delay: 0.9s;
-                }
-                input:nth-child(3){
-                    opacity: 0;
-                    animation-delay: 1.1s;
-                }
-                button{
-                    animation: SmoothAppearance;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    animation-delay: 1.3s;
-                }
-            }
-        }
-        .cancell-btn{
-            animation-name: CancelAppearance;
-            animation-duration: 1.5s;
-            animation-timing-function: linear;
-            animation-delay: 0s;
-        }
-    }
-    .call_wrapper.close {
-        animation-name: close_adverAnim;
-        animation-delay: 1s;
-        .back-call{
-            h3{
-                opacity: 1;
-                animation: close_SmoothAppearance;
-                animation-duration: .5s;
-                animation-fill-mode: forwards;
-                animation-delay: .8s;
-            }
-            form{
-                input{
-                    opacity: 1;
-                    animation: close_SmoothAppearance;
-                    animation-duration: .5s;
-                    animation-fill-mode: forwards;
-                }
-                input:first-child{
-                    animation-delay: .6s;
-                }
-                input:nth-child(2){
-                    animation-delay: .4s;
-                }
-                input:nth-child(3){
-                    animation-delay: .2s;
-                }
-                button{
-                    opacity: 1;
-                    animation: close_SmoothAppearance;
-                    animation-duration: .5s;
-                    animation-fill-mode: forwards;
-                }
-            }
-        }
-        .cancell-btn{
-            animation-name: close_CancelAppearance;
-            animation-duration: 2.5s;
-            animation-timing-function: linear;
-            animation-delay: 0s;
-        }
-    }
-
-    .back-call {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2.1875rem;
-        h3 {
-            font-family: var(--text-font);
-            font-size: 1.5625rem;
-            font-weight: 500;
-            line-height: 2.1875rem;
-            letter-spacing: 0.02em;
-            text-align: left;
-            opacity: 0;
-        }
-        /* форма */
-        form{
-            display: flex;
-            flex-direction: column;
-            row-gap: 2.1875rem;
-            input{
-                max-width: 21.875rem;
-                padding-bottom: 0.9375rem;
-                border-bottom: 1px solid black;
-                font-family: var(--text-font);
-                font-size: 1.0625rem;
-                font-weight: 500;
-                line-height: 1.5rem;
-                letter-spacing: 0.02em;
-                text-align: left;
-            }
-            input::placeholder {
-                transform: translateY(1px);
-                transition: 0.5s ease;
-                font-family: var(--text-font);
-                font-size: 1.0625rem;
-                font-weight: 500;
-                line-height: 1.5rem;
-                letter-spacing: 0.02em;
-                text-align: left;
-            }
-            input:focus::placeholder {
-                opacity: 0;
-            }
-            button {
-                height: 4.25rem;
-                width: 100%;
-                background-color: #6E9C9F;
-                transition: 0.5s ease;
-                font-family: var(--text-font);
-                font-size: 1.06rem;
-                font-weight: 400;
-                line-height: 1.5rem;
-                letter-spacing: 0.02em;
-                text-align: center;
-                color: white;
-                opacity: 0;
-            }
-            button:hover {
-                background-color: #509498;
-            }
-        }
-    }
-    .cancell-btn {
-        position: absolute;
-        right: 1.96875rem;
-        top: 2rem;
-        svg{
-            width: 1.3rem;
-            height: 1.3rem;
-        }
-    }
 }
 
 .back-call{

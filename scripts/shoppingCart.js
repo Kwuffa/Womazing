@@ -1,11 +1,15 @@
 let button = document.querySelector(".add-to-cart__background_in-cart_button");
-if(!localStorage.getItem('sec_item')){
-    localStorage.setItem('sec_item', '<div class="items"></div>');
+if(!sessionStorage.getItem('sec_item')){
+    sessionStorage.setItem('sec_item', '<div class="items"></div>');
 }
-if(localStorage.getItem('sec_item') == '<div class="items"></div>'){
-    localStorage.setItem('countItems', 0);
+if(!sessionStorage.getItem('orderTotal_items')){
+    sessionStorage.setItem('orderTotal_items', '<div class="orderItems"></div>');
 }
-// console.log(localStorage.getItem('sec_item'));
+// sessionStorage.setItem('orderTotal_items', '<div class="orderItems"></div>');
+if(sessionStorage.getItem('sec_item') == '<div class="items"></div>'){
+    sessionStorage.setItem('countItems', 0);
+}
+// console.log(sessionStorage.getItem('sec_item'));
 function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
     let divAdd = `<div class="item">
                     <div class="product_wrapper">
@@ -57,8 +61,42 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
                         <p class="totalItemPrice">$${Number(price.slice(1)) * Number(count)}</p>
                     </div>
                 </div>`
-    let items = localStorage.getItem('sec_item');
+    let items = sessionStorage.getItem('sec_item');
+    let orderWrapper = sessionStorage.getItem('orderTotal_items');
     const parser = new DOMParser();
+    // orderingInf
+    const htmlOrder = parser.parseFromString(orderWrapper, 'text/html');
+    let divOrderWrap = htmlOrder.querySelector(".orderItems");
+    let newElem = document.createElement("div");
+    newElem.className = "orderItem";
+    let newName = document.createElement("span");
+    newName.innerText = `${title} - ${size}, ${color}, ${count}`;
+    let newPrice = document.createElement("span");
+    let priceText = `$${Number(price.slice(1))*Number(count)}`
+    newPrice.innerText = priceText;
+    countinue = true;
+    if(divOrderWrap.children.length > 0){
+        Array.from(divOrderWrap.children).forEach(element => {
+            if(element.children[0].innerText.includes(`${title} - ${size}, ${color}`)){
+                countinue = false;
+                split = element.children[0].innerText.split(", ");
+                newCount = Number(split[split.length-1])+Number(count);
+                split[split.length-1] = newCount;
+                element.children[0].innerText = split.join(", ");
+                // цена
+                element.children[1].innerText = `$${Number(price.slice(1))*newCount}`
+                sessionStorage.setItem("orderTotal_items", divOrderWrap.outerHTML);
+            }
+        });
+    } 
+    if(countinue){
+        newElem.append(newName);
+        newElem.append(newPrice);
+        divOrderWrap.append(newElem);
+        sessionStorage.setItem('orderTotal_items', divOrderWrap.outerHTML);
+    }
+
+    // cart
     const htmlDoc = parser.parseFromString(items, 'text/html');
     let divWrap = htmlDoc.querySelector(".items");
     const add = parser.parseFromString(divAdd, 'text/html');
@@ -76,17 +114,16 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
                 newCount.forEach(element => {
                     element.innerText = Number(element.innerText) + Number(count);
                     newPrice.innerText = `$${Number(price.slice(1)) * Number(element.innerText)}`
-                    localStorage.setItem('sec_item', divWrap.outerHTML);
+                    sessionStorage.setItem('sec_item', divWrap.outerHTML);
                 });
             }
         });
     }
     if(access){
         divWrap.appendChild(divChild);
-        localStorage.setItem('sec_item', divWrap.outerHTML);
+        sessionStorage.setItem('sec_item', divWrap.outerHTML);
     }
 }
-
 
 if(document.contains(button)){
     button.addEventListener('click', function(e){

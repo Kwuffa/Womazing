@@ -27,6 +27,245 @@
     }
 }
 
+// боковая панель Ваш заказ
+.order_information__your-order h3 {
+    font-family: var(--text-font);
+    font-size: 1.5625rem;
+    font-weight: 500;
+    line-height: 2.1875rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-bottom: 2.9375rem;
+}
+.item-inf-ordering {
+    flex-basis: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875rem;
+    .legend, .total{
+        max-width: 16rem;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .items{
+        width: 100%;
+        max-height: 18rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.875rem;
+        overflow-y: hidden;
+        &:hover{
+            overflow-y: scroll;
+        }
+        .orderItem {
+            span:first-child{
+                border-bottom: 1px solid rgb(45, 45, 45);
+                margin-right: 2rem;
+            }
+            span{
+                max-width: 11rem;
+            }
+        }
+    }
+    .total {
+        position: relative;
+    }
+    .total::before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: -0.9375rem;
+        display: block;
+        width: 19rem;
+        height: 3.5625rem;
+        z-index: -1;
+        background-color: #F1EADC;
+    }
+}
+.item-inf-ordering h4 {
+    font-family: var(--text-font);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.item-inf-ordering span {
+    font-family: var(--text-font);
+    font-size: 1.06rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+// боковая панель Оплата
+.payment h3 {
+    font-family: var(--text-font);
+    font-size: 1.5625rem;
+    font-weight: 500;
+    line-height: 2.1875rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.payment button {
+    height: 4.25rem;
+    width: 15.375rem;
+    background-color: #6E9C9F;
+    transition: 0.5s ease;
+    font-family: var(--text-font);
+    font-size: 1.06rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: white;
+}
+.payment button:hover {
+    background-color: #509498;
+}
+.payment button.inactive{
+    position: relative;
+    z-index: -1;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: gray;
+        opacity: .3;    
+    }
+}
+@media screen and (max-width: 768px) {
+    .item-inf-ordering.inactive{
+        .legend{
+            min-width: 15rem;
+        }
+    }
+}
+
+.payment input[type="checkbox"] {
+    position: relative;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    appearance: none;
+}
+.payment input[type="checkbox"] + span {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    font-size: 2rem;
+    line-height: .7em;
+    color: white;
+}
+.payment input[type="checkbox"]:checked + span {
+    color: black;
+}
+.payment input[type="checkbox"]:hover + span {
+    border: 2px solid black;
+}
+.payment input[type="checkbox"]:focus + span {
+    box-shadow: 0 0 1px 1px black;
+}
+.payment input[type="checkbox"]:checked + span {
+    border: 2px solid black;
+}
+.payment input[type="checkbox"]:disabled + span {
+    border: 2px solid grey;
+}
+.payment input[type="checkbox"]:disabled:checked + span {
+    border: 2px solid grey;
+    color: grey;
+}
+.payment label {
+    text-align: center;
+    display: flex;
+    margin-left: -0.4rem;
+    align-items: center;
+    column-gap: 0.5rem;
+    justify-content: start;
+    font-family: var(--text-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;  
+}
+/* форма */
+.order-content__form form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.1875rem;
+}
+.order-content__form input{
+    width: 21.875rem;
+    padding-bottom: 0.9375rem;
+    border-bottom: 1px solid black;
+    background-color: rgb(248, 248, 248);
+    font-family: var(--text-font);
+    font-size: 1.06rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.order-content__form textarea{
+    max-width: 21.875rem;
+    border-bottom: 1px solid black;
+    background-color: rgb(248, 248, 248);
+    font-family: var(--text-font);
+    font-size: 1.06rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.order-content__form input::placeholder {
+    transform: translateY(1px);
+    transition: 0.5s ease;
+    font-family: var(--text-font);
+    font-size: 1.06rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.order-content__form input:focus::placeholder {
+    opacity: 0;
+}
+.order-content__form textarea::placeholder {
+    transition: 0.5s ease;
+}
+.order-content__form textarea:focus::placeholder {
+    opacity: 0;
+}
+.order-content__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.875rem;
+}
+.order-content__form h3 {
+    font-family: var(--text-font);
+    font-size: 1.5625rem;
+    font-weight: 500;
+    line-height: 2.1875rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
 @media screen and (min-width: 768px){
     // page_title
     /* вторая секция */
@@ -36,239 +275,18 @@
         row-gap: 4.5625rem;
         column-gap: 19.5625rem;
     }
-    
-    /* форма */
-    .order-content__form form{
-        display: flex;
-        flex-direction: column;
-        row-gap: 2.1875rem;
-    }
-    .order-content__form input{
-        width: 21.875rem;
-        padding-bottom: 0.9375rem;
-        border-bottom: 1px solid black;
-        background-color: rgb(248, 248, 248);
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    
-    .order-content__form textarea{
-        max-width: 21.875rem;
-        border-bottom: 1px solid black;
-        background-color: rgb(248, 248, 248);
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .order-content__form input::placeholder {
-        transform: translateY(1px);
-        transition: 0.5s ease;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .order-content__form input:focus::placeholder {
-        opacity: 0;
-    }
-    .order-content__form textarea::placeholder {
-        transition: 0.5s ease;
-    }
-    .order-content__form textarea:focus::placeholder {
-        opacity: 0;
-    }
-    .order-content__form {
-        display: flex;
-        flex-direction: column;
-        row-gap: 3.875rem;
-    }
-    .order-content__form h3 {
-        font-family: var(--text-font);
-        font-size: 1.5625rem;
-        font-weight: 500;
-        line-height: 2.1875rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
     /* боковой итог */
     .order-content_information {
         display: flex;
         flex-direction: column;
         row-gap: 9.9375rem;
     }
-    .order_information__your-order h3 {
-        font-family: var(--text-font);
-        font-size: 1.5625rem;
-        font-weight: 500;
-        line-height: 2.1875rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-        margin-bottom: 2.9375rem;
-    }
-    .item-inf-ordering {
-        flex-basis: 17.75rem;
-        display: flex;
-        column-gap: 4.5625rem;
-    }
-    .item-inf-ordering h4 {
-        font-family: var(--text-font);
-        font-size: 1.25rem;
-        font-weight: 500;
-        line-height: 1.75rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .item-inf-ordering span {
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .item-ordering, .sum {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1.875rem;
-    }
-    .item-ordering h4:last-child {
-        position: relative;
-    }
-    .item-ordering h4:last-child::before {
-        content: "";
-        position: absolute;
-        left: -1.125rem;
-        top: -0.9375rem;
-        display: block;
-        width: 17.75rem;
-        height: 3.5625rem;
-        z-index: -1;
-        background-color: #F1EADC;
-    }
     /* pay */
     .payment, .payment form {
         display: flex;
         flex-direction: column;
         row-gap: 2.9375rem;
-    }
-    .payment h3 {
-        font-family: var(--text-font);
-        font-size: 1.5625rem;
-        font-weight: 500;
-        line-height: 2.1875rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .payment button {
-        height: 4.25rem;
-        width: 15.375rem;
-        background-color: #6E9C9F;
-        transition: 0.5s ease;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 400;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: white;
-        
-    }
-    .payment button:hover {
-        background-color: #509498;
-    }
-    
-    .payment input[type="checkbox"] {
-        position: relative;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;
-        clip: rect(0 0 0 0);
-        appearance: none;
-    }
-    .payment input[type="checkbox"] + span {
-        width: 1em;
-        height: 1em;
-        display: inline-block;
-        background-color: white;
-        border: 1px solid black;
-        position: relative;
-        font-size: 2rem;
-        line-height: .7em;
-        color: white;
-    }
-    .payment input[type="checkbox"]:checked + span {
-        color: black;
-    }
-    .payment input[type="checkbox"]:hover + span {
-        border: 2px solid black;
-    }
-    .payment input[type="checkbox"]:focus + span {
-        box-shadow: 0 0 1px 1px black;
-    }
-    .payment input[type="checkbox"]:checked + span {
-        border: 2px solid black;
-    }
-    .payment input[type="checkbox"]:disabled + span {
-        border: 2px solid grey;
-    }
-    .payment input[type="checkbox"]:disabled:checked + span {
-        border: 2px solid grey;
-        color: grey;
-    }
-    .payment label {
-        text-align: center;
-        display: flex;
-        margin-left: -0.4rem;
-        align-items: center;
-        column-gap: 0.5rem;
-        justify-content: start;
-        font-family: var(--text-font);
-        font-size: 1.2rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        
-    }
-    
-    /* comment */
-    .payment .comment {
-        border: 1px solid black;
-        max-width: 15.375rem;
-        padding: 0.625rem;
-        height: fit-content;
-        background-color: #F1EADC;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .payment .comment a{
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 900;
-        line-height: 1.3125rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-        color: black;
-        transition: 0.5s ease;
-    }
-    .payment .comment a:hover {
-        color: #6E9C9F;
-    }
+    }    
 }
 
 @media screen and (max-width: 768px) {
@@ -295,64 +313,10 @@
         }
     }
     /* форма */
-    .order-content__form form{
-        display: flex;
-        flex-direction: column;
-        row-gap: 2.1875rem;
-    }
-    .order-content__form input{
-        width: 21.875rem;
-        padding-bottom: 0.9375rem;
-        border-bottom: 1px solid black;
-        background-color: rgb(248, 248, 248);
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
     .order-content__form textarea{
-        max-width: 21.875rem;
-        border-bottom: 1px solid black;
-        background-color: rgb(248, 248, 248);
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .order-content__form input::placeholder {
-        transform: translateY(1px);
-        transition: 0.5s ease;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .order-content__form input:focus::placeholder {
-        opacity: 0;
-    }
-    .order-content__form textarea::placeholder {
-        transition: 0.5s ease;
-    }
-    .order-content__form textarea:focus::placeholder {
-        opacity: 0;
-    }
-    .order-content__form {
-        display: flex;
-        flex-direction: column;
-        row-gap: 3.875rem;
+        width: 21.875rem !important;
     }
     .order-content__form h3 {
-        font-family: var(--text-font);
-        font-size: 1.5625rem;
-        font-weight: 500;
-        line-height: 2.1875rem;
-        letter-spacing: 0.02em;
         text-align: center;
     }
     /* боковой итог */
@@ -364,53 +328,7 @@
         row-gap: 5rem;
     }
     .order_information__your-order h3 {
-        font-family: var(--text-font);
-        font-size: 1.5625rem;
-        font-weight: 500;
-        line-height: 2.1875rem;
-        letter-spacing: 0.02em;
         text-align: center;
-        margin-bottom: 2.9375rem;
-    }
-    .item-inf-ordering {
-        flex-basis: 17.75rem;
-        display: flex;
-        column-gap: 4.5625rem;
-    }
-    .item-inf-ordering h4 {
-        font-family: var(--text-font);
-        font-size: 1.25rem;
-        font-weight: 500;
-        line-height: 1.75rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .item-inf-ordering span {
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .item-ordering, .sum {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1.875rem;
-    }
-    .item-ordering h4:last-child {
-        position: relative;
-    }
-    .item-ordering h4:last-child::before {
-        content: "";
-        position: absolute;
-        left: -1.125rem;
-        top: -0.9375rem;
-        display: block;
-        width: 17.75rem;
-        height: 3.5625rem;
-        z-index: -1;
-        background-color: #F1EADC;
     }
     /* pay */
     .payment, .payment form {
@@ -420,134 +338,16 @@
         justify-content: center;
         row-gap: 2.9375rem;
     }
-    .payment h3 {
-        font-family: var(--text-font);
-        font-size: 1.5625rem;
-        font-weight: 500;
-        line-height: 2.1875rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .payment button {
-        height: 4.25rem;
-        width: 15.375rem;
-        background-color: #6E9C9F;
-        transition: 0.5s ease;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 400;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: white;
-        
-    }
-    .payment button:hover {
-        background-color: #509498;
-    }
-
-    .payment input[type="checkbox"] {
-        position: relative;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;
-        clip: rect(0 0 0 0);
-        appearance: none;
-    }
-    .payment input[type="checkbox"] + span {
-        width: 1em;
-        height: 1em;
-        display: inline-block;
-        background-color: white;
-        border: 1px solid black;
-        position: relative;
-        font-size: 2rem;
-        line-height: .7em;
-        color: white;
-    }
-    .payment input[type="checkbox"]:checked + span {
-        color: black;
-    }
-    .payment input[type="checkbox"]:hover + span {
-        border: 2px solid black;
-    }
-    .payment input[type="checkbox"]:focus + span {
-        box-shadow: 0 0 1px 1px black;
-    }
-    .payment input[type="checkbox"]:checked + span {
-        border: 2px solid black;
-    }
-    .payment input[type="checkbox"]:disabled + span {
-        border: 2px solid grey;
-    }
-    .payment input[type="checkbox"]:disabled:checked + span {
-        border: 2px solid grey;
-        color: grey;
-    }
-    .payment label {
-        text-align: center;
-        display: flex;
-        margin-left: -0.4rem;
-        align-items: center;
-        column-gap: 0.5rem;
-        justify-content: start;
-        font-family: var(--text-font);
-        font-size: 1.2rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-    }
-    /* comment */
-    .payment .comment {
-        border: 1px solid black;
-        max-width: 15.375rem;
-        padding: 0.625rem;
-        height: fit-content;
-        background-color: #F1EADC;
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 500;
-        line-height: 1.5rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-    }
-    .payment .comment a{
-        font-family: var(--text-font);
-        font-size: 1.06rem;
-        font-weight: 900;
-        line-height: 1.3125rem;
-        letter-spacing: 0.02em;
-        text-align: left;
-        color: black;
-        transition: 0.5s ease;
-    }
-    .payment .comment a:hover {
-        color: #6E9C9F;
-    }
 }
 
-
-
-
 html.dark{
-    .item-ordering h4:last-child::before {
-        background-color: grey;
+    .item-inf-ordering {
+        .total::before {
+            background-color: grey;
+        }
     }
     input[type="checkbox"]{
         color: black;
-        
-    }
-    .comment{
-        background-color: grey;
-        .border_link {
-            color: rgb(201, 201, 201);
-        }
-        .border_link:hover{
-            color: white;
-        }
     }
     .pushInfError, .pushInfSuccess{
         background-color: rgb(74, 74, 74);

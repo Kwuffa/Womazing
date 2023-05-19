@@ -1,11 +1,8 @@
-// let countItemsCart = document.querySelector('.countItemsCart');
 let countItemsCart = Array.from(document.querySelectorAll('.countItemsCart'));
-if(localStorage.getItem("countItems") < 0){
-    localStorage.setItem('countItems', 0);
+if(sessionStorage.getItem("countItems") < 0){
+    sessionStorage.setItem('countItems', 0);
 }
-// console.log(countItemsCart);
-// очистка локал
-// localStorage.setItem('countItems', 0);
+// sessionStorage.setItem('countItems', 0);
 
 function addNumberCart(num=0){
     let counter = 0;
@@ -15,7 +12,7 @@ function addNumberCart(num=0){
             element.innerText = Number(element.innerText) + counter;
         }
     });
-    localStorage.setItem('countItems', Number(countItemsCart[0].innerText));
+    sessionStorage.setItem('countItems', Number(countItemsCart[0].innerText));
     if(countItemsCart[0].innerText > 0){
         countItemsCart.forEach(element => {
             element.classList.add("active");
@@ -28,10 +25,11 @@ function addNumberCart(num=0){
         });
     }
 }
+
 countItemsCart.forEach(element => {
-    element.innerText = localStorage.getItem('countItems');
+    element.innerText = sessionStorage.getItem('countItems');
 });
-// countItemsCart.innerText = localStorage.getItem('countItems');
+
 if(countItemsCart[0].innerText > 0){
     countItemsCart.forEach(element => {
         element.classList.add("active");
@@ -42,15 +40,25 @@ else{
         element.classList.remove("active");
     });
 }
-// if(countItemsCart.innerText > 0){
-//     countItemsCart.classList.add("active");
-// }
-// else{
-//     countItemsCart.classList.remove("active");
-// }
 
 let addToCartBtn = document.querySelector(".add-to-cart__background_in-cart_button");
 let item = document.querySelector(".item");
+let checkIfCartPage = document.querySelector(".sec_item-cart");
+if(checkIfCartPage){
+    function checkIFCartEmpty(){
+        let items = document.querySelector('.item');
+        let emptyMessage = document.querySelector('.emptyCartMessage');
+        let couponAndTotal = document.querySelector(".couponAndTotalSection");
+        if(!items){
+            emptyMessage.classList.add("active");
+            couponAndTotal.classList.add("inactive");
+        }else{
+            emptyMessage.classList.remove("active");
+            couponAndTotal.classList.remove("inactive");
+        };
+    }
+    setTimeout(()=>checkIFCartEmpty(), 10);
+}
 if(addToCartBtn){
     addToCartBtn.addEventListener('click', function(){
         setTimeout(function(){
@@ -62,6 +70,7 @@ if(addToCartBtn){
         }, 10)
     });
 }
+
 if(item){
     itemsAll = Array.from(document.querySelectorAll(".item"));
     itemsAll.forEach(item => {
@@ -81,7 +90,24 @@ if(item){
                     let newPriceTotal = newCount * oneItemPrice;
                     e.target.closest('.item').querySelector(".totalItemPrice").innerText = `$${newPriceTotal}`;
                     allItmsPricesTotal();
-                    localStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+                    sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+                    // order 
+                    let currentElem = e.target.closest(".item").querySelector(".product").querySelector("p").innerText;
+                    let orderhtml = sessionStorage.getItem("orderTotal_items");
+                    let divElement = document.createElement('div');
+                    divElement.innerHTML = orderhtml;
+                    let wrapperItems = Array.from(divElement.querySelectorAll(".orderItem"));
+                    wrapperItems.forEach(element => {
+                        if(element.children[0].innerText.includes(currentElem)){
+                            split = element.children[0].innerText.split(", ");
+                            newCount = Number(split[split.length-1])+1;
+                            split[split.length-1] = newCount;
+                            element.children[0].innerText = split.join(", ");
+                            // цена
+                            element.children[1].innerText = `$${newPriceTotal}`;
+                            sessionStorage.setItem("orderTotal_items", divElement.querySelector(".orderItems").outerHTML);
+                        };
+                    });
             });
         });
         let minuses = Array.from(item.querySelectorAll(".minus"));
@@ -101,12 +127,42 @@ if(item){
                     let newPriceTotal = newCount * oneItemPrice;
                     e.target.closest('.item').querySelector(".totalItemPrice").innerText = `$${newPriceTotal}`;
                     allItmsPricesTotal();
-                    localStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+                    sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+                    // order 
+                    let currentElem = e.target.closest(".item").querySelector(".product").querySelector("p").innerText;
+                    let orderhtml = sessionStorage.getItem("orderTotal_items");
+                    let divElement = document.createElement('div');
+                    divElement.innerHTML = orderhtml;
+                    let wrapperItems = Array.from(divElement.querySelectorAll(".orderItem"));
+                    wrapperItems.forEach(element => {
+                        if(element.children[0].innerText.includes(currentElem)){
+                            split = element.children[0].innerText.split(", ");
+                            newCount = Number(split[split.length-1])-1;
+                            split[split.length-1] = newCount;
+                            element.children[0].innerText = split.join(", ");
+                            // цена
+                            element.children[1].innerText = `$${newPriceTotal}`;
+                            sessionStorage.setItem("orderTotal_items", divElement.querySelector(".orderItems").outerHTML);
+                        };
+                    });
                 }
             })
         });
         let removeBtn = item.querySelector('.removeCartBtn')
         removeBtn.addEventListener('click', (e)=>{
+            // order 
+            let currentElem = e.target.closest(".item").querySelector(".product").querySelector("p").innerText;
+            let orderhtml = sessionStorage.getItem("orderTotal_items");
+            let divElement = document.createElement('div');
+            divElement.innerHTML = orderhtml;
+            let wrapperItems = Array.from(divElement.querySelectorAll(".orderItem"));
+            wrapperItems.forEach(element => {
+                if(element.children[0].innerText.includes(currentElem)){
+                    element.remove();
+                    sessionStorage.setItem("orderTotal_items", divElement.querySelector(".orderItems").outerHTML);
+                };
+            });
+            // cart 
             let item = e.target.closest('.item');
             item.style.animationName = "removeItemAnim";
             item.style.animationDuration = ".5s";
@@ -114,8 +170,9 @@ if(item){
             setTimeout(()=>{
                 item.remove();
                 allItmsPricesTotal();
-            localStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
+                sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
             }, 500);
+            setTimeout(()=>checkIFCartEmpty(), 500);
         });
     });
     function allItmsPricesTotal(){
@@ -128,6 +185,7 @@ if(item){
         });
         subTotalPriceBlock.innerText = `$${totalPrice}`;
         totalPriceBlock.innerText = `$${totalPrice}`;
+        sessionStorage.setItem("totalPrice", `$${totalPrice}`);
     }
     allItmsPricesTotal();
 }

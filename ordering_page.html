@@ -154,7 +154,7 @@
                         <div class="order_information__your-order">
                             <h3>Ваш заказ</h3>
                             <div class="item-inf-ordering">
-                                <div class="item-ordering">
+                                <!-- <div class="item-ordering">
                                     <h4>Товар</h4>
                                     <span>Футболка USA</span>
                                     <span>Подытог</span>
@@ -165,7 +165,15 @@
                                     <span>$129</span>
                                     <span>$129</span>
                                     <h4>$129</h4>
+                                </div> -->
+                                <div class="legend"><h4>Товар</h4><h4>Всего</h4></div>
+                                <div class="items">
+                                    <!-- <div class="itemOrder">
+                                        <span>Футболка USA - L, розовый, 1</span>
+                                        <span>$129</span>
+                                    </div> -->
                                 </div>
+                                <div class="total"><h4>Итого</h4><h4 class="totalField">$129</h4></div>
                             </div>
                         </div>
                         <div class="payment">
@@ -175,9 +183,6 @@
                                 <button class="submitButton orderForm" type="submit">Разместить заказ</button>
                                 <div class="pushInfSuccess orderForm">Заказ успешно размещен</div>
                                 <div class="pushInfError orderForm">Вы где-то ошиблись</div>
-                                <div class="comment">
-                                    <p>Пока кнопка не работает, нажмите <a class="border_link" href="success_page.html">Сюда</a> чтобы сделать имитацию успешного оформления заказа</p>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -339,5 +344,35 @@
     <script src="scripts/scroll_header.js"></script>
     <script src="scripts/countItemsInCart.js"></script>
     <script src="scripts/menuHide.js"></script>
+    <script>
+        let orderToInsert = document.querySelector(".items");
+        let totalPriceBlock = document.querySelector(".totalField");
+        let totalPrice = 0;
+        if(sessionStorage.getItem("orderTotal_items") && sessionStorage.getItem("orderTotal_items") != '<div class="orderItems"></div>'){
+            let htmlParseDiv = document.createElement("div");
+            htmlParseDiv.innerHTML = sessionStorage.getItem("orderTotal_items");
+            let allItems = Array.from(htmlParseDiv.querySelectorAll(".orderItem"));
+            allItems.forEach(element => {
+                orderToInsert.append(element);
+                totalPrice += Number(element.children[1].innerText.slice(1));
+            });
+        }
+        totalPriceBlock.innerText = `$${totalPrice}`;
+
+        setTimeout(()=>{
+            let htmlParseDiv = document.createElement("div");
+            htmlParseDiv.innerHTML = sessionStorage.getItem("orderTotal_items");
+            let allItems = htmlParseDiv.querySelector(".orderItem");
+            let btnToInactivate = document.querySelector(".submitButton.orderForm");
+            let itemBlock = document.querySelector(".item-inf-ordering");
+            if(!allItems){
+                btnToInactivate.classList.add("inactive");
+                itemBlock.classList.add("inactive");
+            } else{
+                btnToInactivate.classList.remove("inactive");
+                itemBlock.classList.remove("inactive");
+            }
+        }, 100);
+    </script>
 </body>
 </html>

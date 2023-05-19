@@ -387,8 +387,10 @@
     .telephone svg:last-child {
         display: none;
     }
-    .side_head p {
-        display: none;
+    .header_scroll{
+        .side_head p {
+            display: none;
+        }
     }
     @media screen and (max-height: 480px) {
         .side_head p {

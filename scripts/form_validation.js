@@ -88,7 +88,7 @@ buttons.forEach(button => {
                             setTimeout(() => {
                                 input.value = "";
                             }, 100 * index);
-                        }
+                        };
                     });
                     setTimeout(() => {
                         if(event.target.classList[1] == "orderCall"){
@@ -96,6 +96,14 @@ buttons.forEach(button => {
                             cancel_Func(callbackground, call_block, body);
                         };
                     }, 1500);
+                    if(event.target.classList[1] == "orderForm"){
+                        setTimeout(()=>{
+                            sessionStorage.setItem('countItems', 0);
+                            sessionStorage.setItem('sec_item', '<div class="items"></div>');
+                            sessionStorage.setItem('orderTotal_items', '<div class="orderItems"></div>');
+                            document.location = "success_page.html";
+                        }, 2000);
+                    };
                 };
             }, 10);
         });
