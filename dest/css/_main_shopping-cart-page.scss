@@ -272,6 +272,14 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .coupon button:nth-child(3) {
+        margin: auto !important;
+    }
+    .subtotal {
+        margin: auto !important;
+    }
+}
 @media screen and (max-width: 768px) {
     // page_title
     /* вторая секция */

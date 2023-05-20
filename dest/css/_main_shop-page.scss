@@ -94,6 +94,12 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .goods-tape__show-items {
+        align-self: center;
+        text-align: center;
+    }   
+}
 @media screen and (max-width: 768px) {
     // page_title
     /* вторая секция */

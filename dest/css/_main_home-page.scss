@@ -478,6 +478,37 @@
     }
     
 }
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .images_block {
+        position: relative;
+        width: 28.75rem;
+        margin-left: -3rem;
+    }
+    .bg_for_images-block {
+        display: flex;
+        top: 33rem !important;
+    }
+    .images_block::after {
+        display: none;
+    }
+    .background_for_images_block {
+        display: none;
+    }
+    .images_block::after {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 51.625rem;
+        background: none !important;
+    }
+    .important_for_us {
+        row-gap: 2rem !important;
+    }
+    .product {
+        margin-bottom: 0px !important;
+    }
+}
 @media screen and (max-width: 768px) {
     .conaiter_top {
         display: flex;

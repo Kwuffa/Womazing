@@ -70,6 +70,26 @@
     }
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    .brend-description__container {
+        row-gap: 2rem !important;
+    }
+    .brend-description__container > section{
+        row-gap: 2rem !important; 
+        .brend-description__text {
+            flex-basis: 0px !important;
+        }
+    }
+    .brend-description__container > section:nth-child(2){
+        .brend-description__img{
+            order: -1 !important;
+        }
+    }
+    .brend-description__container > section{
+        padding: 0px;
+    }
+}
 @media screen and (max-width: 768px) {
     // page_title
     /* вторая секция */

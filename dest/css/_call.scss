@@ -167,6 +167,27 @@
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    .errorSpan {
+        max-width: 22em;
+        margin-top: -2em;
+        margin-bottom: -1em;
+        font-size: 1em;
+    }
+    // сообщения об успехе или ошибки при валидации
+    .pushInfSuccess {
+        height: 2em;
+        margin-top: -2em;
+        width: 15.375em;
+        font-size: 1.06em;
+        line-height: 1.5em;
+    }
+    .pushInfError {
+        height: 2em;
+        margin-top: -2em;
+        width: 15.375em;
+        font-size: 1.06em;
+        line-height: 1.5em;
+    }
 }
 .background-for-call {
     width: 100%;
@@ -192,11 +213,12 @@
     animation-delay: 1s;
 }
 .call_wrapper {
+    font-size: 1rem;
     position: relative;
     min-height: fit-content;
     background-color: white;
     z-index: 99999;
-    padding: 5rem;
+    padding: 5em;
 
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -289,12 +311,12 @@
 .back-call {
     display: flex;
     flex-direction: column;
-    row-gap: 2.1875rem;
+    row-gap: 2.1875em;
     h3 {
         font-family: var(--text-font);
-        font-size: 1.5625rem;
+        font-size: 1.5625em;
         font-weight: 500;
-        line-height: 2.1875rem;
+        line-height: 2.1875em;
         letter-spacing: 0.02em;
         text-align: left;
         opacity: 0;
@@ -303,15 +325,15 @@
     form{
         display: flex;
         flex-direction: column;
-        row-gap: 2.1875rem;
+        row-gap: 2.1875em;
         input{
-            max-width: 21.875rem;
-            padding-bottom: 0.9375rem;
+            max-width: 21.875em;
+            padding-bottom: 0.9375em;
             border-bottom: 1px solid black;
             font-family: var(--text-font);
-            font-size: 1.0625rem;
+            font-size: 1.0625em;
             font-weight: 500;
-            line-height: 1.5rem;
+            line-height: 1.5em;
             letter-spacing: 0.02em;
             text-align: left;
         }
@@ -319,9 +341,9 @@
             transform: translateY(1px);
             transition: 0.5s ease;
             font-family: var(--text-font);
-            font-size: 1.0625rem;
+            font-size: 1.0625em;
             font-weight: 500;
-            line-height: 1.5rem;
+            line-height: 1.5em;
             letter-spacing: 0.02em;
             text-align: left;
         }
@@ -329,14 +351,14 @@
             opacity: 0;
         }
         button {
-            height: 4.25rem;
+            height: 4.25em;
             width: 100%;
             background-color: #6E9C9F;
             transition: 0.5s ease;
             font-family: var(--text-font);
-            font-size: 1.06rem;
+            font-size: 1.06em;
             font-weight: 400;
-            line-height: 1.5rem;
+            line-height: 1.5em;
             letter-spacing: 0.02em;
             text-align: center;
             color: white;
@@ -349,27 +371,63 @@
 }
 .cancell-btn {
     position: absolute;
-    right: 1.96875rem;
-    top: 2rem;
+    right: 1.96875em;
+    top: 2em;
     svg{
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.2em;
+        height: 1.2em;
     }
 }
+
 @media screen and (max-width: 768px) {
     .call_wrapper {
-        padding: 4.375rem;
+        padding: 4.375em;
+    }
+    @media screen and (max-width: 500px){
+        .call_wrapper {
+            font-size: .8rem;
+        }
+    }
+    @media screen and (max-height: 600px){
+        .call_wrapper {
+            font-size: .8rem;
+        }
+    }
+    @media screen and (max-width: 360px) and (max-height: 480px) {
+        .call_wrapper {
+            font-size: .7rem;
+        }
     }
     @media screen and (max-width: 600px) and (min-height: 480px){
             .call_wrapper {
-                width: 28rem; 
+                width: 28em; 
             }
         }
-        @media screen and (max-width: 500px) and (min-height: 480px) {
-            .call_wrapper {
-                width: 25rem; 
-            }
+    @media screen and (max-width: 500px) and (min-height: 480px) {
+        .call_wrapper {
+            width: 25em; 
         }
+    }
+    @media screen and (max-height: 350px){
+        .call_wrapper {
+            font-size: .7rem;
+        }
+    }
+    @media screen and (max-height: 310px){
+        .call_wrapper {
+            font-size: .6rem;
+        }
+    }
+    @media screen and (max-height: 270px){
+        .call_wrapper {
+            font-size: .5rem;
+        }
+    }
+    @media screen and (max-height: 230px){
+        .call_wrapper {
+            font-size: .4rem;
+        }
+    }
 }
 
 .back-call{
@@ -378,7 +436,6 @@
     }
     .pushInfError {
         width: 100%;
-        // margin-top: 0.1rem;
     }
 }
 html.dark {
