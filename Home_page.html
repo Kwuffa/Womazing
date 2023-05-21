@@ -401,10 +401,30 @@
                         <section>
                             <h2>Команда мечты Womazing</h2>
                             <div class="dream_team">
-                                <img src="images/img_home-page/team_section/team.jpg" alt="Команда Womazing">
-                                <svg width="1.8125rem" height="1rem" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.34742e-08 8L28 8M28 8L20.8108 15M28 8L20.8108 1" stroke="black"/>
-                                </svg>
+                                <div class="previous">
+                                    <button class="gallery_prevBtn">
+                                        <svg width="1.8125rem" height="1rem" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29 8L0.999999 8M0.999999 8L8.18919 0.999999M0.999999 8L8.18919 15" stroke="black"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="dream_team__wrapper">
+                                    <img data-gallery="1" class="gallery_image active" src="images/img_home-page/team_section/team.jpg" alt="Команда Womazing">
+                                    <img data-gallery="2" class="gallery_image" src="images/img_home-page/team_section/team2.webp" alt="Команда Womazing">
+                                    <img data-gallery="3" class="gallery_image" src="images/img_home-page/team_section/team3.webp" alt="Команда Womazing">
+                                    <div class="galleryButtonBlock">
+                                        <button class="galleryButton active" data-gallery="1"></button>
+                                        <button class="galleryButton" data-gallery="2"></button>
+                                        <button class="galleryButton" data-gallery="3"></button>
+                                    </div>
+                                </div>
+                                <div class="next">
+                                    <button class="gallery_nextBtn">
+                                        <svg width="1.8125rem" height="1rem" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.34742e-08 8L28 8M28 8L20.8108 15M28 8L20.8108 1" stroke="black"/>
+                                        </svg>
+                                    </button>
+                                </div>
                                 <div class="team_review">
                                     <h3>Для каждой</h3>
                                     <div class="team_text">
@@ -584,5 +604,6 @@
     <script src="scripts/countItemsInCart.js"></script>
     <script src="scripts/menuHide.js"></script>
     <script src="scripts/carousel.js"></script>
+    <script src="scripts/gallery.js"></script>
 </body>
 </html>

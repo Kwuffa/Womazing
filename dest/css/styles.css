@@ -114,6 +114,26 @@ a {
     font-size: 18px;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 2400px) {
+  html {
+    font-size: 27px !important;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 2220px) {
+  html {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 2220px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  html {
+    font-size: 19px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1620px) {
   html {
     font-size: 16px;
@@ -136,7 +156,7 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 830px) {
   html {
-    font-size: 9px;
+    font-size: 9.4px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1177,12 +1197,12 @@ input, textarea {
     font-size: 0.6rem;
   }
 }
-@media screen and (max-width: 768px) and (max-height: 270px) {
+@media screen and (max-width: 768px) and (max-height: 250px) {
   .call_wrapper {
     font-size: 0.5rem;
   }
 }
-@media screen and (max-width: 768px) and (max-height: 230px) {
+@media screen and (max-width: 768px) and (max-height: 220px) {
   .call_wrapper {
     font-size: 0.4rem;
   }
@@ -2004,15 +2024,6 @@ html.dark .telephone_wrapper::before {
   /* 3-я секция */
   /* 4-я секция */
 }
-@media screen and (min-width: 768px) and (min-width: 1921px) {
-  .background_for_images_block {
-    display: none;
-  }
-  .images_block::after {
-    width: 200%;
-    height: 49.94rem;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1320px) {
   .background_for_images_block {
     position: absolute;
@@ -2541,12 +2552,67 @@ html.dark .telephone_wrapper::before {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     row-gap: 1.25rem;
+    position: relative;
   }
 }
 @media screen and (min-width: 768px) {
-  .dream_team img {
+  .previous {
+    position: absolute;
+    top: 0;
+    left: -5rem;
+    top: 48%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery_nextBtn, .gallery_prevBtn {
+    background: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dream_team__wrapper {
     width: 45.5625rem;
     height: 30.4375rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dream_team__wrapper .gallery_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .dream_team__wrapper .gallery_image.active {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .galleryButtonBlock {
+    max-width: 19.6875rem;
+    position: absolute;
+    bottom: 2rem;
+  }
+  .galleryButtonBlock .galleryButton {
+    width: 1.875rem;
+    height: 0.25rem;
+    background-color: #D1D1D1;
+    z-index: -1;
+  }
+  .galleryButtonBlock .galleryButton.active {
+    background-color: black;
+    z-index: 100;
   }
 }
 @media screen and (min-width: 768px) {
@@ -3262,14 +3328,61 @@ html.dark .telephone_wrapper::before {
         -ms-flex-pack: center;
             justify-content: center;
     row-gap: 1.25rem;
+    position: relative;
   }
 }
 @media screen and (max-width: 768px) {
-  .dream_team img {
-    /* width: 45.5625rem; */
+  .previous, .next {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dream_team__wrapper {
+    position: relative;
     width: 100%;
-    height: 66%;
-    /* height: 30.4375rem; */
+    padding-bottom: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dream_team__wrapper .gallery_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .dream_team__wrapper .gallery_image.active {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .galleryButtonBlock {
+    max-width: 19.6875rem;
+    position: absolute;
+    bottom: 2rem;
+  }
+  .galleryButtonBlock .galleryButton {
+    width: 1.875rem;
+    height: 0.25rem;
+    background-color: #D1D1D1;
+    z-index: -1;
+  }
+  .galleryButtonBlock .galleryButton.active {
+    background-color: black;
+    z-index: 100;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3334,6 +3447,9 @@ html.dark .offer_arrow :hover {
   background-color: rgb(15, 15, 14);
 }
 html.dark .carouselButton.active {
+  background-color: gray;
+}
+html.dark .galleryButton.active {
   background-color: gray;
 }
 html.dark .background_open_store_button a:nth-child(2) {
