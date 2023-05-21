@@ -1187,24 +1187,34 @@ input, textarea {
     width: 25em;
   }
 }
-@media screen and (max-width: 768px) and (max-height: 350px) {
+@media screen and (max-width: 768px) and (max-height: 310px) {
   .call_wrapper {
     font-size: 0.7rem;
   }
 }
-@media screen and (max-width: 768px) and (max-height: 310px) {
+@media screen and (max-width: 768px) and (max-height: 285px) {
+  .call_wrapper {
+    font-size: 0.65rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-height: 270px) {
   .call_wrapper {
     font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 768px) and (max-height: 250px) {
   .call_wrapper {
-    font-size: 0.5rem;
+    font-size: 0.57rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-height: 235px) {
+  .call_wrapper {
+    font-size: 0.55rem;
   }
 }
 @media screen and (max-width: 768px) and (max-height: 220px) {
   .call_wrapper {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
   }
 }
 .back-call .pushInfSuccess {

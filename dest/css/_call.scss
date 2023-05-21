@@ -408,24 +408,34 @@
             width: 25em; 
         }
     }
-    @media screen and (max-height: 350px){
+    @media screen and (max-height: 310px){
         .call_wrapper {
             font-size: .7rem;
         }
     }
-    @media screen and (max-height: 310px){
+    @media screen and (max-height: 285px){
+        .call_wrapper {
+            font-size: .65rem;
+        }
+    }
+    @media screen and (max-height: 270px){
         .call_wrapper {
             font-size: .6rem;
         }
     }
     @media screen and (max-height: 250px){
         .call_wrapper {
-            font-size: .5rem;
+            font-size: .57rem;
+        }
+    }
+    @media screen and (max-height: 235px){
+        .call_wrapper {
+            font-size: .55rem;
         }
     }
     @media screen and (max-height: 220px){
         .call_wrapper {
-            font-size: .4rem;
+            font-size: .5rem;
         }
     }
 }
