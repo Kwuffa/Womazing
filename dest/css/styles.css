@@ -1708,14 +1708,15 @@ html.dark .call_wrapper button:hover {
     cursor: pointer;
   }
   .menu-hide-button .menu-hide {
+    font-size: 1rem;
     position: absolute;
     background-color: #F1EADC;
     border: 1px solid #ded4c1;
     -webkit-box-shadow: 0 0 2px 1px #ded4c1;
             box-shadow: 0 0 2px 1px #ded4c1;
-    padding: 1rem;
-    width: 15rem;
-    top: 3.5rem;
+    padding: 1em;
+    width: 15em;
+    top: 3.5em;
     left: 0;
     display: none;
     -webkit-box-align: center;
@@ -1727,12 +1728,59 @@ html.dark .call_wrapper button:hover {
     -webkit-animation: menuAppearAnimation 0.5s linear;
             animation: menuAppearAnimation 0.5s linear;
   }
-  .menu-hide-button .menu-hide li a, .menu-hide div a {
-    font-size: 1.5rem;
+  /* заказ звонка */
+}
+@media screen and (max-width: 768px) and (max-height: 360px) {
+  .menu-hide-button .menu-hide {
+    font-size: 0.8rem;
   }
+}
+@media screen and (max-width: 768px) and (max-height: 290px) {
+  .menu-hide-button .menu-hide {
+    font-size: 0.7rem;
+  }
+  .menu-hide ul {
+    gap: 0.7em !important;
+  }
+  .products_hiden {
+    row-gap: 0.7em !important;
+  }
+}
+@media screen and (max-width: 768px) and (max-height: 230px) {
+  .products_hiden {
+    display: none !important;
+  }
+  .menu-hide-button .menu-hide {
+    font-size: 0.9rem;
+  }
+  .menu-hide ul {
+    gap: 0.7em !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-hide-button .menu-hide li a, .menu-hide div a {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
   .menu-hide:hover {
     cursor: default;
   }
+}
+@media screen and (max-width: 768px) {
   .menu-hide ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1744,11 +1792,13 @@ html.dark .call_wrapper button:hover {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 1rem;
+    gap: 1em;
   }
+}
+@media screen and (max-width: 768px) {
   .menu_links a {
     font-family: "Raleway", sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     font-weight: 400;
     line-height: 1.3em;
     letter-spacing: 0.02em;
@@ -1759,16 +1809,20 @@ html.dark .call_wrapper button:hover {
     transition: 0.5s ease;
     position: relative;
   }
+}
+@media screen and (max-width: 768px) {
   .menu-hide-button .menu_links a::before {
     content: "•";
-    font-size: 2.5rem;
+    font-size: 2.5em;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: -0.9rem;
+    left: -0.9em;
   }
+}
+@media screen and (max-width: 768px) {
   .products_hiden {
-    margin-left: 3rem;
+    margin-left: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1779,12 +1833,15 @@ html.dark .call_wrapper button:hover {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    row-gap: 2rem;
+    row-gap: 1.5em;
   }
+}
+@media screen and (max-width: 768px) {
   .products_hiden div a {
     color: #646464;
   }
-  /* заказ звонка */
+}
+@media screen and (max-width: 768px) {
   .side_head {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1793,6 +1850,8 @@ html.dark .call_wrapper button:hover {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+@media screen and (max-width: 768px) {
   .telephone_wrapper {
     width: 1.6875rem;
     height: 1.6875rem;
@@ -1810,6 +1869,8 @@ html.dark .call_wrapper button:hover {
     transition: 0.5s ease;
     position: relative;
   }
+}
+@media screen and (max-width: 768px) {
   .telephone_wrapper::before {
     content: "";
     display: inline-block;
@@ -1824,6 +1885,8 @@ html.dark .call_wrapper button:hover {
     -o-transition: 0.5s ease;
     transition: 0.5s ease;
   }
+}
+@media screen and (max-width: 768px) {
   .telephone_wrapper:hover {
     cursor: pointer;
   }
@@ -1836,6 +1899,8 @@ html.dark .call_wrapper button:hover {
   .telephone_wrapper:hover .telephone svg:last-child {
     display: block;
   }
+}
+@media screen and (max-width: 768px) {
   .telephone a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1847,15 +1912,21 @@ html.dark .call_wrapper button:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+@media screen and (max-width: 768px) {
   .telephone svg {
     position: relative;
     left: 0.1rem;
     width: 1rem;
     height: 1rem;
   }
+}
+@media screen and (max-width: 768px) {
   .telephone svg:last-child {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
   .header_scroll .side_head p {
     margin-left: 1.25em;
     display: block;
@@ -5142,16 +5213,23 @@ html.dark #background_open_store_button:hover {
             justify-content: center;
     height: 1.5rem;
   }
+  .add-to-cart .click-count button:last-child {
+    font-size: 1.6rem;
+    height: 1rem;
+  }
   .add-to-cart .click-count button:hover {
     color: #509498;
   }
-  .add-to-cart .click-count span {
-    font-size: 1.4rem;
+  .add-to-cart .click-count input {
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.3125rem;
+    line-height: 1.3rem;
     letter-spacing: 0.02em;
     text-align: left;
     color: #9C9C9C;
+    max-width: 100%;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
   }
   /* 3 секция */
   .main-item {
@@ -5347,7 +5425,6 @@ html.dark #background_open_store_button:hover {
             box-shadow: 0 0 1px 1px black;
   }
   /* цвет */
-  /* цвет */
   .color_buttons label {
     display: inline-block;
     margin-right: 0.6rem;
@@ -5491,16 +5568,24 @@ html.dark #background_open_store_button:hover {
             justify-content: center;
     height: 1.5rem;
   }
+  .add-to-cart .click-count button:last-child {
+    font-size: 1.6rem;
+    height: 1rem;
+    margin-bottom: 0.2rem;
+  }
   .add-to-cart .click-count button:hover {
     color: #509498;
   }
-  .add-to-cart .click-count span {
-    font-size: 1.4rem;
+  .add-to-cart .click-count input {
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.3125rem;
+    line-height: 1.3rem;
     letter-spacing: 0.02em;
     text-align: left;
     color: #9C9C9C;
+    max-width: 100%;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
   }
   /* 3 секция */
   .main-item {
@@ -5765,20 +5850,26 @@ html.dark .color_buttons input[type=radio]:checked + span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 1.5rem;
+    height: 1.3rem;
+  }
+  .count_item .click-count button:last-child {
+    font-size: 1.6rem;
+    height: 0.8rem;
+    padding-bottom: 0.3rem;
   }
   .count_item .click-count button:hover {
     color: #509498;
   }
-  .count_item .click-count span {
-    z-index: 999;
-    font-size: 1.4rem;
+  .count_item .click-count input {
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 0.625rem;
+    line-height: 1.1rem;
     letter-spacing: 0.02em;
     text-align: left;
     color: #9C9C9C;
-    margin-top: 0.2rem;
+    max-width: 100%;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
   }
   .total_item {
     -ms-flex-item-align: self-start;
@@ -6217,20 +6308,26 @@ html.dark .color_buttons input[type=radio]:checked + span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 1.5rem;
+    height: 1.3rem;
+  }
+  .count_item .click-count button:last-child {
+    font-size: 1.6rem;
+    height: 0.8rem;
+    padding-bottom: 0.3rem;
   }
   .count_item .click-count button:hover {
     color: #509498;
   }
-  .count_item .click-count span {
-    z-index: 999;
-    font-size: 1.4rem;
+  .count_item .click-count input {
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 0.625rem;
+    line-height: 1.1rem;
     letter-spacing: 0.02em;
     text-align: left;
     color: #9C9C9C;
-    margin-top: 0.2rem;
+    max-width: 100%;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
   }
   .total_item {
     -ms-flex-item-align: self-start;
@@ -6441,10 +6538,14 @@ html.dark .color_buttons input[type=radio]:checked + span {
             justify-content: space-between;
   }
   .total_item .click-count button {
+    background: none;
+    font-weight: 1000;
+    color: #6E9C9F;
     width: 2.875rem;
     font-size: 2rem;
-    color: #6E9C9F;
-    font-weight: 900;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6454,17 +6555,24 @@ html.dark .color_buttons input[type=radio]:checked + span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: none;
+    height: 1.5rem;
   }
-  .total_item .click-count span {
-    z-index: 999;
+  .total_item .click-count button:last-child {
+    height: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  .total_item .click-count input {
     font-size: 1.7rem;
+    z-index: 999;
+    margin-top: 0.6rem;
     font-weight: 500;
     line-height: 0.625rem;
     letter-spacing: 0.02em;
     text-align: left;
     color: #9C9C9C;
-    margin-top: 0.6rem;
+    max-width: 100%;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
   }
   .count_item {
     display: none;

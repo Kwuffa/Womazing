@@ -287,21 +287,53 @@
         cursor: pointer;
     }
     .menu-hide-button .menu-hide {
+        font-size: 1rem;
         position: absolute;
         background-color: #F1EADC;
         border: 1px solid #ded4c1;
         box-shadow: 0 0 2px 1px #ded4c1;
-        padding: 1rem;
-        width: 15rem;
-        top: 3.5rem;
+        padding: 1em;
+        width: 15em;
+        top: 3.5em;
         left: 0;
         display: none;
         align-items: center;
         justify-content: center;
         animation: menuAppearAnimation .5s linear;
     }
+    @media screen and (max-height: 360px){
+        .menu-hide-button .menu-hide {
+            font-size: .8rem;
+        }
+    }
+    @media screen and (max-height: 290px){
+        .menu-hide-button .menu-hide {
+            font-size: .7rem;
+        }
+        .menu-hide ul {
+            gap: .7em !important;
+        }
+        .products_hiden {
+            row-gap: .7em !important;
+        }
+    }
+    @media screen and (max-height: 230px){
+        .products_hiden {
+            display: none !important;
+        }
+        .menu-hide-button .menu-hide {
+            font-size: .9rem;
+        }
+        .menu-hide ul {
+            gap: .7em !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+    }
     .menu-hide-button .menu-hide li a, .menu-hide div a {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
     .menu-hide:hover {
         cursor: default;
@@ -310,11 +342,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 1em;
     }
     .menu_links a{
         font-family: 'Raleway', sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.9em;
         font-weight: 400;
         line-height: 1.3em;
         letter-spacing: 0.02em;
@@ -325,18 +357,18 @@
     }
     .menu-hide-button .menu_links a::before {
         content: "\2022";
-        font-size: 2.5rem;
+        font-size: 2.5em;
         display: inline-block;
         position: absolute;
         top: 0;
-        left: -0.9rem;
+        left: -0.9em;
     }
     .products_hiden {
-        margin-left: 3rem;
+        margin-left: 3em;
         display: flex;
         flex-direction: column;
         align-items: start;
-        row-gap: 2rem;
+        row-gap: 1.5em;
     }
     .products_hiden div a {
         color: #646464;

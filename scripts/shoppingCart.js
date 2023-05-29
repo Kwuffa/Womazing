@@ -44,14 +44,14 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
                         </div>
                         <div class="click-count">
                             <button class="plus">+</button>
-                            <span class="count">${count}</span>
+                            <input type="text" class="count" name="count" value="${count}">
                             <button class="minus">-</button>
                         </div>
                     </div>
                     <div class="total_item">
                         <div class="click-count">
                             <button class="plus">+</button>
-                            <span class="count">${count}</span>
+                            <input type="text" class="count" name="count" value="${count}">
                             <button class="minus">-</button>
                         </div>
                         <div class="item-legend">
@@ -104,18 +104,30 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
     let access = true;
     if(divWrap.children.length > 0){
         let wrapper = Array.prototype.slice.call(divWrap.children, 0, divWrap.children.length);
-        wrapper.forEach(element => {
-            let children = element.querySelector(".product").children;
-            let newPrice = element.querySelector(".totalItemPrice");
+        wrapper.forEach(elementWrap => {
+            let children = elementWrap.querySelector(".product").children;
+            let newPrice = elementWrap.querySelector(".totalItemPrice");
             let lastChildren = children[children.length - 1];
             if(lastChildren.innerText == `${title} - ${size}, ${color}`){
                 access = false;
-                let newCount = Array.from(element.querySelectorAll(".count"));
+                let newCount = Array.from(elementWrap.querySelectorAll(".count"));
                 newCount.forEach(element => {
-                    element.innerText = Number(element.innerText) + Number(count);
-                    newPrice.innerText = `$${Number(price.slice(1)) * Number(element.innerText)}`
-                    sessionStorage.setItem('sec_item', divWrap.outerHTML);
+                    element.parentNode.className = "countTORemake";
+                    let currentValue = Number(element.value) + Number(count);        
+                    newPrice.innerText = `$${Number(price.slice(1)) * Number(currentValue)}`;
                 });
+                Array.from(divWrap.querySelectorAll(".countTORemake")).forEach(inputWrap => {
+                    let input = inputWrap.querySelector("input");
+                    let inputValue = Number(input.value);
+                    let plus = input.parentNode.querySelector(".plus");
+                    input.remove();
+                    let wrapDiv = document.createElement("div");
+                    wrapDiv.innerHTML = `<input type="text" class="count" name="count" value="${inputValue + Number(count)}">`;
+                    let insertInput = wrapDiv.children[0];
+                    plus.after(insertInput);
+                    inputWrap.className = "click-count";
+                });
+                sessionStorage.setItem('sec_item', divWrap.outerHTML);
             }
         });
     }
@@ -158,7 +170,7 @@ if(document.contains(button)){
             let size = selectedSize;
             let color = selectedColor;
             let price = document.querySelector(".price").children[0].innerText;
-            let count = document.querySelector('.count').innerText;
+            let count = document.querySelector('.count').value;
             makeRequestAndUpdateElement(imgSrc, title, size, color, price, count);
         } else {
             if (!selectedSize){
@@ -176,10 +188,6 @@ if(document.contains(button)){
         }
     });
 }
-
-
-
-
 
 // fetch('http://127.0.0.1:5500/shopping-cart.html')
     // .then(response => response.text())

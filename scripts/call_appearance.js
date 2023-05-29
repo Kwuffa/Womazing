@@ -41,4 +41,15 @@ export function cancel_Func(callbackground, call_block, body) {
 closeBtn.addEventListener('click', function() {
     cancel_Func(callbackground, call_block, body);
 });
-btn.onclick = topFunc;
+// btn.onclick = topFunc;
+document.addEventListener('click', (e)=>{
+    if(callbackground.classList.contains("active")){
+        let event = e.target;
+        if (!call_block.contains(event) && !btn.contains(event)) {
+            cancel_Func(callbackground, call_block, body);
+        };
+    };
+});
+btn.addEventListener('click', ()=>{
+    topFunc();
+});

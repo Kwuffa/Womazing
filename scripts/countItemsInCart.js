@@ -64,7 +64,8 @@ if(addToCartBtn){
         setTimeout(function(){
             let errorSpanItem = document.querySelector(".errorSpanItem");
             if(!document.contains(errorSpanItem)){
-                const countCurrentItem = Number(addToCartBtn.parentNode.querySelector('.count').innerText);
+                const countCurrentItem = Number(addToCartBtn.parentNode.querySelector('.count').value);
+                console.log(countCurrentItem);
                 addNumberCart(countCurrentItem);
             }
         }, 10)
@@ -79,13 +80,23 @@ if(item){
             element.addEventListener('click', function(e){
                     if(e.target.parentNode.parentNode.className == 'count_item'){
                         let secondCounter = e.target.closest('.item').querySelector(".total_item").querySelector(".count");
-                        secondCounter.innerText = Number(secondCounter.innerText) + 1;
+                        secondCounter.value = Number(secondCounter.value) + 1;
+                        let wrapDiv = document.createElement("div");
+                        wrapDiv.innerHTML = `<input type="text" class="count" name="count" value=${secondCounter.value}>`;
+                        let insertDiv = wrapDiv.children[0];
+                        secondCounter.after(insertDiv);
+                        secondCounter.remove();
                     } else{
                         let secondCounter = e.target.closest('.item').querySelector(".count_item").querySelector(".count");
-                        secondCounter.innerText = Number(secondCounter.innerText) + 1;
+                        secondCounter.value = Number(secondCounter.value) + 1;
+                        let wrapDiv = document.createElement("div");
+                        wrapDiv.innerHTML = `<input type="text" class="count" name="count" value=${secondCounter.value}>`;
+                        let insertDiv = wrapDiv.children[0];
+                        secondCounter.after(insertDiv);
+                        secondCounter.remove();
                     }
                     addNumberCart(1);
-                    let newCount = Number(e.target.parentNode.querySelector(".count").innerText)+1;
+                    let newCount = Number(e.target.parentNode.querySelector(".count").value)+1;
                     let oneItemPrice = e.target.closest('.item').querySelector(".oneItemPrice").innerText.slice(1);
                     let newPriceTotal = newCount * oneItemPrice;
                     e.target.closest('.item').querySelector(".totalItemPrice").innerText = `$${newPriceTotal}`;
@@ -113,16 +124,26 @@ if(item){
         let minuses = Array.from(item.querySelectorAll(".minus"));
         minuses.forEach(element => {
             element.addEventListener('click', function(e){
-                if(e.target.parentNode.querySelector('.count').innerText > 1){
+                if(e.target.parentNode.querySelector('.count').value > 1){
                     if(e.target.parentNode.parentNode.className == 'count_item'){
                         let secondCounter = e.target.closest('.item').querySelector(".total_item").querySelector(".count");
-                        secondCounter.innerText = Number(secondCounter.innerText) - 1;
+                        secondCounter.value = Number(secondCounter.value) - 1;
+                        let wrapDiv = document.createElement("div");
+                        wrapDiv.innerHTML = `<input type="text" class="count" name="count" value=${secondCounter.value}>`;
+                        let insertDiv = wrapDiv.children[0];
+                        secondCounter.after(insertDiv);
+                        secondCounter.remove();
                     } else{
                         let secondCounter = e.target.closest('.item').querySelector(".count_item").querySelector(".count");
-                        secondCounter.innerText = Number(secondCounter.innerText) - 1;
+                        secondCounter.value = Number(secondCounter.value) - 1;
+                        let wrapDiv = document.createElement("div");
+                        wrapDiv.innerHTML = `<input type="text" class="count" name="count" value=${secondCounter.value}>`;
+                        let insertDiv = wrapDiv.children[0];
+                        secondCounter.after(insertDiv);
+                        secondCounter.remove();
                     }
                     addNumberCart(-1);
-                    let newCount = Number(e.target.parentNode.querySelector(".count").innerText)-1;
+                    let newCount = Number(e.target.parentNode.querySelector(".count").value)-1;
                     let oneItemPrice = e.target.closest('.item').querySelector(".oneItemPrice").innerText.slice(1);
                     let newPriceTotal = newCount * oneItemPrice;
                     e.target.closest('.item').querySelector(".totalItemPrice").innerText = `$${newPriceTotal}`;
@@ -166,7 +187,7 @@ if(item){
             let item = e.target.closest('.item');
             item.style.animationName = "removeItemAnim";
             item.style.animationDuration = ".5s";
-            addNumberCart(-(Number(item.querySelector('.count').innerText)))
+            addNumberCart(-(Number(item.querySelector('.count').value)))
             setTimeout(()=>{
                 item.remove();
                 allItmsPricesTotal();
