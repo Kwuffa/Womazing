@@ -9,12 +9,14 @@ counterForEvent = 0;
 function validFunc(event) {
     let checkIfCartPage = document.querySelector(".item");
     function clickHandler(e) {
-        let oldValue = event.target.outerHTML.split('value="')[1].split('"')[0];
-        addNumberCartValid(-Number(oldValue));
-        if(Number(event.target.value) == 0){
-            addNumberCartValid(1);
-        } else{
-            addNumberCartValid(Number(event.target.value));
+        if(checkIfCartPage){
+            let oldValue = event.target.outerHTML.split('value="')[1].split('"')[0];
+            addNumberCartValid(-Number(oldValue));
+            if(Number(event.target.value) == 0){
+                addNumberCartValid(1);
+            } else{
+                addNumberCartValid(Number(event.target.value));
+            };
         };
         counterForEvent = 0;
         let isInput = e.target == event.target;
@@ -82,7 +84,7 @@ function validFunc(event) {
             secondCounter.remove();
         }
     };
-    if(counterForEvent == 0 && checkIfCartPage){
+    if(counterForEvent == 0){
         document.addEventListener('click', clickHandler);
     };
     counterForEvent++;
