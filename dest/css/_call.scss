@@ -21,8 +21,6 @@
 @keyframes adverAnim {
     0% {
         opacity: 0;
-        // transform: translateX(18.2rem) translateY(-19rem) scale(0);
-        // transform: translateX(40rem) translateY(-32rem) scale(0);
         transform: translateX(50vw) translateY(-50vh) scale(0);
         border-top-left-radius: 100%;
         border-bottom-left-radius: 100%;
@@ -43,12 +41,76 @@
     }
     100% {
         opacity: 0;
-        // transform: translateX(18.2rem) translateY(-19rem) scale(0);
-        // transform: translateX(40rem) translateY(-32rem) scale(0);
         transform: translateX(50vw) translateY(-50vh) scale(0);
         border-top-left-radius: 100%;
         border-bottom-left-radius: 100%;
         border-bottom-right-radius: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    @keyframes adverAnim {
+        0% {
+            opacity: 0;
+            transform: translateX(50vw) translateY(-50vh) scale(0);
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) translateY(0) scale(1);
+            border-radius: 0;
+        }
+    }
+    @media screen and (max-width: 600px) and (min-height: 480px) {
+        @keyframes adverAnim {
+            0% {
+                opacity: 0;
+                transform: translateX(50vw);
+            }
+            90%{
+                opacity: 1;
+                transform: translateX(-5vw);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+    @keyframes close_adverAnim {
+        0% {
+            opacity: 1;
+            transform: translateX(0) translateY(0) scale(1);
+            border-radius: 0;
+            border-radius: 0;
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(50vw) translateY(-50vh) scale(0);
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
+    }
+    @media screen and (max-width: 600px) and (min-height: 480px) {
+        @keyframes close_adverAnim {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            10%{
+                transform: translateX(-5vw);
+                opacity: .8;
+            }
+            30%{
+                opacity: .6;
+            }
+            100% {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+        }
     }
 }
 // плавное появление элементов блока звонка
@@ -127,6 +189,35 @@
                 }
             }
         }
+    // по выстоте
+    @media screen and (max-height: 350px) {
+        @keyframes CancelAppearance {
+            0% {
+            opacity: 0;
+            background: rgb(0, 0, 0);
+                }
+            100% {
+            opacity: 1;
+            transform: rotate(360deg);
+            transform-origin: -14.375rem 23.625rem;
+            background: none;
+                }
+            }
+        }
+    @media screen and (max-height: 270px) {
+        @keyframes CancelAppearance {
+            0% {
+            opacity: 0;
+            background: rgb(0, 0, 0);
+                }
+            100% {
+            opacity: 1;
+            transform: rotate(360deg);
+            transform-origin: -10rem 16rem;
+            background: none;
+                }
+            }
+        }
 @keyframes close_CancelAppearance {
     0% {
         opacity: 1;
@@ -153,6 +244,35 @@
         }
     }
 }
+// по выстоте
+@media screen and (max-height: 350px) {
+    @keyframes close_CancelAppearance {
+        0% {
+            opacity: 1;
+            transform: rotate(90deg);
+            
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(-360deg);
+            transform-origin: -14.375rem 23.625rem;
+        }
+    }
+    }
+@media screen and (max-height: 270px) {
+    @keyframes close_CancelAppearance {
+        0% {
+            opacity: 1;
+            transform: rotate(90deg);
+            
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(-360deg);
+            transform-origin: -10rem 16rem;
+        }
+    }
+    }
 // звонок меню
 .cancell-btn a:hover {
     cursor: pointer;
@@ -212,6 +332,11 @@
     animation-name: close_Opacity;
     animation-delay: 1s;
 }
+@media screen and (max-width: 600px) and (min-height: 480px) {
+    .background-for-call.close {
+        animation-delay: 1.5s;
+    }
+}
 .call_wrapper {
     font-size: 1rem;
     position: relative;
@@ -223,6 +348,13 @@
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+}
+@media screen and (max-width: 600px) and (min-height: 480px) {
+    .call_wrapper {
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
 }
 .call_wrapper.active {
     animation-name: adverAnim;
@@ -306,6 +438,12 @@
         animation-duration: 2.5s;
         animation-timing-function: linear;
         animation-delay: 0s;
+    }
+}
+@media screen and (max-width: 600px) and (min-height: 480px) {
+    .call_wrapper.close {
+        animation-delay: .5s;
+        animation-duration: 1.5s;
     }
 }
 .back-call {
