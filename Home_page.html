@@ -107,6 +107,17 @@
     </style>
 </head>
 <body id="body">
+    <div class="yellowLoadBackground loading">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
     <div class="header_scroll" id="myhead">
         <div class="head_wrapper">
             <div class="head">
@@ -606,5 +617,11 @@
     <script src="scripts/carousel.js"></script>
     <script src="scripts/gallery.js"></script>
     <script src="scripts/shopPageSelectCategory.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            let yellowBlock = document.querySelector(".yellowLoadBackground");
+            yellowBlock.classList.remove('loading');
+        });
+    </script>
 </body>
 </html>
