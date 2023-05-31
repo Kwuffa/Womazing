@@ -66,7 +66,7 @@
         @keyframes adverAnim {
             0% {
                 opacity: 0;
-                transform: translateX(50vw);
+                transform: translateX(100vw);
             }
             90%{
                 opacity: 1;
@@ -332,11 +332,6 @@
     animation-name: close_Opacity;
     animation-delay: 1s;
 }
-@media screen and (max-width: 600px) and (min-height: 480px) {
-    .background-for-call.close {
-        animation-delay: 1.5s;
-    }
-}
 .call_wrapper {
     font-size: 1rem;
     position: relative;
@@ -443,7 +438,6 @@
 @media screen and (max-width: 600px) and (min-height: 480px) {
     .call_wrapper.close {
         animation-delay: .5s;
-        animation-duration: 1.5s;
     }
 }
 .back-call {

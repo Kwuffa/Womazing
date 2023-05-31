@@ -616,8 +616,8 @@ input, textarea {
   @-webkit-keyframes adverAnim {
     0% {
       opacity: 0;
-      -webkit-transform: translateX(50vw);
-              transform: translateX(50vw);
+      -webkit-transform: translateX(100vw);
+              transform: translateX(100vw);
     }
     90% {
       opacity: 1;
@@ -633,8 +633,8 @@ input, textarea {
   @keyframes adverAnim {
     0% {
       opacity: 0;
-      -webkit-transform: translateX(50vw);
-              transform: translateX(50vw);
+      -webkit-transform: translateX(100vw);
+              transform: translateX(100vw);
     }
     90% {
       opacity: 1;
@@ -1145,12 +1145,6 @@ input, textarea {
           animation-delay: 1s;
 }
 
-@media screen and (max-width: 600px) and (min-height: 480px) {
-  .background-for-call.close {
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
-  }
-}
 .call_wrapper {
   font-size: 1rem;
   position: relative;
@@ -1298,8 +1292,6 @@ input, textarea {
   .call_wrapper.close {
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
   }
 }
 .back-call {
