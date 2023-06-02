@@ -343,7 +343,7 @@ input, textarea{
     .page_title {
         margin-top: 16.8rem;
         margin-bottom: 13.375rem;
-        height: 6.9375rem;
+        height: fit-content;
     }
     .page_title__container {
         display: flex;
@@ -357,7 +357,6 @@ input, textarea{
         line-height: 3.8125rem;
         letter-spacing: 0.02em;
         text-align: left;
-        
     }
     .page_title__links {
         font-family: var(--text-font);
@@ -381,7 +380,7 @@ input, textarea{
     .page_title {
         margin-top: 8.125rem;
         margin-bottom: 4rem;
-        height: 6.9375rem;
+        height: fit-content;
     }
     .page_title__container {
         display: flex;
@@ -426,4 +425,5 @@ input, textarea{
 @import 'main_shopping-cart-page';
 @import 'main_ordering-page';
 @import 'main_success-page';
+@import 'privacy-policy-offer-page';
 @import 'footer';

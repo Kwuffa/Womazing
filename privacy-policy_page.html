@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Womazing - корзина</title>
+    <title>Womazing - заказ получен</title>
     <link rel="stylesheet" href="dest/css/styles.css">
     <link rel="shortcut icon" href="images/logo/favicon.svg">
-    <style>
-        .cart:hover {
-            transform: scale(1);
-            animation-name: ShoppingCartAnim;
-            animation-duration: 0s;
-            animation-iteration-count: 0;
-        }
-    </style>
 </head>
 <body id="body">
     <div class="yellowLoadBackground loading">
@@ -99,7 +91,7 @@
                             </div>
                     </div></a>
                     <p><a class="border_link" href="tel:+380958235412">+38 (095) 823-54-12</a></p>
-                    <div class="cart"><a style="border-bottom: 1px solid #509498; pointer-events: none; cursor: default;" href="shopping-cart.html">
+                    <div class="cart"><a href="shopping-cart.html">
                         <span class="countItemsCart">0</span>
                         <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_40543_437)">
@@ -116,7 +108,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="cart-hiden"><a style="border-bottom: 1px solid #509498; pointer-events: none; cursor: default;" href="shopping-cart.html">
+                <div class="cart-hiden"><a href="shopping-cart.html">
                     <span class="countItemsCart">0</span>
                     <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_40543_437)">
@@ -138,95 +130,46 @@
     <div class="wholeWrapper">
         <div class="wrapper wrapGrow">
             <main>
-                <section class="page_title shopping-cart-title">
-                    <div class="page_title__container shopping-cart-title__container">
-                        <h1>Корзина</h1>
-                        <div class="page_title__links shopping-cart-links">
+                <section class="page_title privacy-policy_page">
+                    <div class="page_title__container privacy-policy_page__container">
+                        <h1>Политика конфиденциальности</h1>
+                        <div class="page_title__links privacy-policy_page-links">
                             <a class="border_link" href="Home_page.html">Главная</a>
                             <span>—</span>
-                            <span>Корзина</span>
+                            <span>Политика конфиденциальности</span>
                         </div>
                     </div>
                 </section>
-                <div class="emptyWrapper">
-                    <div class="emptyCartMessage">
-                        <h2>Корзина пока что пуста :(</h2>
-                        <p>Скорее переходите во вкладку "Магазин" и выбирайте самые качественные изделия от компании Womazing!</p>
-                    </div>
-                </div>
-                <section class="sec_item-cart">
-                    <!-- <div class="item">
-                        <div class="product_wrapper">
-                            <div class="item-legend">
-                                <h4>Товар</h4>
-                                <hr>
-                            </div>
-                            <div class="product">
-                                <button>
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L13 13M13 1L1 13" stroke="black"/>
-                                    </svg>
-                                </button>
-                                <figure>
-                                    <img src="images/img_shopping-cart/item-image/brooke-cagle.jpg" alt="Футболка USA" width="125" height="179">
-                                    <figcaption class="shopping-cart_figcaption">Футболка USA</figcaption>
-                                </figure>
-                                <p>Футболка USA</p>
-                            </div>
-                        </div>
-                        <div class="price_wrapper">
-                            <div class="item-legend">
-                                <h4>Цена</h4>
-                                <hr>
-                            </div>
-                            <p>$129</p>
-                        </div>
-                        <div class="count_item">
-                            <div class="item-legend">
-                                <h4>Количество</h4>
-                                <hr>
-                            </div>
-                            <div class="click-count">
-                                <button class="plus">+</button>
-                                <span id="count">1</span>
-                                <button class="minus">-</button>
-                            </div>
-                        </div>
-                        <div class="total_item">
-                            <div class="click-count">
-                                <button class="plus">+</button>
-                                <span id="count2">1</span>
-                                <button class="minus">-</button>
-                            </div>
-                            <div class="item-legend">
-                                <h4>Всего</h4>
-                                <hr>
-                            </div>
-                            <p>$129</p>
-                        </div>
-                    </div> -->
-                </section>
-                <section class="couponAndTotalSection">
-                    <form class="coupon" action="#" method="post">
-                        <div class="couponInputDiv"><input type="text" name="coupon" placeholder="Введите купон"></div>
-                        <button type="submit">Применить купон</button>
-                        <button type="reset">Обновить корзину</button>
-                    </form>
-                    <div class="subtotal">
-                        <div class="subtotal__text">
-                            <p>Подытог:</p>
-                            <p class="subTotalProceBlock">$0</p>
-                        </div>
-                        <div class="subtotal__total total">
-                            <div class="total__price">
-                                <h3>Итого:</h3>
-                                <h3 class="totalProceBlock">$0</h3>
-                            </div>
-                            <div class="checkout">
-                                <!-- <button>Оформить заказ</button> -->
-                                <a href="ordering_page.html">Оформить заказ</a>
-                            </div>
-                        </div>
+                <section>
+                    <div class="policy_wrapper">
+                        <p><a class="border_link" href="Home_page.html"><strong>Интернет-магазин Womazing</strong></a> уделяет большое внимание защите персональных данных своих Пользователей. Пользователи интернет-магазина Womazing могут просматривать странички сайта не сообщая о себе никаких персональных данных. Однако, для оказания услуг, связанных с покупкой товаров, представленных в нашем интернет-магазине, нам нужны Ваши контактные данные для того, чтобы мы могли созвониться с Вами, подтвердить заказ и доставить Вам заказанный товар. Ваши персональные данные мы не передаем третьим лицам и защищаем их конфиденциальность.</p>
+                        <h2>1. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
+                        <p>1.1. Данная политика конфиденциальности устанавливает порядок получения, хранения, обработки, использования и раскрытия персональных данных Пользователя. Персональные данные Пользователя мы получаем от Пользователя при оформлении заказа через корзину магазина, при оформлении заказа по телефону, указанному на сайте, и при регистрации самим Пользователем (создании Личного кабинета). Персональные данные Пользователя заполняются Пользователем (при оформлении заказа или при регистрации на сайте). Обязательная для предоставления услуги информация помечена специальным образом. Иная информация предоставляется Пользователем на его усмотрение.</p>
+                        <p>1.2. Конфиденциальность персональных данных - обязательное условие для соблюдения магазином доступа к персональным данным Пользователя, с требованием не допускать их распространения без согласия Пользователя или наличия иного законного основания.</p>
+                        <p>1.3. Использование Пользователем сайта интернет-магазина Womazing означает согласие с данной Политикой конфиденциальности и условиями обработки персональных данных Пользователя.</p>
+                        <p>1.4. В случае несогласия с условиями Политики Пользователь должен прекратить использование сайта интернет-магазина Womazing.</p>
+                        <p>1.5. Настоящая Политика применяется только к сайту интернет-магазина Womazing Интернет-магазин Womazing не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте интернет-магазина Womazing.</p>
+                        <p>1.6. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта Интернет-магазина.</p>
+                        <p>1.7. Пользователь признает, что в случае халатного отношения самим Пользователем к безопасному хранению своего логина и пароля, дающим доступ к его персональным данным, третьи лица могут получить несанкционированный доступ к учетной записи, персональным и другим данным Пользователя. Интернет-магазин Womazing не несет ответственность за убытки причиненные таким доступом.</p>
+                        <p>Мы рекомендуем Пользователям использовать сложные пароли состоящие из цифр и букв.</p>
+                        <h2>2. ПЕРСОНАЛЬНЫЕ ДАННЫЕ</h2>
+                        <p>2.1. Интернет-магазин Womazing собирает персональные данные, а именно: имя, фамилию, контактный телефон, адрес для доставки. Также, мы можем уточнить и получить от Вас данную информацию по телефону.</p>
+                        <p>2.2. Иная информация предоставляется Пользователем на его усмотрение.</p>
+                        <p>2.3. Интернет-магазин Womazing не собирает IP-адреса пользователей.</p>
+                        <h2>3. ИНТЕРНЕТ-МАГАЗИН WOMAZING НЕ СОБИРАЕТ IP-АДРЕСА ПОЛЬЗОВАТЕЛЕЙ</h2>
+                        <p>3.1. Интернет-магазин Womazing собирает и хранит только те персональные данные, которые необходимы для оказания услуг по продаже и доставке заказанных Вами товаров.</p>
+                        <p>3.2. Интернет-магазин Womazing собирает данные для связи с Пользователем, в том числе направления уведомления о оказании услуги, информирование Пользователя о наличии товара, подтверждения заказа, доставки заказанных Пользователем товаров, для связи курьерской службы с Пользователем, а также для обработки запросов и заявок от Пользователя.</p>
+                        <p>3.3. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом.</p>
+                        <h2>4. УСЛОВИЯ ПРЕДОСТАВЛЕНИЯ ДОСТУПА К БАЗЕ ДАННЫХ</h2>
+                        <p>4.1. Мы не передаем персональные данные Пользователя третьим лицам кроме случаев определенных законодательством Украины.</p>
+                        <p>4.2. Раскрытие персональных данных Пользователя производится при заказе Пользователем товаров в интернет-магазине Womazing. В частности Пользователь соглашается с тем, что интернет-магазин Womazing вправе передавать персональные данные курьерским службам, организациям почтовой связи, операторам электросвязи, исключительно в целях выполнения заказа Пользователя, оформленного на сайте интернет-магазина Womazing, включая доставку Товара.</p>
+                        <p>4.3. При утрате или разглашении персональных данных интернет-магазин Womazing информирует Пользователя об утрате или разглашении персональных данных.</p>
+                        <p>4.4. Интернет-магазин Womazing принимает необходимые организационные и технические меры для защиты персональной информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.</p>
+                        <h2>5. ИЗМЕНЕНИЕ ПОЛЬЗОВАТЕЛЕМ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h2>
+                        <p>5.1. Пользователь может в любой момент изменить (обновить, дополнить, удалить) предоставленную им персональную информацию или её часть, воспользовавшись функцией входа в "Личный кабинет".</p>
+                        <h2>6. ИЗМЕНЕНИЕ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h2>
+                        <p>6.1. Мы имеем право изменить условия Политики конфиденциальности. В таком случае, мы заменим версию документа на странице "Политика конфиденциальности". Пожалуйста, периодически пересматривайте эти условия, чтобы быть информированными о том, как интернет-магазин Womazing защищает персональные данные своих пользователей.</p>
+                        <p>Все предложения или вопросы по поводу настоящей Политики следует сообщать в службу поддержки Пользователей интернет-магазина Womazing по электронному адресу : <a class="border_link" target="_blank" href="mailto:hello@womazing.com">hello@womazing.com</a>.</p>
                     </div>
                 </section>
             </main>
@@ -384,45 +327,14 @@
     <script type="module" src="scripts/form_validation.js"></script>
     <script src="scripts/theme.js"></script>
     <script src="scripts/scroll_header.js"></script>
-    <script src="scripts/shoppingCart.js"></script>
-    <script src="scripts/addToCart.js"></script>
     <script src="scripts/countItemsInCart.js"></script>
     <script src="scripts/menuHide.js"></script>
     <script src="scripts/shopPageSelectCategory.js"></script>
-    <script src="scripts/inputCountValidation.js"></script>
     <script>
         window.addEventListener('load', function() {
             let yellowBlock = document.querySelector(".yellowLoadBackground");
             yellowBlock.classList.remove('loading');
         });
-
-document.addEventListener('click', ({ target: t }) => {
-    const count = t.parentNode.querySelector(".count");
-    if (t.classList.contains('plus')) {
-        count.value = (count.value | 0) + 1;
-        let wrapDIv = document.createElement("div");
-        wrapDIv.innerHTML = `<input type="text" class="count" name="count" value=${count.value}>`;
-        let insertInput = wrapDIv.children[0];
-        count.after(insertInput);
-        count.remove();
-        sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
-    }
-});
-
-document.addEventListener('click', ({ target: t }) => {
-    const count = t.parentNode.querySelector(".count");
-    if (t.classList.contains('minus')) {
-        if (count.value > 1) {
-            count.value = (count.value | 0) - 1;
-            let wrapDIv = document.createElement("div");
-            wrapDIv.innerHTML = `<input type="text" class="count" name="count" value=${count.value}>`;
-            let insertInput = wrapDIv.children[0];
-            count.after(insertInput);
-            count.remove();
-            sessionStorage.setItem('sec_item', document.querySelector(".items").outerHTML);
-        }
-    }
-});
     </script>
 </body>
 </html>

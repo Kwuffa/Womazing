@@ -498,7 +498,9 @@ input, textarea {
   .page_title {
     margin-top: 16.8rem;
     margin-bottom: 13.375rem;
-    height: 6.9375rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .page_title__container {
     display: -webkit-box;
@@ -546,7 +548,9 @@ input, textarea {
   .page_title {
     margin-top: 8.125rem;
     margin-bottom: 4rem;
-    height: 6.9375rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .page_title__container {
     display: -webkit-box;
@@ -8010,9 +8014,6 @@ html.dark .pushInfError, html.dark .pushInfSuccess {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .success_page + section {
-    margin-top: 10rem;
-  }
 }
 @media screen and (max-width: 768px) and (max-width: 441px) {
   .success_page__container a, span {
@@ -8148,6 +8149,85 @@ html.dark .no_background_open_store_button a {
   border: none;
 }
 
+/* политика конфиденциальности */
+.policy_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 3rem;
+  margin-top: -7rem;
+}
+.policy_wrapper p, .policy_wrapper h2, .policy_wrapper li {
+  font-family: var(--text-font);
+  font-size: 1.06rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.policy_wrapper h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.policy_wrapper li {
+  font-style: italic;
+  margin-left: 1rem;
+}
+.policy_wrapper a {
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-family: var(--text-font);
+  font-size: 1.06rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: black;
+}
+.policy_wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .policy_wrapper {
+    margin-top: 0rem;
+    padding: 0 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .policy_wrapper p, .policy_wrapper h2, .policy_wrapper li {
+    text-align: center;
+  }
+  .policy_wrapper a {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 590px) {
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 2.5rem !important;
+  }
+}
 /* FOOTER */
 footer {
   margin-top: 8.125rem;
