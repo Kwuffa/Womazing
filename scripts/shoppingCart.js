@@ -5,16 +5,15 @@ if(!sessionStorage.getItem('sec_item')){
 if(!sessionStorage.getItem('orderTotal_items')){
     sessionStorage.setItem('orderTotal_items', '<div class="orderItems"></div>');
 }
-// sessionStorage.setItem('orderTotal_items', '<div class="orderItems"></div>');
 if(sessionStorage.getItem('sec_item') == '<div class="items"></div>'){
     sessionStorage.setItem('countItems', 0);
 }
-// console.log(sessionStorage.getItem('sec_item'));
+
 function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
     let divAdd = `<div class="item">
                     <div class="product_wrapper">
                         <div class="item-legend">
-                            <h4>Товар</h4>
+                            <h4>Product</h4>
                             <hr>
                         </div>
                         <div class="product">
@@ -32,14 +31,14 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
                     </div>
                     <div class="price_wrapper">
                         <div class="item-legend">
-                            <h4>Цена</h4>
+                            <h4>Price</h4>
                             <hr>
                         </div>
                         <p class="oneItemPrice">${price}</p>
                     </div>
                     <div class="count_item">
                         <div class="item-legend">
-                            <h4>Количество</h4>
+                            <h4>Quantity</h4>
                             <hr>
                         </div>
                         <div class="click-count">
@@ -55,7 +54,7 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
                             <button class="minus">-</button>
                         </div>
                         <div class="item-legend">
-                            <h4>Всего</h4>
+                            <h4>Total</h4>
                             <hr>
                         </div>
                         <p class="totalItemPrice">$${Number(price.slice(1)) * Number(count)}</p>
@@ -72,19 +71,20 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
     let newName = document.createElement("span");
     newName.innerText = `${title} - ${size}, ${color}, ${count}`;
     let newPrice = document.createElement("span");
-    let priceText = `$${Number(price.slice(1))*Number(count)}`
+    let priceText = `$${Number(price.slice(1))*Number(count)}`;
     newPrice.innerText = priceText;
-    countinue = true;
+    let countinue = true;
+
     if(divOrderWrap.children.length > 0){
         Array.from(divOrderWrap.children).forEach(element => {
             if(element.children[0].innerText.includes(`${title} - ${size}, ${color}`)){
                 countinue = false;
-                split = element.children[0].innerText.split(", ");
-                newCount = Number(split[split.length-1])+Number(count);
+                let split = element.children[0].innerText.split(", ");
+                let newCount = Number(split[split.length-1])+Number(count);
                 split[split.length-1] = newCount;
                 element.children[0].innerText = split.join(", ");
                 // цена
-                element.children[1].innerText = `$${Number(price.slice(1))*newCount}`
+                element.children[1].innerText = `$${Number(price.slice(1))*newCount}`;
                 sessionStorage.setItem("orderTotal_items", divOrderWrap.outerHTML);
             }
         });
@@ -102,6 +102,7 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
     const add = parser.parseFromString(divAdd, 'text/html');
     let divChild = add.querySelector(".item");
     let access = true;
+
     if(divWrap.children.length > 0){
         let wrapper = Array.prototype.slice.call(divWrap.children, 0, divWrap.children.length);
         wrapper.forEach(elementWrap => {
@@ -113,7 +114,7 @@ function makeRequestAndUpdateElement(imgSrc, title, size, color, price, count) {
                 let newCount = Array.from(elementWrap.querySelectorAll(".count"));
                 newCount.forEach(element => {
                     element.parentNode.className = "countTORemake";
-                    let currentValue = Number(element.value) + Number(count);        
+                    let currentValue = Number(element.value) + Number(count);       
                     newPrice.innerText = `$${Number(price.slice(1)) * Number(currentValue)}`;
                 });
                 Array.from(divWrap.querySelectorAll(".countTORemake")).forEach(inputWrap => {
@@ -144,9 +145,9 @@ if(document.contains(button)){
         errorElements.forEach((element) => {
         element.remove();
         });
-        let button = e.target;
-        if(button.tagName != "BUTTON"){
-            button = e.target.parentNode;
+        let targetButton = e.target;
+        if(targetButton.tagName != "BUTTON"){
+            targetButton = e.target.parentNode;
         }
         const sizeButtons = document.getElementsByName("size");
         const colorButtons = document.getElementsByName("color");
@@ -176,34 +177,15 @@ if(document.contains(button)){
             if (!selectedSize){
                 let errorSize = document.createElement('span');
                 errorSize.className = "errorSpanItem";
-                errorSize.innerText = "Поле обязательно для выбора";
+                errorSize.innerText = "This field is required";
                 sizeButtons[1].parentNode.parentNode.parentNode.append(errorSize);
             }
             if (!selectedColor){
                 let errorColor = document.createElement('span');
                 errorColor.className = "errorSpanItem";
-                errorColor.innerText = "Поле обязательно для выбора";
+                errorColor.innerText = "This field is required";
                 colorButtons[1].parentNode.parentNode.parentNode.append(errorColor);
             }
         }
     });
 }
-
-// fetch('http://127.0.0.1:5500/shopping-cart.html')
-    // .then(response => response.text())
-    // .then(data => {
-    //     const parser = new DOMParser();
-    //     const htmlDoc = parser.parseFromString(data, 'text/html');
-    //     const elementToChange = htmlDoc.querySelector('.sec_item-cart');
-    //     let errorSize = document.createElement('span');
-    //     errorSize.innerText = "Поле обязательно для выбора";
-    //     elementToChange.append(errorSize);
-    //     // console.log(elementToChange);
-    //     // localStorage.setItem('sec_item', elementToChange);
-    // });
-
-
-
-
-
-

@@ -1,7 +1,5 @@
 /* SHOP */
-@media screen and (min-width: 768px){
-    // page_title
-    /* вторая секция */
+@media screen and (min-width: 992px){
     .sec_shop-nav {
         margin-bottom: 5.75rem;
     }
@@ -34,7 +32,7 @@
         background-color: black;
         color: white;
     }
-    /* третья секция */
+
     .goods-tape {
         display: flex;
         flex-direction: column;
@@ -54,13 +52,13 @@
     }   
     
     /* кнопка для перелистывания стрниц магазина */
-    .shop-buttons {
-        display: flex !important;
+    .shop-pagination {
+        display: flex;
         align-items: center;
-        flex-direction: row !important;
+        flex-direction: row;
         column-gap: 0.875rem;
     }
-    .shop-buttons a:not(:last-child){
+    .shop-pagination a:not(:last-child){
         width: 2.5625rem;
         height: 2.5625rem;
         display: flex;
@@ -76,11 +74,11 @@
         border: 1px solid black;
         transition: .5s ease;
     }
-    .shop-buttons a:not(:last-child):hover{
+    .shop-pagination a:not(:last-child):hover{
         background-color: black;
         color: white;
     }
-    .shop-buttons-next{
+    .shop-pagination-next{
         width: 2.5625rem;
         height: 2.5625rem;
         display: flex;
@@ -88,21 +86,13 @@
         align-items: center;
         margin-left: -.5rem;
     }
-    .shop-buttons-next:hover{
+    .shop-pagination-next:hover{
         transform-origin: left;
         transform: scaleX(1.2);
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 768px) {
-    .goods-tape__show-items {
-        align-self: center;
-        text-align: center;
-    }   
-}
-@media screen and (max-width: 768px) {
-    // page_title
-    /* вторая секция */
+@media screen and (max-width: 991px) {
     .sec_shop-nav {
         margin-bottom: 4rem;
     }
@@ -133,7 +123,7 @@
         background-color: rgb(248, 248, 248);
         transition: 0.5s ease;
     }
-    /* третья секция */
+
     .goods-tape {
         display: flex;
         flex-direction: column;
@@ -151,13 +141,14 @@
         color: #808080;  
     }   
     /* кнопка для перелистывания стрниц магазина */
-    .shop-buttons {
+    .shop-pagination {
         display: flex;
+        flex-direction: row ;
         align-items: center;
         justify-content: center;
         column-gap: 0.875rem;
     }
-    .shop-buttons a:not(:last-child){
+    .shop-pagination a:not(:last-child){
         width: 2.5625rem;
         height: 2.5625rem;
         display: flex;
@@ -173,11 +164,11 @@
         border: 1px solid black;
         transition: .5s ease;
     }
-    .shop-buttons a:not(:last-child):hover{
+    .shop-pagination a:not(:last-child):hover{
         background-color: black;
         color: white;
     }
-    .shop-buttons-next:hover{
+    .shop-pagination-next:hover{
         transform-origin: left;
         transform: scaleX(1.2);
     }
@@ -197,7 +188,7 @@ html.dark{
             color: white;
         }
     }
-    .shop-buttons{
+    .shop-pagination{
         a:not(:last-child){
             background-color: grey;
             &:hover{

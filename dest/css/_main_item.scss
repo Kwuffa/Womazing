@@ -1,11 +1,9 @@
 /* ITEMS */
-@media screen and (min-width: 768px){
-    // page_title
+@media screen and (min-width: 992px){
     .item-title {
         margin-top: 11.8125rem;
         margin-bottom: 6.375rem;
     }
-    /* вторая секция */
     .item_wrapper {
         display: flex;
         column-gap: 4.625rem;
@@ -74,10 +72,17 @@
         align-items: flex-start;
         justify-content: start;
         row-gap: .5rem;
+        position: relative;
     }
-    .errorSpanItem{
-        color: red;
-        margin-bottom: -1rem;
+    .errorSpanItem {
+        position: absolute !important;
+        bottom: -1.5rem;
+        left: 0;
+        color: #d93025;
+        font-family: var(--text-font);
+        font-size: 0.85rem;
+        font-weight: 500;
+        white-space: nowrap;
     }
     .size_buttons label {
         display: inline-block;
@@ -171,6 +176,14 @@
         display: flex;
         flex-direction: column;
         row-gap: 2.125rem;
+    }
+    .size_buttons, .color_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+    .size_buttons label, .color_buttons label {
+        margin-right: 0 !important;
     }
     /* кнопка */
     .add-to-cart__background_in-cart_button {
@@ -266,9 +279,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    // page_title
-    /* вторая секция */
+@media screen and (max-width: 991px) {
     .item_wrapper {
         display: flex;
         flex-direction: column;
@@ -428,6 +439,35 @@
         flex-direction: column;
         row-gap: 2.125rem;
     }
+    /* Контейнеры кнопок */
+    .shop-buttons, .color-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+    }
+    .size_buttons, .color_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 0.8rem;
+    }
+    .size_buttons label, .color_buttons label {
+        margin-right: 0 !important;
+    }
+    .errorSpanItem {
+        position: absolute !important;
+        bottom: -1.5rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: #d93025;
+        font-family: var(--text-font);
+        font-size: 0.85rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
     /* кнопка */
     .add-to-cart__background_in-cart_button {
         max-width: 15rem;
@@ -537,6 +577,10 @@ html.dark{
         &:hover{
             color: white;
         }
+    }
+    .add-to-cart .click-count input {
+        background: none;
+        color: white;
     }
     input[type="radio"]+span{
         background-color: grey;

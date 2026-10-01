@@ -5,12 +5,21 @@ function updateListenerOnNewInputs(){
     });
 };
 updateListenerOnNewInputs();
-counterForEvent = 0;
+let counterForEvent = 0;
+
 function validFunc(event) {
     let checkIfCartPage = document.querySelector(".item");
     function clickHandler(e) {
+        let isButton = e.target.classList.contains('plus') || e.target.classList.contains('minus');
+        if (isButton) {
+            document.removeEventListener('click', clickHandler);
+            counterForEvent = 0;
+            return;
+        }
+
         if(checkIfCartPage){
-            let oldValue = event.target.outerHTML.split('value="')[1].split('"')[0];
+            let oldValue = event.target.getAttribute("value") || 1; 
+            
             addNumberCartValid(-Number(oldValue));
             if(Number(event.target.value) == 0){
                 addNumberCartValid(1);
@@ -47,6 +56,7 @@ function validFunc(event) {
         };
         document.removeEventListener('click', clickHandler);
     };
+    
     const inputValue = event.target.value;
     let numericValue = inputValue.replace(/\D/g, "");
     if(Number(numericValue) > 999){
@@ -56,6 +66,7 @@ function validFunc(event) {
         numericValue = numericValue.slice(1);
     };
     event.target.value = numericValue;
+    
     if(checkIfCartPage){
         updateTOtalPrice(event.target);
         if(event.target.parentNode.parentNode.className == 'count_item'){
@@ -84,14 +95,16 @@ function validFunc(event) {
             secondCounter.remove();
         }
     };
+    
     if(counterForEvent == 0){
         document.addEventListener('click', clickHandler);
     };
     counterForEvent++;
 };
+
 // update minuses and pluses
 if(document.querySelector(".item")){
-    itemsAll = Array.from(document.querySelectorAll(".item"));
+    let itemsAll = Array.from(document.querySelectorAll(".item"));
     itemsAll.forEach(item => {
         let pluses = Array.from(item.querySelectorAll(".plus"));
         pluses.forEach(element => {
@@ -108,12 +121,12 @@ if(document.querySelector(".item")){
     });
 };
 
-
 function updateTOtalPrice(eventTarget){
-    totalPriceBlock = eventTarget.closest(".item").querySelector(".totalItemPrice");
-    oneItemPrice = Number(eventTarget.closest(".item").querySelector(".oneItemPrice").innerText.slice(1));
+    let totalPriceBlock = eventTarget.closest(".item").querySelector(".totalItemPrice"); 
+    let oneItemPrice = Number(eventTarget.closest(".item").querySelector(".oneItemPrice").innerText.slice(1));
     totalPriceBlock.innerText = `$${oneItemPrice * Number(eventTarget.value)}`;
 };
+
 // counterInCart 
 function addNumberCartValid(num=0){
     let counter = 0;
@@ -125,6 +138,7 @@ function addNumberCartValid(num=0){
     });
     sessionStorage.setItem('countItems', Number(countItemsCart[0].innerText));
 };
+
 // totalCOuntFunc
 function allItmsPricesTotal(){
     let subTotalPriceBlock = document.querySelector(".subTotalProceBlock");
@@ -138,6 +152,7 @@ function allItmsPricesTotal(){
     totalPriceBlock.innerText = `$${totalPrice}`;
     sessionStorage.setItem("totalPrice", `$${totalPrice}`);
 };
+
 function orderFuncInput(eventTarget){
     let currentElem = eventTarget.closest(".item").querySelector(".product").querySelector("p").innerText;
     let orderhtml = sessionStorage.getItem("orderTotal_items");
@@ -146,8 +161,8 @@ function orderFuncInput(eventTarget){
     let wrapperItems = Array.from(divElement.querySelectorAll(".orderItem"));
     wrapperItems.forEach(element => {
         if(element.children[0].innerText.includes(currentElem)){
-            split = element.children[0].innerText.split(", ");
-            newCount = Number(eventTarget.value);
+            let split = element.children[0].innerText.split(", ");
+            let newCount = Number(eventTarget.value);
             split[split.length-1] = newCount;
             element.children[0].innerText = split.join(", ");
             // цена
@@ -160,3 +175,18 @@ function orderFuncInput(eventTarget){
         };
     });
 };
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('plus')) {
+        let input = e.target.parentNode.querySelector('.count');
+        if (input && Number(input.value) >= 999) {
+            input.value = 998;
+        }
+    }
+    if (e.target.classList.contains('minus')) {
+        let input = e.target.parentNode.querySelector('.count');
+        if (input && Number(input.value) <= 1) {
+            input.value = 2;
+        }
+    }
+}, true);

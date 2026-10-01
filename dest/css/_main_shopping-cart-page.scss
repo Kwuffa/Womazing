@@ -7,9 +7,18 @@
         opacity: 0;
     }
 }
-@media screen and (min-width: 768px){
-    // page_title
-    /* вторая секция */
+.coupon button.apply-coupon-btn {
+    color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.coupon button.apply-coupon-btn:hover {
+    background-color: #f9f9f9;
+    color: #b3b3b3;
+}
+@media screen and (min-width: 992px){
     .emptyCartMessage{
         display: none;
     }
@@ -19,13 +28,16 @@
         row-gap: 1rem;
         margin-top: -7rem;
         margin-bottom: -5rem;
-        h2, p{
+        h2, p, a{
             font-family: var(--text-font);
             font-size: 1rem;
             font-weight: lighter;
             color: gray;
             letter-spacing: 0.02em;
             text-align: left;
+        }
+        a:hover{
+            color: #6E9C9F;
         }
         h2{
             font-size: 3rem;
@@ -98,15 +110,15 @@
         align-self: self-start;
     }
     .count_item {
-        align-self: self-start;
+        align-self: flex-start;
         display: flex;
         flex-direction: column;
         align-items: start;
-        row-gap: 8.8125rem;
+        row-gap: 7.5rem;
     }
     .count_item .click-count {
-        width: 3.9375rem;
-        height: 3.9375rem;
+        width: 5.5rem;
+        height: 5.5rem;
         border: 1px solid #AFAFAF;
         display: flex;
         flex-direction: column;
@@ -117,37 +129,36 @@
         background: none;
         font-weight: 1000;
         color: #6E9C9F;
-        width: 1.875rem;
-        font-size: 1.4rem;
+        width: 100%;
+        font-size: 1.8rem;
         transition: 0.5s ease;
         align-self: center;
         display: flex;
         align-items: center;
         justify-content: center;
-        // border: 1px solid red;
-        height: 1.3rem;
+        height: 2rem;
         &:last-child{
-            font-size: 1.6rem;
-            height: .8rem;
-            padding-bottom: .3rem;
+            font-size: 2rem;
+            padding-bottom: .6rem;
         }
     }
     .count_item .click-count button:hover {
         color: #509498;
     }
     .count_item .click-count input {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 500;
-        line-height: 1.1rem;
+        line-height: 1;
         letter-spacing: 0.02em;
-        text-align: left;
+        text-align: center;
         color: #9C9C9C;
         max-width: 100%;
         text-align: center;
-        background-color: rgb(248, 248, 248);
+        background-color: transparent;
     }
     .total_item {
-        align-self: self-start;
+        width: 4rem;
+        align-self: flex-start;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -168,7 +179,8 @@
     .coupon input{
         height: 100%;
         width: 100%;
-        padding-bottom: 0.9375rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
         border-bottom: 1px solid black;
         background-color: rgb(248, 248, 248);
         font-family: var(--text-font);
@@ -179,7 +191,6 @@
         text-align: left;
     }
     .coupon input::placeholder {
-        transform: translateY(1px);
         transition: 0.5s ease;
         font-family: var(--text-font);
         font-size: 1.06rem;
@@ -240,17 +251,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        column-gap: 4.3125rem;
+        column-gap: 1rem;
         height: 4.25rem;
-        width: 17.9375rem;
+        width: 16rem;
         background: #F1EADC;
-        text-align: center;
         font-family: var(--text-font);
         font-size: 1.5625rem;
         font-weight: 500;
         line-height: 2.1875rem;
         letter-spacing: 0.02em;
-        text-align: left;
+    }
+    .totalProceBlock {
+        min-width: 6.5rem;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
     }
     .checkout a {
         display: block;
@@ -268,6 +282,9 @@
     .checkout a:hover {
         background: #509498;
     }
+    .couponAndTotalSection .apply-coupon-btn{
+
+    }
     .couponAndTotalSection.inactive{
         .coupon{
             display: none;
@@ -278,17 +295,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 768px) {
-    .coupon button:nth-child(3) {
-        margin: auto !important;
-    }
-    .subtotal {
-        margin: auto !important;
-    }
-}
-@media screen and (max-width: 768px) {
-    // page_title
-    /* вторая секция */
+@media screen and (max-width: 991px) {
     .emptyCartMessage{
         display: none;
     }
@@ -299,9 +306,9 @@
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
-        max-width: 70%;
+        max-width: 80%;
         margin: auto;
-        h2, p{
+        h2, p, a{
             font-family: var(--text-font);
             font-size: 1rem;
             font-weight: lighter;
@@ -384,11 +391,11 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        row-gap: 8.8125rem;
+        row-gap: 7.5rem;
     }
     .count_item .click-count {
-        width: 3.9375rem;
-        height: 3.9375rem;
+        width: 5.5rem;
+        height: 5.5rem;
         border: 1px solid #AFAFAF;
         display: flex;
         flex-direction: column;
@@ -400,25 +407,23 @@
         font-weight: 1000;
         color: #6E9C9F;
         width: 1.875rem;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         transition: 0.5s ease;
         align-self: center;
         display: flex;
         align-items: center;
         justify-content: center;
-        // border: 1px solid red;
         height: 1.3rem;
         &:last-child{
-            font-size: 1.6rem;
-            height: .8rem;
-            padding-bottom: .3rem;
+            font-size: 2rem;
+            padding-bottom: .5rem;
         }
     }
     .count_item .click-count button:hover {
         color: #509498;
     }
     .count_item .click-count input {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 500;
         line-height: 1.1rem;
         letter-spacing: 0.02em;
@@ -429,11 +434,18 @@
         background-color: rgb(248, 248, 248);
     }
     .total_item {
-        align-self: self-start;
+        width: 5.5rem;
+        align-self: flex-start;
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         row-gap: 9.5625rem;
+    }
+    .total_item p {
+        align-self: flex-start;
+        width: 100%;
+        margin: 0;
+        text-align: left;
     }
     .total_item .click-count {
         display: none;
@@ -738,6 +750,11 @@
 }
 
 html.dark{
+    .emptyCartMessage.active{
+        a:hover {
+            color: white;
+        }
+    }
     .product{
         button{
             background: none;
@@ -749,10 +766,22 @@ html.dark{
             color: white;
         }
     }
+    .count_item .click-count input {
+        background: none;
+        color: white;
+    }
     .coupon{
         button{
             color: white;
             border: none;
+        }
+        button.apply-coupon-btn {
+            background-color: #333333;
+            color: #666666;
+            border: none;
+        }
+        button.apply-coupon-btn:hover {
+            background-color: #333333;
         }
     }
     .total__price{

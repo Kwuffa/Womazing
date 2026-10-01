@@ -1,7 +1,5 @@
 /* SUCCESS PAGE */
-@media screen and (min-width: 768px){
-    // page_title
-    /* вторая секция */
+@media screen and (min-width: 992px){
     .order-success_wrapper {
         display: flex;
         align-items: center;
@@ -54,8 +52,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    // page_title
+@media screen and (max-width: 991px) {
     @media screen and (max-width: 300px) {
         .success_page-links {
             flex-direction: column;
@@ -68,7 +65,7 @@
             font-size: .9rem;
         }
     }
-    /* вторая секция */
+
     .order-success_wrapper {
         display: flex;
         flex-direction: column;

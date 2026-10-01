@@ -24,7 +24,10 @@
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 992px){
+    .wholeWrapper {
+        overflow-x: hidden; 
+    }
     .conaiter_top {
         display: flex;
         margin-top: -27px;
@@ -42,65 +45,14 @@
     }
     .images_block::after {
         content: "";
-        display: block;
-        width: 100%;
-        height: 51.625rem;
-        background-color: #F1EADC;
-        transition: .5s ease;
-    }
-    .background_for_images_block {
         position: absolute;
         top: 0;
-        right: 0;
-        width: 30rem;
-        height: 49.94rem;
-        z-index: -1;
+        left: 0;
+        width: 100vw;
+        height: 51.625rem;
         background-color: #F1EADC;
+        z-index: -1;
         transition: .5s ease;
-    }
-    @media screen and (max-width: 1320px){
-        .background_for_images_block {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 30rem;
-            height: 49.69rem;
-            z-index: -1;
-            background-color: #F1EADC;
-        }
-    }
-    @media screen and (max-width: 1164px){
-        .background_for_images_block {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 30rem;
-            height: 49.37rem;
-            z-index: -1;
-            background-color: #F1EADC;
-        }
-    }
-    @media screen and (max-width: 992px){
-        .background_for_images_block {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 30rem;
-            height: 48.9rem;
-            z-index: -1;
-            background-color: #F1EADC;
-        }
-    }
-    @media screen and (max-width: 830px){
-        .background_for_images_block {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 30rem;
-            height: 48.62rem;
-            z-index: -1;
-            background-color: #F1EADC;
-        }
     }
     .mainHomeImage{
         opacity: 0;
@@ -155,15 +107,15 @@
     }
     .new_staff {
         font-family: 'Raleway', sans-serif;
-        font-size: 3.475rem;
+        font-size: 2.8rem;
         font-weight: 500;
-        line-height: 3.8rem;
+        line-height: 3.2rem;
         letter-spacing: 0.02em;
         text-align: left;
     }
     .offer_inf {
         margin-top: 2.8rem;
-        max-width: 24.06rem;
+        max-width: 26rem;
         font-family: 'Raleway', sans-serif;
         font-size: 1.25rem;
         font-weight: 400;
@@ -217,9 +169,7 @@
     }
     .carouselButtonBlock{
         margin-top: 5rem;
-        justify-self: end;
-        max-width: 19.6875rem;
-        margin-left: 17.875rem;
+        justify-self: center;
         .carouselButton{
             width: 1.875rem;
             height: 0.25rem;
@@ -510,38 +460,16 @@
     }
     
 }
-
-@media screen and (min-width: 768px) and (max-width: 768px) {
-    .images_block {
-        position: relative;
-        width: 28.75rem;
-        margin-left: -3rem;
-    }
-    .bg_for_images-block {
-        display: flex;
-        top: 33rem !important;
-    }
-    .images_block::after {
-        display: none;
-    }
-    .background_for_images_block {
-        display: none;
-    }
-    .images_block::after {
-        content: "";
-        display: block;
-        width: 2rem;
-        height: 51.625rem;
-        background: none !important;
-    }
-    .important_for_us {
-        row-gap: 2rem !important;
-    }
-    .product {
-        margin-bottom: 0px !important;
+@media screen and (max-width: 1160px) {
+    .smallBottomImage{
+        position: absolute;
+        top: 7.4rem;
+        right: -4rem;
+        width: 10rem;
+        height: 10rem;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .conaiter_top {
         display: flex;
         flex-direction: column;
@@ -1059,9 +987,6 @@ html.dark {
     .no_background_open_store_button a:hover {
         background: rgb(13, 13, 12);
     }
-    .background_for_images_block{
-        background-color: rgb(15, 15, 14);
-    }
     .images_block::after {
         background-color: rgb(13, 13, 12);
     }
@@ -1069,7 +994,7 @@ html.dark {
         background-color: gray;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     html.dark{
         .images_block::after {
             background: none;

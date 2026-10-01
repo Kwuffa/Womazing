@@ -33,7 +33,6 @@ buttons.forEach(button => {
                 valid = false;
                 const value = input.value;
                 if (input.name === "user_name") {
-                    // 1.*value; 2.*input; 3.минимальная\4.максимальная длинна.Нужна ли проверка на: 4.длинну; 5.буквы;
                     standartPattern(value, input, 2, 30, true, true);  
                 };
                 if (input.name === "user_e-mail") {
@@ -48,20 +47,26 @@ buttons.forEach(button => {
                     standartPattern(value, input, 2, 64, true, true);  
                 };
                 if (input.name === "user_city") {
-                    standartPattern(value, input, 0, 50, true, true);  
+                    // ИСПРАВЛЕНО: Мин. длина города теперь 2
+                    standartPattern(value, input, 2, 50, true, true);  
                 };
                 if (input.name === "user_street") {
-                    standartPattern(value, input, 2, 100, true, true);  
+                    // ИСПРАВЛЕНО: Последний параметр false (разрешаем цифры для улиц типа "5th Avenue")
+                    standartPattern(value, input, 2, 100, true, false);  
+                    (valid == false && !(/^[\p{L}\d\s/.,-]+$/iu).test(value))
+                    ? (errorText.push("invalid characters, "), createError(input), errorText = []) : null;
                 };
                 if (input.name === "user_house") {
-                    standartPattern(value, input, 2, 50, true, false);
+                    // ИСПРАВЛЕНО: Мин. длина дома теперь 1. Текст ошибки изменен.
+                    standartPattern(value, input, 1, 50, true, false);
                     (valid == false && !(/^[\p{L}\d\s/-]+$/iu).test(value))
-                    ? (errorText.push("запрещены цифры и некоторые символы, "), createError(input), errorText = []) : null;
+                    ? (errorText.push("invalid characters, "), createError(input), errorText = []) : null;
                 };
                 if (input.name === "user_flat") {
-                    standartPattern(value, input, 0, 8, true, false);  
-                    (valid == false && !(/^[0-9]+$/).test(value))
-                    ? (errorText.push("введите только цифры, "), createError(input), errorText = []) : null;
+                    // ИСПРАВЛЕНО: Разрешаем буквы и дроби в номерах квартир (например, 12A или 4/2)
+                    standartPattern(value, input, 1, 8, true, false);  
+                    (valid == false && !(/^[\p{L}\d\s/-]+$/iu).test(value))
+                    ? (errorText.push("invalid characters, "), createError(input), errorText = []) : null;
                 };
                 if (input.name === "user_message") {
                     validLen(value, 0, 500);
@@ -74,11 +79,11 @@ buttons.forEach(button => {
             setTimeout(() => {
                 const checEerrorSpans = document.querySelectorAll('.errorSpan');
                 if (checEerrorSpans.length > 0) {
-                    error_div.classList.add("active");
-                    success_div.classList.remove("active");
+                    if(error_div) error_div.classList.add("active");
+                    if(success_div) success_div.classList.remove("active");
                 } else {
-                    success_div.classList.add("active");
-                    error_div.classList.remove("active");
+                    if(success_div) success_div.classList.add("active");
+                    if(error_div) error_div.classList.remove("active");
                     Array.from(inputs).forEach((input, index) => {
                         if(event.target.classList[1] == "orderCall"){
                             setTimeout(() => {
@@ -92,7 +97,7 @@ buttons.forEach(button => {
                     });
                     setTimeout(() => {
                         if(event.target.classList[1] == "orderCall"){
-                            success_div.classList.remove("active");
+                            if(success_div) success_div.classList.remove("active");
                             cancel_Func(callbackground, call_block, body);
                         };
                     }, 1500);
@@ -109,9 +114,9 @@ buttons.forEach(button => {
         });
     };
 });
-// шаблон поведения валидации
+
 function standartPattern(value, input, minLength, maxLength, needValidLen, needValidOnlyLetters) {
-    valid = value.length == 0 ? (errorText.push("поле обязательное для ввода, "), createError(input), true) : (
+    valid = value.length == 0 ? (errorText.push("this field is required, "), createError(input), true) : (
         !hasLeadingSpaces(value) ? (createError(input), true) : (
             needValidLen && validLen(value, minLength, maxLength),
             needValidOnlyLetters && isLettersOnly(value),
@@ -120,36 +125,36 @@ function standartPattern(value, input, minLength, maxLength, needValidLen, needV
     );
     errorText = [];
 };
-// проверка на пробел
+
 function hasLeadingSpaces(str) {
-    return str !== str.trim()?(errorText.push("уберите пробел в начале, "), false):true;
+    return str !== str.trim()?(errorText.push("remove leading space, "), false):true;
 };
-// проверка на длинну
+
 function validLen(value, minRequiredLength, maxRequiredLength) {
-    if(value.length < minRequiredLength) errorText.push("недостаточно символов, ");   
-    if(value.length > maxRequiredLength) errorText.push("слишком много символов, "); 
+    if(value.length < minRequiredLength) errorText.push("not enough characters, ");   
+    if(value.length > maxRequiredLength) errorText.push("too many characters, "); 
 };
-// проверка на буквы
+
 function isLettersOnly(str) {
-    if(!(/^[\p{L}\s-]+$/u).test(str)) errorText.push("запрещены цифры и некоторые символы, ");  
+    if(!(/^[\p{L}\s-]+$/u).test(str)) errorText.push("numbers and special characters are not allowed, ");  
 };
-// проверка на e-mail
+
 function validateEmail(input, email) {
     if(!(/^((([0-9A-Za-z]{1}[-0-9A-z\.]*[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]*[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u).test(email)) {
-        errorText.push("некорректный синтаксис почты, ");
+        errorText.push("invalid email format, ");
         createError(input);
         errorText = [];
     } 
 };
-// проверка на номер телефона
+
 function validatePhone(input, phone) {
     if(!(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/).test(phone)) {
-        errorText.push("некорректный синтаксис номера телефона, ");
+        errorText.push("invalid phone format, ");
         createError(input);
         errorText = [];
     } 
 };
-// создание блока ошибки
+
 function createError(element){
     let error = document.createElement('span');
     let errorStr = errorText.join(" ").slice(0, -2);

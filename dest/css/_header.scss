@@ -56,8 +56,8 @@
     }
 }
 
-@media screen and (min-width: 769px){
-/* важно спрятать не нужное не на телефонах */
+@media screen and (min-width: 992px){
+/* спрятать не нужное не на телефонах */
 .menu-hide-button {
     display: none;
 }
@@ -131,8 +131,8 @@
     align-items: center;
 }
 .telephone_wrapper {
-    width: 1.6875rem;
-    height: 1.6875rem;
+    width: 1.9rem;
+    height: 1.9rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,8 +143,8 @@
     content: "";
     display: inline-block;
     position: absolute;
-    width: 1.6875rem;
-    height: 1.6875rem;
+    width: 1.9rem;
+    height: 1.9rem;
     top: 0;
     left: 0;
     background-color: #509498;
@@ -178,9 +178,9 @@
 .telephone svg {
     position: absolute;
     left: .4rem;
-    top: .34rem;
-    width: 1rem;
-    height: 1rem;
+    top: .17rem;
+    width: 1.3rem;
+    height: 1.3rem;
     transition: .5s ease;
 }
 
@@ -215,13 +215,19 @@
 }
 }
 
-@media screen and (min-width: 768px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .cart-hiden{
         display: flex;
     }
+    .menu-hide-button h3 {
+        color: white;
+        font-style: var(--text-font);
+        letter-spacing: .1em;
+        font-size: 1rem;
+    }
 }
-/* HEADER max768 */
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 991px) {
     .header_scroll {
         position: fixed;
         width: 100%;  
@@ -270,8 +276,8 @@
         display: block;
         order: -1;
         background-color: #6E9C9F;
-        width: 5rem;
-        height: 2rem;
+        width: 6rem;
+        height: 3rem;
         text-align: center;
         display: flex;
         align-items: center;
@@ -344,7 +350,7 @@
         justify-content: space-between;
         gap: 1em;
     }
-    .menu_links a{
+    .menu_links a {
         font-family: 'Raleway', sans-serif;
         font-size: 0.9em;
         font-weight: 400;
@@ -353,15 +359,21 @@
         text-align: left;
         color: black;
         transition: 0.5s ease;
-        position: relative;
     }
-    .menu-hide-button .menu_links a::before {
-        content: "\2022";
-        font-size: 2.5em;
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -0.9em;
+    .menu-hide-button .menu_links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.8em;
+    }
+    .menu-hide-button .menu_links::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 1px;
+        background-color: #444444;
+        border-radius: 2px;
+        flex-shrink: 0;
     }
     .products_hiden {
         margin-left: 3em;
@@ -379,8 +391,8 @@
         align-items: center;
     }
     .telephone_wrapper {
-        width: 1.6875rem;
-        height: 1.6875rem;
+        width: 1.9rem;
+        height: 1.9rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -391,8 +403,8 @@
         content: "";
         display: inline-block;
         position: absolute;
-        width: 1.6875rem;
-        height: 1.6875rem;
+        width: 1.9rem;
+        height: 1.9rem;
         top: 0;
         left: 0;
         background-color: #509498;
@@ -419,8 +431,8 @@
     .telephone svg {
         position: relative;
         left: 0.1rem;
-        width: 1rem;
-        height: 1rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
     .telephone svg:last-child {
         display: none;
@@ -441,7 +453,7 @@
             transition: 0.5s ease;
         }
     }
-    @media screen and (max-width: 530px) {
+    @media screen and (max-width: 580px) {
         .side_head p {
             display: none !important;
         }
@@ -458,6 +470,23 @@ html.dark {
     .telephone_wrapper::before{
         background-color: grey;
     }
+    .side_head p a {
+        color: white;
+    }
+    .menu-hide-button .menu-hide {
+        background-color: grey;
+        border: 1px solid rgb(138, 138, 138);
+        box-shadow: 0 0 2px 1px rgb(138, 138, 138);
+    }
+    .menu_links a {
+        color: white;
+    }
+    .menu-hide-button .menu_links::before {
+        background-color: white;
+    }
+    .products_hiden div a {
+        color: #cccccc;
+    }
 }
 
 .cart{
@@ -466,13 +495,25 @@ html.dark {
 .cart-hiden{
     position: relative;
 }
+.cartSvg, .cartSvgHide {
+    display: block;
+}
+.cart a::after, .cart-hiden a::after {
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    bottom: -0.7rem;
+    left: -0.7rem;
+    right: -0.7rem;
+    z-index: 10;
+}
 .countItemsCart{
     display: none;
     position: absolute;
     left: 1rem;
     top: -.8rem;
     background-color: #509498;
-    width: 1.3rem;
+    width: 1.7rem;
     height: 1.3rem;
     line-height: 1.3rem;
     text-align: center;

@@ -47,7 +47,7 @@
         border-bottom-right-radius: 100%;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     @keyframes adverAnim {
         0% {
             opacity: 0;
@@ -189,7 +189,6 @@
                 }
             }
         }
-    // по выстоте
     @media screen and (max-height: 350px) {
         @keyframes CancelAppearance {
             0% {
@@ -244,7 +243,6 @@
         }
     }
 }
-// по выстоте
 @media screen and (max-height: 350px) {
     @keyframes close_CancelAppearance {
         0% {
@@ -453,7 +451,6 @@
         text-align: left;
         opacity: 0;
     }
-    /* форма */
     form{
         display: flex;
         flex-direction: column;
@@ -511,7 +508,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .call_wrapper {
         padding: 4.375em;
     }

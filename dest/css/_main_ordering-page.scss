@@ -143,7 +143,7 @@
         opacity: .3;    
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .item-inf-ordering.inactive{
         .legend{
             min-width: 15rem;
@@ -266,9 +266,7 @@
     letter-spacing: 0.02em;
     text-align: left;
 }
-@media screen and (min-width: 768px){
-    // page_title
-    /* вторая секция */
+@media screen and (min-width: 992px){
     .order-content {
         display: flex;
         flex-wrap: wrap;
@@ -289,9 +287,7 @@
     }    
 }
 
-@media screen and (max-width: 768px) {
-    // page_title
-    /* вторая секция */
+@media screen and (max-width: 991px) {
     .order-content {
         display: flex;
         margin: auto;

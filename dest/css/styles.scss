@@ -30,96 +30,63 @@ a{
     }
 }
 /* тело */
-@media screen and (min-width: 768px){
-    html {
-        font-size: 18px;
-    }
-@media screen and (min-width: 2400px){
-    html {
-        font-size: 27px !important;
-    }
-}
-@media screen and (min-width: 2220px){
-    html {
-        font-size: 23px;
-    }
-}
-@media screen and (max-width: 2220px){
-    html {
-        font-size: 21px;
-    }
-}
-@media screen and (max-width: 1920px){
-    html {
-        font-size: 19px;
-    }
-}
-@media screen and (max-width: 1620px){
-    html {
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 1520px){
-    html {
-        font-size: 13px;
-    }
-}
-@media screen and (max-width: 1164px){
-    html {
-        font-size: 12px;
-    }
-}
-@media screen and (max-width: 992px){
-    html {
-        font-size: 10px;
-    }
-}
-@media screen and (max-width: 830px){
-    html {
-        font-size: 9.4px;
-    }
-}
-}
-@media screen and (max-width: 768px) {
+/* 1. БАЗОВЫЙ ШРИФТ (для 1920px и стандартных 2K мониторов) */
+/* Мы не делаем его огромным. 16px - это мировой стандарт. */
 html {
-    font-size: 15px;
+    font-size: 16px; 
 }
 
-@media screen and (max-width: 500px) {
+/* Для ОГРОМНЫХ телевизоров (если очень хочется чуть увеличить) */
+@media screen and (min-width: 2400px){
     html {
-        font-size: 14px;
+        font-size: 18px; /* 27px - это слишком. 18px даст аккуратное увеличение */
     }
 }
-@media screen and (max-width: 430px) {
-    html {
-        font-size: 13px;
-    }
+
+/* 2. НОУТБУКИ И ПЛАНШЕТЫ (идем на уменьшение) */
+@media screen and (max-width: 1620px){
+    html { font-size: 15px; }
 }
-@media screen and (max-width: 376px) {
-    html {
-        font-size: 11px;
-    }
+@media screen and (max-width: 1440px){
+    html { font-size: 14px; }
 }
-@media screen and (max-width: 315px) {
-    html {
-        font-size: 9px;
-    }
+
+/* ТВОЙ ИДЕАЛ: Nest Hub Max (1280x800) и маленькие ноутбуки */
+@media screen and (max-width: 1280px){
+    html { font-size: 14px; } /* Сохранили твою любимую пропорцию! */
 }
-@media screen and (max-height: 500px) {
-    html{
-        font-size: 11.5px;
-    }
-    @media screen and (max-width: 376px) {
-        html {
-            font-size: 11px;
-        }
-    }
-    @media screen and (max-width: 315px) {
-        html {
-            font-size: 9px;
-        }
-    }
+@media screen and (max-width: 1024px){
+    html { font-size: 13px; }
 }
+/* === ПЛАНШЕТЫ (Здесь дизайн перестраивается в 1 колонку) === */
+@media screen and (max-width: 991px) {
+    /* Резко увеличиваем шрифт, так как теперь у нас одна колонка и много места! */
+    html { font-size: 16px; } 
+}
+
+@media screen and (max-width: 830px){
+    html { font-size: 14.5px; } /* Плавно уменьшаем к мобилкам */
+}
+
+/* 3. МОБИЛЬНЫЕ ТЕЛЕФОНЫ */
+@media screen and (max-width: 768px) {
+    /* ВАЖНО: На телефонах контент перестраивается в колонку. 
+       Чтобы текст было удобно читать с экрана телефона, его нужно СНОВА чуть увеличить! */
+    html { font-size: 14px; } 
+}
+@media screen and (max-width: 480px) {
+    html { font-size: 13px; }
+}
+@media screen and (max-width: 375px) {
+    html { font-size: 11.5px; }
+}
+@media screen and (max-width: 320px) {
+    html { font-size: 10px; }
+}
+
+/* Ограничение для горизонтальных мобилок (если экран очень низкий) */
+@media screen and (max-height: 500px) and (max-width: 900px) {
+    html { font-size: 11.5px; }
 }
 
 @keyframes rotate {
@@ -295,7 +262,7 @@ html{
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .themeBtn{
         bottom: 6rem;
         left: .5rem;
@@ -335,7 +302,7 @@ input, textarea{
 }
 
 // Назания страниц со ссылками
-@media screen and (min-width: 768px){
+@media screen and (min-width: 992px){
     .page_title__links a {
         color: black;
         transition: 0.5s ease;
@@ -372,7 +339,7 @@ input, textarea{
         color: #909090;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .page_title__links a {
         color: black;
         transition: 0.5s ease;
