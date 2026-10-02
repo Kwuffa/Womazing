@@ -166,16 +166,22 @@
     }
     .carouselButtonBlock{
         margin-top: 5rem;
-        justify-self: center;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .4rem;
+
         .carouselButton{
-            width: 1.875rem;
-            height: 0.25rem;
+            width: 2.2rem;
+            height: .35rem;
             background-color: #D1D1D1;
-            z-index: -1;
+            border: none;
+            padding: 0;
+            cursor: pointer;
         }
         .carouselButton.active{
             background-color: black;
-            z-index: 100;
         }
     }
     /* вторая секция */
@@ -406,21 +412,6 @@
             }
         }
     }
-    .galleryButtonBlock{
-        max-width: 19.6875rem;
-        position: absolute;
-        bottom: 2rem;
-        .galleryButton{
-            width: 1.875rem;
-            height: 0.25rem;
-            background-color: #D1D1D1;
-            z-index: -1;
-        }
-        .galleryButton.active{
-            background-color: black;
-            z-index: 100;
-        }
-    }
     .team_review {
         max-width: 16rem;
     }
@@ -643,23 +634,31 @@
         }
     }
     .carouselButtonBlock{
-        justify-self: end;
         max-width: fit-content;
-        margin: auto;
         position: absolute;
         bottom: -20%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .4rem;
         z-index: 999;
         .carouselButton{
-            width: 1.875rem;
-            height: 0.25rem;
+            width: 2.2rem;
+            height: 0.35rem;
             background-color: #D1D1D1;
+            border: none;
+            padding: 0;
+            cursor: pointer;
         }
         .carouselButton.active{
             background-color: black;
         }
     }
+
     /* вторая секция */
-    
     .container_collections {
         margin-top: 5.75rem;
     }
@@ -900,21 +899,6 @@
             }
         }
     }
-    .galleryButtonBlock{
-        max-width: 19.6875rem;
-        position: absolute;
-        bottom: 2rem;
-        .galleryButton{
-            width: 1.875rem;
-            height: 0.25rem;
-            background-color: #D1D1D1;
-            z-index: -1;
-        }
-        .galleryButton.active{
-            background-color: black;
-            z-index: 100;
-        }
-    }
     .team_review {
         max-width: 16rem;
     }
@@ -950,6 +934,27 @@
         letter-spacing: 0.02em;
         text-align: center;
         color: #6E9C9F;
+    }
+}
+
+.galleryButtonBlock {
+    max-width: 19.6875rem;
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    .galleryButton{
+        width: 2.2rem;
+        height: 0.35rem;
+        background-color: #D1D1D1;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    .galleryButton.active{
+        background-color: black;
     }
 }
 
