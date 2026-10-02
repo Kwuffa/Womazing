@@ -25,9 +25,6 @@
 }
 
 @media screen and (min-width: 992px){
-    .wholeWrapper {
-        overflow-x: hidden; 
-    }
     .conaiter_top {
         display: flex;
         margin-top: -27px;
@@ -479,6 +476,7 @@
     .images_block {
         position: relative;
         width: 28.75rem;
+        height: 51.625rem;
         margin-left: -3rem;
     }
     .bg_for_images-block {
@@ -497,10 +495,7 @@
         }
     }
     .images_block::after {
-        content: "";
-        display: block;
-        width: 2rem;
-        height: 51.625rem;
+        display: none;
     }
     .mainHomeImage{
         opacity: 0;
@@ -996,9 +991,6 @@ html.dark {
 }
 @media screen and (max-width: 991px) {
     html.dark{
-        .images_block::after {
-            background: none;
-        }
         .bg_for_images-block{
             background-color: rgb(13, 13, 12);
         }

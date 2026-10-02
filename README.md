@@ -2,7 +2,7 @@
 
 A fully responsive, multi-page e-commerce frontend built from scratch using HTML5, SCSS (BEM methodology), and modular Vanilla JavaScript. No frameworks or external UI libraries were used.
 
-**Live Demo:** [https://kwuffa.github.io/Womazing/Home_page.html](https://kwuffa.github.io/Womazing/Home_page.html)
+**Live Demo:** [https://kwuffa.github.io/Womazing/](https://kwuffa.github.io/Womazing/)
 
 ---
 
@@ -118,7 +118,7 @@ Since this is a static multi-page application with compiled CSS, it can be run i
 
 2. **Open the project:**
 
-   Simply open `Home_page.html` in any modern web browser.
+   Simply open `index.html` in any modern web browser.
 
    *(For the best development experience, use the "Live Server" extension in VS Code).*
 

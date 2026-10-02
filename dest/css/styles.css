@@ -274,6 +274,7 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .wrapGrow {
@@ -1631,9 +1632,6 @@ html.dark .products_hiden div a {
   }
 }
 @media screen and (min-width: 992px) {
-  .wholeWrapper {
-    overflow-x: hidden;
-  }
   .conaiter_top {
     display: flex;
     margin-top: -27px;
@@ -2076,6 +2074,7 @@ html.dark .products_hiden div a {
   .images_block {
     position: relative;
     width: 28.75rem;
+    height: 51.625rem;
     margin-left: -3rem;
   }
   .bg_for_images-block {
@@ -2096,10 +2095,7 @@ html.dark .products_hiden div a {
 }
 @media screen and (max-width: 991px) {
   .images_block::after {
-    content: "";
-    display: block;
-    width: 2rem;
-    height: 51.625rem;
+    display: none;
   }
   .mainHomeImage {
     opacity: 0;
@@ -2600,9 +2596,6 @@ html.dark .onclick_for_collections {
 }
 
 @media screen and (max-width: 991px) {
-  html.dark .images_block::after {
-    background: none;
-  }
   html.dark .bg_for_images-block {
     background-color: rgb(13, 13, 12);
   }
@@ -5003,7 +4996,7 @@ html.dark .checkout button .comment .border_link:hover {
   }
 }
 .payment input[type=checkbox] {
-  position: relative;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -5017,46 +5010,42 @@ html.dark .checkout button .comment .border_link:hover {
 }
 
 .payment input[type=checkbox] + span {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  background-color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   border: 1px solid black;
   position: relative;
-  font-size: 2rem;
-  line-height: 0.7em;
-  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.payment input[type=checkbox]:checked + span {
-  color: black;
+.payment input[type=checkbox] + span::after {
+  content: "";
+  width: 0.85rem;
+  height: 0.85rem;
+  background-color: black;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.payment input[type=checkbox]:checked + span::after {
+  opacity: 1;
 }
 
 .payment input[type=checkbox]:hover + span {
-  border: 2px solid black;
+  border-width: 2px;
 }
 
 .payment input[type=checkbox]:focus + span {
-  box-shadow: 0 0 1px 1px black;
-}
-
-.payment input[type=checkbox]:checked + span {
-  border: 2px solid black;
-}
-
-.payment input[type=checkbox]:disabled + span {
-  border: 2px solid grey;
-}
-
-.payment input[type=checkbox]:disabled:checked + span {
-  border: 2px solid grey;
-  color: grey;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .payment label {
   text-align: center;
   display: flex;
-  margin-left: -0.4rem;
   align-items: center;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
