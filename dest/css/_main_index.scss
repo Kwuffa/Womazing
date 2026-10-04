@@ -457,7 +457,7 @@
         height: 10rem;
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     .conaiter_top {
         display: flex;
         flex-direction: column;
@@ -994,7 +994,7 @@ html.dark {
         background-color: gray;
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     html.dark{
         .bg_for_images-block{
             background-color: rgb(13, 13, 12);

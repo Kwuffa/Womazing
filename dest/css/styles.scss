@@ -55,7 +55,7 @@ html {
     html { font-size: 13px; }
 }
 /* ПЛАНШЕТЫ (Здесь дизайн перестраивается в 1 колонку) */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     html { font-size: 16px; } 
 }
 
@@ -257,7 +257,7 @@ html{
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     .themeBtn{
         bottom: 6rem;
         left: .5rem;
@@ -333,7 +333,7 @@ input, textarea{
         color: #909090;
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     .page_title__links a {
         color: black;
         transition: 0.5s ease;
@@ -378,7 +378,7 @@ input, textarea{
 
 @import 'call';
 @import 'header';
-@import 'main_home-page';
+@import 'main_index';
 @import 'main_contacts-page';
 @import 'main_shop-page';
 @import 'main_about-brand-page';

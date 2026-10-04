@@ -215,7 +215,7 @@
 }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
     .cart-hiden{
         display: flex;
     }
@@ -227,7 +227,7 @@
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     .header_scroll {
         position: fixed;
         width: 100%;  

@@ -120,7 +120,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     footer {
         padding: 2rem 0;
     }
@@ -158,7 +158,7 @@ footer {
         display: none;
     }
     @media screen and (max-height: 500px) {
-        @media screen and (min-width: 581px) and (max-width: 991px) {
+        @media screen and (min-width: 581px) and (max-width: 991.98px) {
             .nav-footer .menu {
                 max-width: fit-content;
                 display: flex;

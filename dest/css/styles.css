@@ -136,7 +136,7 @@ html {
   }
 }
 /* ПЛАНШЕТЫ (Здесь дизайн перестраивается в 1 колонку) */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   html {
     font-size: 16px;
   }
@@ -354,7 +354,7 @@ html {
   animation-iteration-count: infinite;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .themeBtn {
     bottom: 6rem;
     left: 0.5rem;
@@ -430,7 +430,7 @@ input, textarea {
     color: #909090;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .page_title__links a {
     color: black;
     transition: 0.5s ease;
@@ -517,7 +517,7 @@ input, textarea {
     border-bottom-right-radius: 100%;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   @keyframes adverAnim {
     0% {
       opacity: 0;
@@ -533,7 +533,7 @@ input, textarea {
     }
   }
 }
-@media screen and (max-width: 991px) and (max-width: 600px) and (min-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-width: 600px) and (min-height: 480px) {
   @keyframes adverAnim {
     0% {
       opacity: 0;
@@ -549,7 +549,7 @@ input, textarea {
     }
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   @keyframes close_adverAnim {
     0% {
       opacity: 1;
@@ -566,7 +566,7 @@ input, textarea {
     }
   }
 }
-@media screen and (max-width: 991px) and (max-width: 600px) and (min-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-width: 600px) and (min-height: 480px) {
   @keyframes close_adverAnim {
     0% {
       transform: translateX(0);
@@ -986,62 +986,62 @@ input, textarea {
   height: 1.2em;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .call_wrapper {
     padding: 4.375em;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 500px) {
+@media screen and (max-width: 991.98px) and (max-width: 500px) {
   .call_wrapper {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 600px) {
+@media screen and (max-width: 991.98px) and (max-height: 600px) {
   .call_wrapper {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 360px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-width: 360px) and (max-height: 480px) {
   .call_wrapper {
     font-size: 0.7rem;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 600px) and (min-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-width: 600px) and (min-height: 480px) {
   .call_wrapper {
     width: 28em;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 500px) and (min-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-width: 500px) and (min-height: 480px) {
   .call_wrapper {
     width: 25em;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 310px) {
+@media screen and (max-width: 991.98px) and (max-height: 310px) {
   .call_wrapper {
     font-size: 0.7rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 285px) {
+@media screen and (max-width: 991.98px) and (max-height: 285px) {
   .call_wrapper {
     font-size: 0.65rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 270px) {
+@media screen and (max-width: 991.98px) and (max-height: 270px) {
   .call_wrapper {
     font-size: 0.6rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 250px) {
+@media screen and (max-width: 991.98px) and (max-height: 250px) {
   .call_wrapper {
     font-size: 0.57rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 235px) {
+@media screen and (max-width: 991.98px) and (max-height: 235px) {
   .call_wrapper {
     font-size: 0.55rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 220px) {
+@media screen and (max-width: 991.98px) and (max-height: 220px) {
   .call_wrapper {
     font-size: 0.5rem;
   }
@@ -1282,7 +1282,7 @@ html.dark .call_wrapper button:hover {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   .cart-hiden {
     display: flex;
   }
@@ -1293,7 +1293,7 @@ html.dark .call_wrapper button:hover {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .header_scroll {
     position: fixed;
     width: 100%;
@@ -1374,12 +1374,12 @@ html.dark .call_wrapper button:hover {
     animation: menuAppearAnimation 0.5s linear;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 360px) {
+@media screen and (max-width: 991.98px) and (max-height: 360px) {
   .menu-hide-button .menu-hide {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 290px) {
+@media screen and (max-width: 991.98px) and (max-height: 290px) {
   .menu-hide-button .menu-hide {
     font-size: 0.7rem;
   }
@@ -1390,7 +1390,7 @@ html.dark .call_wrapper button:hover {
     row-gap: 0.7em !important;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 230px) {
+@media screen and (max-width: 991.98px) and (max-height: 230px) {
   .products_hiden {
     display: none !important;
   }
@@ -1405,7 +1405,7 @@ html.dark .call_wrapper button:hover {
     align-items: start;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .menu-hide-button .menu-hide li a, .menu-hide div a {
     font-size: 1.5em;
   }
@@ -1454,7 +1454,7 @@ html.dark .call_wrapper button:hover {
     color: #646464;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* заказ звонка */
   .side_head {
     display: flex;
@@ -1522,12 +1522,12 @@ html.dark .call_wrapper button:hover {
     transition: 0.5s ease;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 580px) {
+@media screen and (max-width: 991.98px) and (max-width: 580px) {
   .side_head p {
     display: none !important;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .cart {
     display: none;
   }
@@ -2048,7 +2048,7 @@ html.dark .products_hiden div a {
     height: 10rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .conaiter_top {
     display: flex;
     flex-direction: column;
@@ -2072,12 +2072,12 @@ html.dark .products_hiden div a {
     transition: background 0.5s ease;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 576px) {
+@media screen and (max-width: 991.98px) and (max-width: 576px) {
   .bg_for_images-block {
     height: 46rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .images_block::after {
     display: none;
   }
@@ -2108,7 +2108,7 @@ html.dark .products_hiden div a {
     height: 19.875rem;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 650px) {
+@media screen and (max-width: 991.98px) and (max-width: 650px) {
   .smallBottomImage {
     position: absolute;
     top: 15.1875rem;
@@ -2124,7 +2124,7 @@ html.dark .products_hiden div a {
     height: 19.875rem;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 576px) {
+@media screen and (max-width: 991.98px) and (max-width: 576px) {
   .smallBottomImage {
     display: none;
   }
@@ -2132,7 +2132,7 @@ html.dark .products_hiden div a {
     display: none;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* offer */
   .offer {
     margin: 0 auto;
@@ -2273,7 +2273,7 @@ html.dark .products_hiden div a {
     row-gap: 1.25rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-height: 480px) {
   .new_collection {
     display: flex;
     flex-direction: row;
@@ -2285,7 +2285,7 @@ html.dark .products_hiden div a {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .new_collection > div {
     position: relative;
     display: flex;
@@ -2298,7 +2298,7 @@ html.dark .products_hiden div a {
     height: 29.875rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* при нведении на картинку товара */
   #collections_svg {
     position: absolute;
@@ -2418,7 +2418,7 @@ html.dark .products_hiden div a {
     row-gap: 1rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-height: 480px) {
   .important_for_us {
     display: flex;
     flex-direction: row;
@@ -2431,7 +2431,7 @@ html.dark .products_hiden div a {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .product {
     max-width: 21.875rem;
     display: flex;
@@ -2465,7 +2465,7 @@ html.dark .products_hiden div a {
     display: inline-block !important;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* 4-я секция */
   .dream_team {
     display: flex;
@@ -2593,7 +2593,7 @@ html.dark .onclick_for_collections {
   background-color: gray;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   html.dark .bg_for_images-block {
     background-color: rgb(13, 13, 12);
   }
@@ -2789,7 +2789,7 @@ html.dark .onclick_for_collections {
     background-color: #6E9C9F;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .contact-content {
     display: flex;
     flex-direction: column;
@@ -2808,7 +2808,7 @@ html.dark .onclick_for_collections {
     row-gap: 3.125rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-height: 480px) {
   .contact-content__contacts {
     flex-direction: row;
     -moz-column-gap: 1.875rem;
@@ -2816,7 +2816,7 @@ html.dark .onclick_for_collections {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .contacts > div {
     display: flex;
     flex-direction: column;
@@ -2848,7 +2848,7 @@ html.dark .onclick_for_collections {
     transition: 0.5s ease;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* форма */
   .contact-content__form form {
     display: flex;
@@ -3113,7 +3113,7 @@ html.dark .message-submit-success {
     transform: scaleX(1.2);
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .sec_shop-nav {
     margin-bottom: 4rem;
   }
@@ -3296,7 +3296,7 @@ html.dark .shop-pagination a:not(:last-child):hover {
     color: white;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .brend-description__container {
     display: flex;
     flex-direction: column;
@@ -3314,7 +3314,7 @@ html.dark .shop-pagination a:not(:last-child):hover {
     order: -1;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-height: 480px) {
   .brend-description__container > section {
     flex-direction: row;
     -moz-column-gap: 5.875rem;
@@ -3328,7 +3328,7 @@ html.dark .shop-pagination a:not(:last-child):hover {
     order: 1;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .brend-description__text {
     display: flex;
     flex-direction: column;
@@ -3680,7 +3680,7 @@ html.dark #background_open_store_button:hover {
     row-gap: 1.875rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .item_wrapper {
     display: flex;
     flex-direction: column;
@@ -4313,7 +4313,7 @@ html.dark .color_buttons input[type=radio]:checked + span {
     display: none;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .emptyCartMessage {
     display: none;
   }
@@ -4471,7 +4471,7 @@ html.dark .color_buttons input[type=radio]:checked + span {
     display: none;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 600px) {
+@media screen and (max-width: 991.98px) and (max-width: 600px) {
   .product_wrapper {
     height: 100%;
     width: 40%;
@@ -4520,7 +4520,7 @@ html.dark .color_buttons input[type=radio]:checked + span {
     justify-content: center;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 450px) {
+@media screen and (max-width: 991.98px) and (max-width: 450px) {
   .count_item .item-legend {
     visibility: hidden;
     width: 1px;
@@ -4647,7 +4647,7 @@ html.dark .color_buttons input[type=radio]:checked + span {
     height: 13.425rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* форма */
   .coupon {
     display: flex;
@@ -4988,7 +4988,7 @@ html.dark .checkout button .comment .border_link:hover {
   opacity: 0.3;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .item-inf-ordering.inactive .legend {
     min-width: 15rem;
   }
@@ -5171,7 +5171,7 @@ html.dark .checkout button .comment .border_link:hover {
     row-gap: 2.9375rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .order-content {
     display: flex;
     margin: auto;
@@ -5182,7 +5182,7 @@ html.dark .checkout button .comment .border_link:hover {
     margin-top: 8rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-height: 480px) {
   .order-content {
     flex-direction: row;
     align-items: start;
@@ -5194,7 +5194,7 @@ html.dark .checkout button .comment .border_link:hover {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   /* форма */
   .order-content__form textarea {
     width: 21.875rem !important;
@@ -5286,19 +5286,19 @@ html.dark .pushInfError, html.dark .pushInfSuccess {
     color: #fff;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 300px) {
+@media screen and (max-width: 991.98px) and (max-width: 300px) {
   .success_page-links {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 441px) {
+@media screen and (max-width: 991.98px) and (max-width: 441px) {
   .success_page__container a, span {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .order-success_wrapper {
     display: flex;
     flex-direction: column;
@@ -5334,7 +5334,7 @@ html.dark .pushInfError, html.dark .pushInfSuccess {
     text-align: left;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 500px) {
+@media screen and (max-width: 991.98px) and (max-width: 500px) {
   .order-success {
     flex-direction: column;
     row-gap: 2rem;
@@ -5362,7 +5362,7 @@ html.dark .pushInfError, html.dark .pushInfSuccess {
     text-align: center;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .order-success_wrapper .no_background_open_store_button a {
     border: 1px solid #6E9C9F;
     display: block;
@@ -5424,7 +5424,7 @@ html.dark .no_background_open_store_button a {
   row-gap: 2rem;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .policy_wrapper {
     margin-top: 0rem;
     padding: 0 4rem;
@@ -5439,7 +5439,7 @@ html.dark .no_background_open_store_button a {
     text-align: center;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 590px) {
+@media screen and (max-width: 991.98px) and (max-width: 590px) {
   h1 {
     font-size: 2.5rem !important;
     line-height: 2.5rem !important;
@@ -5581,7 +5581,7 @@ footer {
     display: none;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   footer {
     padding: 2rem 0;
   }
@@ -5619,7 +5619,7 @@ footer {
     display: none;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991px) {
+@media screen and (max-width: 991.98px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991.98px) {
   .nav-footer .menu {
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -5631,20 +5631,20 @@ footer {
     padding: 0;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991px) and (max-width: 670px) {
+@media screen and (max-width: 991.98px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991.98px) and (max-width: 670px) {
   .nav-footer .menu {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991px) and (max-width: 635px) {
+@media screen and (max-width: 991.98px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991.98px) and (max-width: 635px) {
   .footer_wrapper {
     max-width: 69.375rem;
     display: grid;
     grid-template-columns: minmax(10rem, 15rem) minmax(4.4375rem, 39.375rem) 12.1875rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991px) {
+@media screen and (max-width: 991.98px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991.98px) {
   .nav-footer .menu li:nth-child(1) {
     align-self: flex-start;
   }
@@ -5667,7 +5667,7 @@ footer {
     height: 6.375rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991px) {
+@media screen and (max-width: 991.98px) and (max-height: 500px) and (min-width: 581px) and (max-width: 991.98px) {
   /* спрятать не нужное не на телефонах */
   .connection-hiden {
     display: none;
@@ -5676,7 +5676,7 @@ footer {
     display: none;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 585px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 585px) {
   .nav-footer .menu {
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -5688,18 +5688,18 @@ footer {
     padding: 0;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 585px) and (max-width: 640px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 585px) and (max-width: 640px) {
   .nav-footer .menu {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 585px) and (max-width: 640px) and (max-width: 620px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 585px) and (max-width: 640px) and (max-width: 620px) {
   .nav-footer .menu {
     margin-left: -2rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 585px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 585px) {
   .nav-footer .menu li:nth-child(1) {
     align-self: flex-start;
   }
@@ -5722,7 +5722,7 @@ footer {
     height: 6.375rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 585px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 585px) {
   /* спрятать не нужное не на телефонах */
   .connection-hiden {
     display: none;
@@ -5731,19 +5731,19 @@ footer {
     display: none;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 585px) and (min-width: 680px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 585px) and (min-width: 680px) {
   .footer_wrapper {
     max-width: 69.375rem;
     display: grid;
     grid-template-columns: minmax(20rem, 22rem) minmax(4.4375rem, 39.375rem) 12.1875rem;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (min-width: 431px) and (max-width: 580px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (min-width: 431px) and (max-width: 580px) {
   footer {
     padding: 2rem 5rem !important;
   }
 }
-@media screen and (max-width: 991px) and (max-height: 420px) and (max-width: 300px) {
+@media screen and (max-width: 991.98px) and (max-height: 420px) and (max-width: 300px) {
   footer {
     padding: 2rem 0rem !important;
   }
@@ -5780,7 +5780,7 @@ footer {
     text-align: center !important;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .connection-footer .side_head p a {
     transition: 0.5s ease;
     font-family: var(--text-font);
@@ -5792,7 +5792,7 @@ footer {
     color: black;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 580px) {
+@media screen and (max-width: 991.98px) and (max-width: 580px) {
   footer {
     margin-top: 8.125rem;
     background: #F1EADC;
@@ -5800,17 +5800,17 @@ footer {
     padding: 2rem 2rem;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 580px) and (min-width: 440px) and (max-height: 520px) {
+@media screen and (max-width: 991.98px) and (max-width: 580px) and (min-width: 440px) and (max-height: 520px) {
   footer {
     padding: 2rem 5rem !important;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 580px) and (min-width: 501px) and (max-height: 480px) {
+@media screen and (max-width: 991.98px) and (max-width: 580px) and (min-width: 501px) and (max-height: 480px) {
   footer {
     padding: 2rem 5rem !important;
   }
 }
-@media screen and (max-width: 991px) and (max-width: 580px) {
+@media screen and (max-width: 991.98px) and (max-width: 580px) {
   .footer_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
