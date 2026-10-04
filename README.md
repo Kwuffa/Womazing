@@ -13,7 +13,7 @@ A fully responsive, multi-page e-commerce frontend built from scratch using HTML
 - [Tech Stack](#-tech-stack)
 - [Architecture & State Management](#-architecture--state-management)
 - [Responsive Design Strategy](#-responsive-design-strategy)
-- [Local Setup](#-local-setup)
+- [Local Setup](#️-local-setup)
 - [What I Learned](#-what-i-learned)
 - [Kurzprofil für Recruiter (DE)](#-kurzprofil-für-recruiter-de)
 - [Contact](#-contact)
