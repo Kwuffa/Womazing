@@ -2,7 +2,7 @@
 
 A fully responsive, multi-page e-commerce frontend built from scratch using HTML5, SCSS (BEM methodology), and modular Vanilla JavaScript. No frameworks or external UI libraries were used.
 
-**Live Demo:** [https://kwuffa.github.io/Womazing/](https://kwuffa.github.io/Womazing/)
+**Live Demo:** [https://yevhenii-miroshnikov.github.io/Womazing/](https://yevhenii-miroshnikov.github.io/Womazing/)
 
 ---
 
@@ -113,7 +113,7 @@ Since this is a static multi-page application with compiled CSS, it can be run i
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/kwuffa/Womazing.git
+   git clone https://github.com/yevhenii-miroshnikov/Womazing.git
    ```
 
 2. **Open the project:**
@@ -149,5 +149,5 @@ Das Projekt zeigt meine Fähigkeit, strukturierten und wartbaren Code zu schreib
 
 ## 📬 Contact
 
-- **GitHub:** [@kwuffa](https://github.com/kwuffa)
+- **GitHub:** [@yevhenii-miroshnikov](https://github.com/yevhenii-miroshnikov)
 - **Email:** [mirevg06@gmail.com](mailto:mirevg06@gmail.com)
