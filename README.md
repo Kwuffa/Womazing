@@ -150,4 +150,4 @@ Das Projekt zeigt meine Fähigkeit, strukturierten und wartbaren Code zu schreib
 ## 📬 Contact
 
 - **GitHub:** [@yevhenii-miroshnikov](https://github.com/yevhenii-miroshnikov)
-- **Email:** [mirevg06@gmail.com](mailto:mirevg06@gmail.com)
+- **LinkedIn:** [yevhenii-miroshnikov](https://www.linkedin.com/in/yevhenii-miroshnikov)
