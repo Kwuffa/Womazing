@@ -12,7 +12,6 @@ Womazing began as an educational frontend project during a course, based on a re
 
 ## Table of Contents
 
-- [Project Context](#project-context)
 - [Implemented Features](#implemented-features)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
